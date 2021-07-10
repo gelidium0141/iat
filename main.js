@@ -165,19 +165,12 @@ var fullscreen ={
 
 
   var timeline =[];
-  timeline.push({
-    type: 'fullscreen',
-    fullscreen_mode: true
-  });
-  
+  timeline.push(fullscreen);
   timeline.push(name_options_get);
   timeline.push(instructions_block1);
   timeline.push(trial_block1);
   timeline.push(instructions_block2);
   timeline.push(trial_block2);
-  timeline.push(instructions_block3);
-  timeline.push(trial_block3);
- 
   timeline.push(experimentend);
   timeline.push({
     type: 'fullscreen',
