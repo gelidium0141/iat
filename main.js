@@ -168,10 +168,7 @@ var fullscreen ={
 
 
   var timeline =[];
-  timeline.push({
-    type: 'fullscreen',
-    fullscreen_mode: true
-  });
+  timeline.push(fullscreen);
   timeline.push(name_get);
   timeline.push(name_options_get);
   timeline.push(instructions_block1);
