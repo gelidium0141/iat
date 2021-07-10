@@ -5,36 +5,33 @@ var fullscreen ={
     fullscreen_mode: true
   };
   
+
+
   
   //名前の取得
-  var name_get = {
-    type: 'survey-text',
+  var oname_up_options = ["菊池", "佐伯", "笠井", "須知", "希月"];
+  var oname_do_options = ["紀史", "悠理", "一昌", "武一","晴乃", "文香", "紘香","千子"];
+  
+  var name_options_get = {
+    type: 'survey-multi-choice',
     questions: [
-          {prompt: '<p>次に行う実験でどうしても必要なため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p>'+'<b>あなたの名字（姓）</b>を入力してください（例：田中 太郎さんなら、<b>田中</b>）', name: 'name_up', required:'True'},
-          {prompt: '<b>あなたの名前（名）</b>を入力してください（例：田中 太郎さんなら、<b>太郎</b>）', name: 'name_do', required:'True'},
-          {prompt: '<b>最も呼ばれるあなたのあだ名を<strong>ひらがな</strong></b>で入力してください', name: 'name_sc', required:'True'},
-        　{prompt: '<b>最も親しい同性の友人の名字（名）</b>を入力してください', name: 'fname_up', required:'True'},
-        　{prompt: '<b>最も親しい同性の友人の名前（名）</b>を入力してください', name: 'fname_do', required:'True'},
-        　{prompt: '<b>最も親しい同性の友人のあだ名を<strong>ひらがな</strong></b>で入力してください', name: 'fname_sc', required:'True'}
-          ],
+      {prompt: '<p>次に行う実験で使用します。</p>'+'<b>最もききなじみのない名字</b>を選択してください', name: 'oname_up1', options: oname_up_options, required: true, horizontal: true},
+      {prompt: '<b>2番目にききなじみのない名字</b>を選択してください', name: 'oname_up2', options: oname_up_options, required: true, horizontal: true}, 
+      {prompt: '<b>最もききなじみのない同性の名前</b>を選択してください', name: 'oname_do1', options: oname_do_options, required: true, horizontal: true},
+      {prompt: '<b>２番目にききなじみのない同性の名前</b>を選択してください', name: 'oname_do2', options: oname_do_options, required: true, horizontal: true}
+    ],
     button_label: '次へ',
     on_finish: function(data){
-      nameup = jsPsych.data.get().last(1).values()[0].response.name_up;
-      namedo = jsPsych.data.get().last(1).values()[0].response.name_do;
-      namesc = jsPsych.data.get().last(1).values()[0].response.name_sc;
-      fnameup = jsPsych.data.get().last(1).values()[0].response.fname_up;
-      fnamedo = jsPsych.data.get().last(1).values()[0].response.fname_do;
-      fnamesc = jsPsych.data.get().last(1).values()[0].response.fname_sc;
-      jsPsych.data.addProperties({name01: nameup});
-      jsPsych.data.addProperties({name02: namedo});
-      jsPsych.data.addProperties({name03: namesc});
-      jsPsych.data.addProperties({name04: fnameup});
-      jsPsych.data.addProperties({name05: fnamedo});
-      jsPsych.data.addProperties({name06: fnamesc});
+      onameup1 = jsPsych.data.get().last(1).values()[0].response.oname_up1;
+      onameup2 = jsPsych.data.get().last(1).values()[0].response.oname_up2;
+      onamedo1 = jsPsych.data.get().last(1).values()[0].response.oname_do1;
+      onamedo2 = jsPsych.data.get().last(1).values()[0].response.oname_do2;
+      jsPsych.data.addProperties({name07: onameup1});
+      jsPsych.data.addProperties({name08: onameup2});
+      jsPsych.data.addProperties({name09: onamedo1});
+      jsPsych.data.addProperties({name10: onamedo2});
     }
   };
-  
-  
   
   //練習試行
   var instructions_block1 = {
@@ -117,38 +114,28 @@ var fullscreen ={
       }
     ],
     timeline_variables: [
+      {stimulus:"sinta", stim_key_association: 'left'},
+      {stimulus: "inoue", stim_key_association: 'left'},
+      {stimulus: "shityna", stim_key_association: 'left'},
+     {stimulus: "kazue", stim_key_association: 'left'},
+      {stimulus:"yamada", stim_key_association: 'left'},
+      {stimulus: "omega", stim_key_association: 'left'},
       {stimulus: function(){
-        return nameup;
-        }, stim_key_association: 'left'},
+        return onameup1;
+        }, stim_key_association: 'right'},
       {stimulus: function(){
-        return namedo;
-        }, stim_key_association: 'left'},
+        return onameup2;
+        }, stim_key_association: 'right'},
       {stimulus: function(){
-        return namesc;
-        }, stim_key_association: 'left'},
-     {stimulus: function(){
-        return fnameup;
-        }, stim_key_association: 'left'},
+        return onamedo1;
+        }, stim_key_association: 'right'},
       {stimulus: function(){
-        return fnamedo;
-        }, stim_key_association: 'left'},
-      {stimulus: function(){
-        return fnamesc;
-        }, stim_key_association: 'left'},
-      {stimulus: "優紀", stim_key_association: 'right'},
-      {stimulus: "田島", stim_key_association: 'right'},
-      {stimulus: "蒼井", stim_key_association: 'right'},
-      {stimulus: "田中", stim_key_association: 'right'}
+        return onamedo2;
+        }, stim_key_association: 'right'}
     ],
     randomize_order:true,
     repetitions: 2
   };
-  
-  //SC-IAT_main:self+friend_vs_other
-  
-  
-  
-  //SC-IAT_practice:self+other_vs_friend
   
   
   
@@ -168,14 +155,18 @@ var fullscreen ={
 
 
   var timeline =[];
-  timeline.push(fullscreen);
-  timeline.push(name_get);
+  timeline.push({
+    type: 'fullscreen',
+    fullscreen_mode: true
+  });
+  
   timeline.push(name_options_get);
   timeline.push(instructions_block1);
   timeline.push(trial_block1);
   timeline.push(instructions_block2);
   timeline.push(trial_block2);
- 
+  timeline.push(instructions_block3);
+  timeline.push(trial_block3);
  
   timeline.push(experimentend);
   timeline.push({
