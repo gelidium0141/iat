@@ -15,20 +15,14 @@ var oname_up_options = ["菊池", "佐伯", "笠井", "須知", "希月"];
   var name_options_get = {
     type: 'survey-multi-choice',
     questions: [
-      {prompt: '<p>次に行う実験で使用します。</p>'+'<b>最もききなじみのない名字</b>を選択してください', name: 'oname_up1', options: oname_up_options, required: true, horizontal: true},
       {prompt: '<b>2番目にききなじみのない名字</b>を選択してください', name: 'oname_up2', options: oname_up_options, required: true, horizontal: true}, 
-      {prompt: '<b>最もききなじみのない同性の名前</b>を選択してください', name: 'oname_do1', options: oname_do_options, required: true, horizontal: true},
       {prompt: '<b>２番目にききなじみのない同性の名前</b>を選択してください', name: 'oname_do2', options: oname_do_options, required: true, horizontal: true}
     ],
     button_label: '次へ',
     on_finish: function(data){
-      onameup1 = jsPsych.data.get().last(1).values()[0].response.oname_up1;
       onameup2 = jsPsych.data.get().last(1).values()[0].response.oname_up2;
-      onamedo1 = jsPsych.data.get().last(1).values()[0].response.oname_do1;
       onamedo2 = jsPsych.data.get().last(1).values()[0].response.oname_do2;
-      jsPsych.data.addProperties({name07: onameup1});
       jsPsych.data.addProperties({name08: onameup2});
-      jsPsych.data.addProperties({name09: onamedo1});
       jsPsych.data.addProperties({name10: onamedo2});
     }
   };
@@ -121,13 +115,7 @@ var trial_block2 = {
     {stimulus: "pqpqpq", stim_key_association: 'left'},
     {stimulus: "bcvnvhdf", stim_key_association: 'left'},
     {stimulus: function(){
-      return onameup1;
-      }, stim_key_association: 'right'},
-    {stimulus: function(){
       return onameup2;
-      }, stim_key_association: 'right'},
-    {stimulus: function(){
-      return onamedo1;
       }, stim_key_association: 'right'},
     {stimulus: function(){
       return onamedo2;
