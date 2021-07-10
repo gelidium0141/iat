@@ -28,8 +28,8 @@ var name_get = {
   }
 };
 
-var oname_up_options = ["菊池", "佐伯", "笠井", "須知", "希月"];
-  var oname_do_options = ["紀史", "悠理", "一昌", "武一","晴乃", "文香", "紘香","千子"];
+var oname_up_options = ["笠井", "須知", "希月"];
+  var oname_do_options = ["悠理", "一昌", "武一","晴乃", "紘香","千子"];
   
   var name_options_get = {
     type: 'survey-multi-choice',
