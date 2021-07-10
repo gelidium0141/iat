@@ -9,23 +9,26 @@ var fullscreen ={
 //名前の取得
 
 
-var oname_up_options = ["菊池", "佐伯", "笠井", "須知", "希月"];
-  var oname_do_options = ["紀史", "悠理", "一昌", "武一","晴乃", "文香", "紘香","千子"];
-  
-  var name_options_get = {
-    type: 'survey-multi-choice',
-    questions: [
-      {prompt: '<b>2番目にききなじみのない名字</b>を選択してください', name: 'oname_up2', options: oname_up_options, required: true, horizontal: true}, 
-      {prompt: '<b>２番目にききなじみのない同性の名前</b>を選択してください', name: 'oname_do2', options: oname_do_options, required: true, horizontal: true}
-    ],
-    button_label: '次へ',
-    on_finish: function(data){
-      onameup2 = jsPsych.data.get().last(1).values()[0].response.oname_up2;
-      onamedo2 = jsPsych.data.get().last(1).values()[0].response.oname_do2;
-      jsPsych.data.addProperties({name08: onameup2});
-      jsPsych.data.addProperties({name10: onamedo2});
-    }
-  };
+var name_get = {
+  type: 'survey-text',
+  questions: [
+        {prompt: '<p>次に行う実験でどうしても必要なため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p>'+'<b>あなたの名字（姓）</b>を入力してください（例：田中 太郎さんなら、<b>田中</b>）', name: 'name_up', required:'True'},
+        {prompt: '<b>あなたの名前（名）</b>を入力してください（例：田中 太郎さんなら、<b>太郎</b>）', name: 'name_do', required:'True'},
+      　{prompt: '<b>最も親しい同性の友人の名字（名）</b>を入力してください', name: 'fname_up', required:'True'},
+      　{prompt: '<b>最も親しい同性の友人の名前（名）</b>を入力してください', name: 'fname_do', required:'True'},
+        ],
+  button_label: '次へ',
+  on_finish: function(data){
+    nameup = jsPsych.data.get().last(1).values()[0].response.name_up;
+    namedo = jsPsych.data.get().last(1).values()[0].response.name_do;
+    fnameup = jsPsych.data.get().last(1).values()[0].response.fname_up;
+    fnamedo = jsPsych.data.get().last(1).values()[0].response.fname_do;
+    jsPsych.data.addProperties({name01: nameup});
+    jsPsych.data.addProperties({name02: namedo});
+    jsPsych.data.addProperties({name04: fnameup});
+    jsPsych.data.addProperties({name05: fnamedo});
+  }
+};
 
 //練習試行
 var instructions_block1 = {
@@ -108,18 +111,22 @@ var trial_block2 = {
     }
   ],
   timeline_variables: [
-    {stimulus:"asd", stim_key_association: 'left'},
-    {stimulus: "jhd", stim_key_association: 'left'},
-    {stimulus: "iir", stim_key_association: 'left'},
-   {stimulus: "ltitit", stim_key_association: 'left'},
-    {stimulus: "pqpqpq", stim_key_association: 'left'},
-    {stimulus: "bcvnvhdf", stim_key_association: 'left'},
     {stimulus: function(){
-      return onameup2;
-      }, stim_key_association: 'right'},
+      return nameup;
+      }, stim_key_association: 'left'},
     {stimulus: function(){
-      return onamedo2;
-      }, stim_key_association: 'right'}
+      return namedo;
+      }, stim_key_association: 'left'},
+   {stimulus: function(){
+      return fnameup;
+      }, stim_key_association: 'left'},
+    {stimulus: function(){
+      return fnamedo;
+      }, stim_key_association: 'left'},
+    {stimulus: "aka", stim_key_association: 'right'},
+    {stimulus: "baka", stim_key_association: 'right'},
+    {stimulus: "taka", stim_key_association: 'right'},
+    {stimulus: "naka", stim_key_association: 'right'}
   ],
   randomize_order:true,
   repetitions: 2
@@ -130,7 +137,7 @@ timeline.push({
   type: 'fullscreen',
   fullscreen_mode: true
 });
-timeline.push(name_options_get);
+timeline.push(name_get);
 timeline.push(instructions_block1);
 timeline.push(trial_block1);
 timeline.push(instructions_block2);
