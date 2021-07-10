@@ -150,7 +150,6 @@ timeline.push({
   fullscreen_mode: true
 });
 timeline.push(name_get);
-timeline.push(name_options_get);
 timeline.push(instructions_block1);
 timeline.push(trial_block1);
 timeline.push(instructions_block2);
