@@ -1,6 +1,6 @@
 var fullscreen_start ={
   type: 'fullscreen',
-  message: '<p>以下のボタンをクリックすると、画面は全画面表示に切り替わります。実験の際は全画面表示で参加してください。</p>',
+  message: '<p>以下のボタンをクリックすると、画面は全画面表示に切り替わります。全画面表示で参加してください。</p>',
   button_label:"全画面表示に切り替え",
   fullscreen_mode: true
 };
@@ -34,7 +34,7 @@ var instructions_block1 = {
   type: 'html-keyboard-response',
   stimulus:  "<div style='position: absolute; top: 18%; left: 20%'><p>次の概念が出たらeキーを押して下さい :<br><strong>虫</strong>or<strong>わるい</strong></p></div>" +
   "<div style='position: absolute; top: 18%; right: 20%'><p>次の概念が出たらiキーを押してください:<br><strong>よい</strong></p></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"虫もしくはわるい意味の単語が出てきたときは左手の中指で<strong>e</strong>キーを押してください。<br>" + "よい意味の単語が出てきたときは右手の中指で<strong>i</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" + "もし"+"間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください<br>" +" できるだけ早く、正確にキーを押してください<br><br> " +"準備ができたらgキーを押して始めて下さい</div>",
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br><br>"+"虫もしくはわるい意味の単語が出てきたときは左手の中指で<strong>e</strong>キーを押してください。<br>" + "よい意味の単語が出てきたときは右手の中指で<strong>i</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" + "もし"+"間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください<br>" +" できるだけ早く、正確にキーを押してください<br><br> " +"準備ができたらgキーを押して始めて下さい</div>",
   choices:["g"]
 };
 
@@ -45,7 +45,7 @@ var trial_block1 = {
       stimulus: jsPsych.timelineVariable('stimulus'),
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">X</span>',
-      bottom_instructions:'<p>間違えると赤いバツが表示されます。反対のキーを押してください。</p>',
+      bottom_instructions:'<p>間違えると赤いバツが表示されます。正しいキーを押しなおしててください。</p>',
       force_correct_key_press: true,
       display_feedback: true,
       trial_duration: 3000,
@@ -83,7 +83,7 @@ var instructions_block2 = {
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらeキーを押してください<br> " +
   "<strong>自分</strong><br>" + "or<br>" + "<strong>友人</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
   "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong> ここからが本番です</strong>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>e</strong>キーを押してください。 <br>" + "見知らぬ人の名前が出てきたときは右手の中指で<strong>i</strong>キーを押してください。<br><br>" + "もし" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong> ここからが本番です</strong><br><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>e</strong>キーを押してください。 <br>" + "見知らぬ人の名前が出てきたときは右手の中指で<strong>i</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらgキーを押して始めて下さい</div>",
@@ -138,7 +138,7 @@ var instructions_block3 = {
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらeキーを押してください<br> " +
   "<strong>自分</strong><br>" + "or<br>" + "<strong>友人</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
   "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>e</strong>キーを押してください。 <br>" + "知らない人の名前が出てきたときは右手の中指で<strong>i</strong>キーを押してください。<br><br>" + "もし" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong><br><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>e</strong>キーを押してください。 <br>" + "知らない人の名前が出てきたときは右手の中指で<strong>i</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらgキーを押して始めて下さい</div>",
@@ -194,7 +194,7 @@ var instructions_block4 = {
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらeキーを押してください<br> " +
   "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>見知らぬ人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
   "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>友人の名前</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>　<strong>先ほどの課題とは名前の位置が逆になっています。</strong> <br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>f</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>j</strong>キーを押してください。<br><br>" + "もし" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>　<strong>先ほどの課題とは名前の位置が逆になっています。</strong> <br><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>f</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>j</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらgキーを押して始めて下さい</div>",
@@ -249,7 +249,7 @@ var instructions_block5 = {
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらeキーを押してください<br> " +
   "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>見知らぬ人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
   "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>友人の名前</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>f</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>j</strong>キーを押してください。<br><br>" + "もし" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong><br><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>f</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>j</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらgキーを押して始めて下さい</div>",
