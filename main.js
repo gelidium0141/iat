@@ -249,7 +249,7 @@ var instructions_block5 = {
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらeキーを押してください<br> " +
   "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>見知らぬ人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
   "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>友人の名前</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>f</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>j</strong>キーを押してください。<br><br>" + "もし" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>f</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>j</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらgキーを押して始めて下さい</div>",
