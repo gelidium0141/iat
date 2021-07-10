@@ -390,18 +390,27 @@ var fullscreen ={
       button_label_next: "次へ",
   };
   
+
+
   var timeline =[];
-  timeline.push(fullscreen);
+  timeline.push({
+    type: 'fullscreen',
+    fullscreen_mode: true
+  });
   timeline.push(name_get);
   timeline.push(name_options_get);
   timeline.push(instructions_block1);
-  timeline.push(trial_block1)
-  timeline.push(instructions_block2)
-  timeline.push(trial_block2)
-  timeline.push(instructions_block3)
-  timeline.push(trial_block3)
-  timeline.push(instructions_block4)
-  timeline.push(trial_block4)
-  timeline.push(instructions_block5)
-  timeline.push(trial_block5)
-  timeline.push(experimentend)
+  timeline.push(trial_block1);
+  timeline.push(instructions_block2);
+  timeline.push(trial_block2);
+  timeline.push(instructions_block3);
+  timeline.push(trial_block3);
+  timeline.push(instructions_block4);
+  timeline.push(trial_block4);
+  timeline.push(instructions_block5);
+  timeline.push(trial_block5);
+  timeline.push(experimentend);
+  timeline.push({
+    type: 'fullscreen',
+    fullscreen_mode: false
+  });
