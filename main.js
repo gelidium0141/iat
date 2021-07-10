@@ -329,5 +329,5 @@ timeline.push(instructions_block4);
 timeline.push(trial_block4);
 timeline.push(instructions_block5);
 timeline.push(trial_block5);
-timeline.push(experimentend);
 timeline.push(fullscreen_end);
+timeline.push(experimentend);
