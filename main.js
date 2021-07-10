@@ -1,4 +1,4 @@
-var fullscreen ={
+var fullscreen_start ={
   type: 'fullscreen',
   message: '<p>以下のボタンをクリックすると、画面は全画面表示に切り替わります。実験の際は全画面表示で参加してください。</p>',
   button_label:"全画面表示に切り替え",
@@ -23,36 +23,19 @@ var name_get = {
     fnamedo = jsPsych.data.get().last(1).values()[0].response.fname_do;
     jsPsych.data.addProperties({name01: nameup});
     jsPsych.data.addProperties({name02: namedo});
-    jsPsych.data.addProperties({name04: fnameup});
-    jsPsych.data.addProperties({name05: fnamedo});
+    jsPsych.data.addProperties({name03: fnameup});
+    jsPsych.data.addProperties({name04: fnamedo});
   }
 };
 
-var oname_up_options = ["笠井", "須知", "希月"];
-  var oname_do_options = ["悠理", "一昌", "武一","晴乃", "紘香","千子"];
-  
-  var name_options_get = {
-    type: 'survey-multi-choice',
-    questions: [
-      {prompt: '<p>次に行う実験で使用します。</p>'+'<b>最もききなじみのない名字</b>を選択してください', name: 'oname_up1', options: oname_up_options, required: true, horizontal: true},
-      {prompt: '<b>最もききなじみのない同性の名前</b>を選択してください', name: 'oname_do1', options: oname_do_options, required: true, horizontal: true},
-    ],
-    button_label: '次へ',
-    on_finish: function(data){
-      onameup1 = jsPsych.data.get().last(1).values()[0].response.oname_up1;
-      onamedo1 = jsPsych.data.get().last(1).values()[0].response.oname_do1;
-      jsPsych.data.addProperties({name07: onameup1});
-      jsPsych.data.addProperties({name09: onamedo1});
-    }
-  };
 
 //練習試行
 var instructions_block1 = {
   type: 'html-keyboard-response',
   stimulus:  "<div style='position: absolute; top: 18%; left: 20%'><p>次の概念が出たらeキーを押して下さい :<br><strong>虫</strong>or<strong>わるい</strong></p></div>" +
   "<div style='position: absolute; top: 18%; right: 20%'><p>次の概念が出たらiキーを押してください:<br><strong>よい</strong></p></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"虫もしくはわるい意味の単語が出てきたときは左手の中指で<strong>e</strong>キーを押してください。<br>" + "よい意味の単語が出てきたときは右手の中指で<strong>i</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" + "もし"+"間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください<br>" +" できるだけ早く、正確にキーを押してください<br><br> " +"準備ができたらエンターキーを押して始めて下さい</div>",
-  choices:["enter"]
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"虫もしくはわるい意味の単語が出てきたときは左手の中指で<strong>e</strong>キーを押してください。<br>" + "よい意味の単語が出てきたときは右手の中指で<strong>i</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" + "もし"+"間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください<br>" +" できるだけ早く、正確にキーを押してください<br><br> " +"準備ができたらスペースキーを押して始めて下さい</div>",
+  choices:["space"]
 };
 
 var trial_block1 = {
@@ -98,13 +81,13 @@ var trial_block1 = {
 var instructions_block2 = {
   type: 'html-keyboard-response',
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらeキーを押してください<br> " +
-  "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>友人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>聞きなじみのない人の名前</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong> ここからが本番です</strong>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>e</strong>キーを押してください。 <br>" + "聞きなじみのない人の名前が出てきたときは右手の中指で<strong>i</strong>キーを押してください。<br><br>" + "もし" +
+  "<strong>自分</strong><br>" + "or<br>" + "<strong>友人</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
+  "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong> ここからが本番です</strong>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>e</strong>キーを押してください。 <br>" + "見知らぬ人の名前が出てきたときは右手の中指で<strong>i</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらエンターキーを押して始めて下さい</div>",
-   choices:["enter"]
+  "準備ができたらスペースキーを押して始めて下さい</div>",
+   choices:["space"]
 };
 
 var trial_block2 = {
@@ -120,8 +103,8 @@ var trial_block2 = {
       trial_duration: 3000, 
       left_category_key: 'e',
       right_category_key: 'i',
-      left_category_label: ['自分の名前<br><br>友人の名前'],
-      right_category_label: ['聞きなじみのない人の名前'],
+      left_category_label: ['自分<br><br>友人'],
+      right_category_label: ['見知らぬ人'],
       response_ends_trial: true,
       data: { iat_type: 'practice' }
     }
@@ -139,12 +122,10 @@ var trial_block2 = {
     {stimulus: function(){
       return fnamedo;
       }, stim_key_association: 'left'},
-      {stimulus: function(){
-        return onameup1;
-        }, stim_key_association: 'right'},
-      {stimulus: function(){
-        return onamedo1;
-        }, stim_key_association: 'right'},
+    {stimulus: "希月", stim_key_association: 'right'},
+    {stimulus: "須知", stim_key_association: 'right'},
+    {stimulus: "一昌", stim_key_association: 'right'},
+    {stimulus: "武一", stim_key_association: 'right'},
   ],
   randomize_order:true,
   repetitions: 2
@@ -155,13 +136,13 @@ var trial_block2 = {
 var instructions_block3 = {
   type: 'html-keyboard-response',
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらeキーを押してください<br> " +
-  "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>友人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>聞きなじみのない人の名前</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> これは先ほどと同じ課題です。" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>e</strong>キーを押してください。 <br>" + "聞きなじみのない人の名前が出てきたときは右手の中指で<strong>i</strong>キーを押してください。<br><br>" + "もし" +
+  "<strong>自分</strong><br>" + "or<br>" + "<strong>友人</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
+  "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>e</strong>キーを押してください。 <br>" + "知らない人の名前が出てきたときは右手の中指で<strong>i</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらエンターキーを押して始めて下さい</div>",
-   choices:["enter"]
+  "準備ができたらスペースキーを押して始めて下さい</div>",
+   choices:["space"]
 };
 
 var trial_block3 = {
@@ -177,8 +158,8 @@ var trial_block3 = {
       trial_duration: 3000, 
       left_category_key: 'e',
       right_category_key: 'i',
-      left_category_label: ['自分の名前<br><br>友人の名前'],
-      right_category_label: ['聞きなじみのない人の名前'],
+      left_category_label: ['自分<br><br>友人'],
+      right_category_label: ['見知らぬ人'],
       response_ends_trial: true,
       data: { iat_type: 'main' }
     }
@@ -196,12 +177,10 @@ var trial_block3 = {
     {stimulus: function(){
       return fnamedo;
       }, stim_key_association: 'left'},
-    {stimulus: function(){
-      return onameup1;
-      }, stim_key_association: 'right'},
-    {stimulus: function(){
-      return onamedo1;
-      }, stim_key_association: 'right'},
+    {stimulus: "希月", stim_key_association: 'right'},
+    {stimulus: "須知", stim_key_association: 'right'},
+    {stimulus: "一昌", stim_key_association: 'right'},
+    {stimulus: "武一", stim_key_association: 'right'},
   ],
   randomize_order:true,
   repetitions: 2
@@ -215,11 +194,11 @@ var instructions_block4 = {
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらeキーを押してください<br> " +
   "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>聞きなじみのない人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
   "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>友人の名前</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> 自分もしくは聞きなじみのない人の名前が出てきたときは左手の中指で<strong>f</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>j</strong>キーを押してください。<br><br>" + "もし" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>　<strong>先ほどの課題とは名前の位置が逆になっています。</strong> <br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>f</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>j</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらエンターキーを押して始めて下さい</div>",
-   choices:["enter"]
+  "準備ができたらスペースキーを押して始めて下さい</div>",
+   choices:["space"]
 };
 
 var trial_block4 = {
@@ -235,8 +214,8 @@ var trial_block4 = {
       trial_duration: 3000, 
       left_category_key: 'e',
       right_category_key: 'i',
-      left_category_label: ['自分の名前<br><br>聞きなじみのない人の名前'],
-      right_category_label: ['友人の名前'],
+      left_category_label: ['自分<br><br>見知らぬ人'],
+      right_category_label: ['友人'],
       response_ends_trial: true,
       data: { iat_type: 'practice' }
     }
@@ -254,12 +233,10 @@ var trial_block4 = {
     {stimulus: function(){
       return fnamedo;
       }, stim_key_association: 'right'},
-    {stimulus: function(){
-      return onameup1;
-      }, stim_key_association: 'left'},
-    {stimulus: function(){
-      return onamedo1;
-      }, stim_key_association: 'left'},
+    {stimulus: "希月", stim_key_association: 'left'},
+    {stimulus: "須知", stim_key_association: 'left'},
+    {stimulus: "一昌", stim_key_association: 'left'},
+    {stimulus: "武一", stim_key_association: 'left'},
   ],
   randomize_order:true,
   repetitions: 2
@@ -270,13 +247,13 @@ var trial_block4 = {
 var instructions_block5 = {
   type: 'html-keyboard-response',
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらeキーを押してください<br> " +
-  "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>聞きなじみのない人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
+  "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>見知らぬ人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
   "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>友人の名前</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> これは先ほどと同じ課題です。"+"自分もしくは聞きなじみのない人の名前が出てきたときは左手の中指で<strong>f</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>j</strong>キーを押してください。<br><br>" + "もし" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>f</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>j</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらエンターキーを押して始めて下さい</div>",
-   choices:["enter"]
+  "準備ができたらスペースキーを押して始めて下さい</div>",
+   choices:["space"]
 };
 
 var trial_block5 = {
@@ -292,8 +269,8 @@ var trial_block5 = {
       trial_duration: 3000, 
       left_category_key: 'e',
       right_category_key: 'i',
-      left_category_label: ['自分の名前<br><br>聞きなじみのない人の名前'],
-      right_category_label: ['友人の名前'],
+      left_category_label: ['自分<br><br>見知らぬ人'],
+      right_category_label: ['友人'],
       response_ends_trial: true,
       data: { iat_type: 'main' }
     }
@@ -311,15 +288,20 @@ var trial_block5 = {
     {stimulus: function(){
       return fnamedo;
       }, stim_key_association: 'right'},
-    {stimulus: function(){
-      return onameup1;
-      }, stim_key_association: 'left'},
-    {stimulus: function(){
-      return onamedo1;
-      }, stim_key_association: 'left'},
+    {stimulus: "希月", stim_key_association: 'left'},
+    {stimulus: "須知", stim_key_association: 'left'},
+    {stimulus: "一昌", stim_key_association: 'left'},
+    {stimulus: "武一", stim_key_association: 'left'},
   ],
   randomize_order:true,
   repetitions: 2
+};
+
+var fullscreen_end ={
+  type: 'fullscreen',
+  message: '<p>以下のボタンをクリックすると、全画面表示を終了します。</p>',
+  button_label:"全画面表示を終了",
+  fullscreen_mode: false
 };
 
 var experimentend = {
@@ -334,10 +316,7 @@ var experimentend = {
 
 
 var timeline =[];
-timeline.push({
-  type: 'fullscreen',
-  fullscreen_mode: true
-});
+timeline.push(fullscreen_start)
 timeline.push(name_get);
 timeline.push(name_options_get);
 timeline.push(instructions_block1);
@@ -351,7 +330,4 @@ timeline.push(trial_block4);
 timeline.push(instructions_block5);
 timeline.push(trial_block5);
 timeline.push(experimentend);
-timeline.push({
-  type: 'fullscreen',
-  fullscreen_mode: false
-});
+timeline.push(fullscreen_end);
