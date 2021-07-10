@@ -116,7 +116,7 @@ var fullscreen ={
    "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
     "できるだけ早く、正確にキーを押してください。<br><br> " +
     "準備ができたらエンターキーを押して始めて下さい</div>",
-     choices:["enter"]
+     choices:["space"]
   };
   
   var trial_block2 = {
