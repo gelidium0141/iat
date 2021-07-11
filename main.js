@@ -84,7 +84,7 @@ var instructions_block2 = {
   "<strong>自分</strong><br>" + "or<br>" + "<strong>友人</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
   "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>ここからが本番です</strong><br><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "見知らぬ人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
- "間違えた場合は、赤い文字で<p style="color: red">x</p>が表示されます。正しいキーを押しなおしてください。<br>" +
+ "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらGキーを押して始めて下さい</div>",
    choices:["g"]
@@ -139,7 +139,7 @@ var instructions_block3 = {
   "<strong>自分</strong><br>" + "or<br>" + "<strong>友人</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
   "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong><br><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "知らない人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
- "間違えた場合は、赤い文字で<p style="color: red">x</p>が表示されます。正しいキーを押しなおしてください。<br>" +
+ "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらGキーを押して始めて下さい</div>",
    choices:["g"]
@@ -195,7 +195,7 @@ var instructions_block4 = {
   "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>見知らぬ人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
   "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>友人の名前</strong></div>" +
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>　<strong>先ほどの課題とは名前の位置が逆になっています。</strong> <br><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
- "間違えた場合は、赤い文字で<p style="color: red">x</p>が表示されます。正しいキーを押しなおしてください。<br>" +
+ "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらGキーを押して始めて下さい</div>",
    choices:["g"]
@@ -249,7 +249,7 @@ var instructions_block5 = {
   "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>見知らぬ人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
   "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>友人の名前</strong></div>" +
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong><br><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
- "間違えた場合は、赤い文字で<p style="color: red">x</p>が表示されます。正しいキーを押しなおしてください。<br>" +
+ "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらGキーを押して始めて下さい</div>",
    choices:["g"]
