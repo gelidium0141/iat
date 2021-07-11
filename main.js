@@ -10,8 +10,8 @@ var fullscreen_start ={
 var name_get = {
   type: 'survey-text',
   questions: [
-        {prompt: '<p>次に行う実験でどうしても必要なため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p>'+'<b>あなたの名字（姓）</b>を入力してください（例：田中 太郎さんなら、<b>田中</b>）', name: 'name_up', required:'True'},
-        {prompt: '<b>あなたの名前（名）</b>を入力してください（例：田中 太郎さんなら、<b>太郎</b>）', name: 'name_do', required:'True'},
+        {prompt: '<p>次に行う実験でどうしても必要なため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p>'+'<p>最も親しい友人の名前については、<strong>先ほど入力した名前と同じ名前</strong>を入力してください</p>'+'<b>あなたの名字（姓）</b>を入力してください', name: 'name_up', required:'True'},
+        {prompt: '<b>あなたの名前（名）</b>を入力してください', name: 'name_do', required:'True'},
       　{prompt: '<b>最も親しい同性の友人の名字（名）</b>を入力してください', name: 'fname_up', required:'True'},
       　{prompt: '<b>最も親しい同性の友人の名前（名）</b>を入力してください', name: 'fname_do', required:'True'},
         ],
