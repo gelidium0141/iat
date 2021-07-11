@@ -12,8 +12,8 @@ var name_get = {
   questions: [
         {prompt: '<p>次に行う実験でどうしても必要なため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p>'+'<p>最も親しい友人の名前については、<strong>先ほど入力した名前と同じ名前</strong>を入力してください</p>'+'<b>あなたの名字（姓）</b>を入力してください', name: 'name_up', required:'True'},
         {prompt: '<b>あなたの名前（名）</b>を入力してください', name: 'name_do', required:'True'},
-      　{prompt: '<b>最も親しい同性の友人の名字（名）</b>を入力してください', name: 'fname_up', required:'True'},
-      　{prompt: '<b>最も親しい同性の友人の名前（名）</b>を入力してください', name: 'fname_do', required:'True'},
+      　{prompt: '<b>最も親しい同性の友人の名字（名）</b>を入力してください(<strong>先ほど入力した名前と同じ名前</strong>を入力してください)', name: 'fname_up', required:'True'},
+      　{prompt: '<b>最も親しい同性の友人の名前（名）</b>を入力してください(<strong>先ほど入力した名前と同じ名前</strong>を入力してください)', name: 'fname_do', required:'True'},
         ],
   button_label: '次へ',
   on_finish: function(data){
