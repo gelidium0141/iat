@@ -164,7 +164,8 @@ var trial_block3 = {
       data: { iat_type: 'main' }
     }
   ],
-  {stimulus: function(){
+  timeline_variables: [
+    {stimulus: function(){
       return nameup;
       }, stim_key_association: 'left'},
     {stimulus: function(){
@@ -219,7 +220,8 @@ var trial_block4 = {
       data: { iat_type: 'practice' }
     }
   ],
-  {stimulus: function(){
+  timeline_variables: [
+    {stimulus: function(){
       return nameup;
       }, stim_key_association: 'left'},
     {stimulus: function(){
@@ -239,7 +241,6 @@ var trial_block4 = {
   randomize_order:true,
   repetitions: 2
 };
-
 //SC-IAT_main:self+other_vs_friend
 
 var instructions_block5 = {
@@ -273,7 +274,8 @@ var trial_block5 = {
       data: { iat_type: 'main' }
     }
   ],
-  {stimulus: function(){
+  timeline_variables: [
+    {stimulus: function(){
       return nameup;
       }, stim_key_association: 'left'},
     {stimulus: function(){
