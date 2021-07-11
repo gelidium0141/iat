@@ -58,18 +58,18 @@ var trial_block1 = {
     }
   ],
   timeline_variables: [
-    {stimulus: "すてきな", stim_key_association: "right"},
-    {stimulus: "カブトムシ", stim_key_association: "left"},
-    {stimulus: "ひどい", stim_key_association: "left"},
-    {stimulus: "卑しい", stim_key_association: "left"},
-    {stimulus: "バッタ", stim_key_association: "left"},
-    {stimulus: "汚い", stim_key_association: "left"},
-    {stimulus: "愚かな", stim_key_association: "left"},
-    {stimulus: "優秀な", stim_key_association: "right"},
-    {stimulus: "クワガタ", stim_key_association: "left"},
-    {stimulus: "素晴らしい", stim_key_association: "right"},
-    {stimulus: "美しい", stim_key_association: "right"},
-    {stimulus: "ハチ", stim_key_association: "left"}
+    {stimulus: "<p style='font-size:60pt'>すてきな</p>", stim_key_association: "right"},
+    {stimulus: "<p style='font-size:60pt'>カブトムシ</p>", stim_key_association: "left"},
+    {stimulus: "<p style='font-size:60pt'>ひどい</p>", stim_key_association: "left"},
+    {stimulus: "<p style='font-size:60pt'>卑しい</p>", stim_key_association: "left"},
+    {stimulus: "<p style='font-size:60pt'>バッタ</p>", stim_key_association: "left"},
+    {stimulus: "<p style='font-size:60pt'>汚い</p>", stim_key_association: "left"},
+    {stimulus: "<p style='font-size:60pt'>愚かな</p>", stim_key_association: "left"},
+    {stimulus: "<p style='font-size:60pt'>優秀な</p>", stim_key_association: "right"},
+    {stimulus: "<p style='font-size:60pt'>クワガタ</p>", stim_key_association: "left"},
+    {stimulus: "<p style='font-size:60pt'>素晴らしい</p>", stim_key_association: "right"},
+    {stimulus: "<p style='font-size:60pt'>美しい</p>", stim_key_association: "right"},
+    {stimulus: "<p style='font-size:60pt'>ハチ</p>", stim_key_association: "left"}
     ],
   randomize_order:true,
   repetitions: 2
@@ -110,22 +110,26 @@ var trial_block2 = {
     }
   ],
   timeline_variables: [
-    {stimulus: function(){
+    {stimulus: "<p style='font-size:60pt'>
+      function(){
       return nameup;
-      }, stim_key_association: 'left'},
-    {stimulus: function(){
+      }</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>
+      function(){
       return namedo;
-      }, stim_key_association: 'left'},
-   {stimulus: function(){
+      }</p>", stim_key_association: 'left'},
+   {stimulus: "<p style='font-size:60pt'>
+      function(){
       return fnameup;
-      }, stim_key_association: 'left'},
-    {stimulus: function(){
+      }</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>
+      function(){
       return fnamedo;
-      }, stim_key_association: 'left'},
-    {stimulus: "希月", stim_key_association: 'right'},
-    {stimulus: "須知", stim_key_association: 'right'},
-    {stimulus: "一昌", stim_key_association: 'right'},
-    {stimulus: "武一", stim_key_association: 'right'},
+      }</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>希月</p>", stim_key_association: 'right'},
+    {stimulus: "<p style='font-size:60pt'>須知</p>", stim_key_association: 'right'},
+    {stimulus: "<p style='font-size:60pt'>一昌</p>", stim_key_association: 'right'},
+    {stimulus: "<p style='font-size:60pt'>武一</p>", stim_key_association: 'right'},
   ],
   randomize_order:true,
   repetitions: 2
@@ -164,23 +168,26 @@ var trial_block3 = {
       data: { iat_type: 'main' }
     }
   ],
-  timeline_variables: [
-    {stimulus: function(){
+  {stimulus: "<p style='font-size:60pt'>
+      function(){
       return nameup;
-      }, stim_key_association: 'left'},
-    {stimulus: function(){
+      }</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>
+      function(){
       return namedo;
-      }, stim_key_association: 'left'},
-   {stimulus: function(){
+      }</p>", stim_key_association: 'left'},
+   {stimulus: "<p style='font-size:60pt'>
+      function(){
       return fnameup;
-      }, stim_key_association: 'left'},
-    {stimulus: function(){
+      }</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>
+      function(){
       return fnamedo;
-      }, stim_key_association: 'left'},
-    {stimulus: "希月", stim_key_association: 'right'},
-    {stimulus: "須知", stim_key_association: 'right'},
-    {stimulus: "一昌", stim_key_association: 'right'},
-    {stimulus: "武一", stim_key_association: 'right'},
+      }</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>希月</p>", stim_key_association: 'right'},
+    {stimulus: "<p style='font-size:60pt'>須知</p>", stim_key_association: 'right'},
+    {stimulus: "<p style='font-size:60pt'>一昌</p>", stim_key_association: 'right'},
+    {stimulus: "<p style='font-size:60pt'>武一</p>", stim_key_association: 'right'},
   ],
   randomize_order:true,
   repetitions: 2
@@ -220,23 +227,26 @@ var trial_block4 = {
       data: { iat_type: 'practice' }
     }
   ],
-  timeline_variables: [
-    {stimulus: function(){
+  {stimulus: "<p style='font-size:60pt'>
+      function(){
       return nameup;
-      }, stim_key_association: 'left'},
-    {stimulus: function(){
+      }</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>
+      function(){
       return namedo;
-      }, stim_key_association: 'left'},
-   {stimulus: function(){
+      }</p>", stim_key_association: 'left'},
+   {stimulus: "<p style='font-size:60pt'>
+      function(){
       return fnameup;
-      }, stim_key_association: 'right'},
-    {stimulus: function(){
+      }</p>", stim_key_association: 'right'},
+    {stimulus: "<p style='font-size:60pt'>
+      function(){
       return fnamedo;
-      }, stim_key_association: 'right'},
-    {stimulus: "希月", stim_key_association: 'left'},
-    {stimulus: "須知", stim_key_association: 'left'},
-    {stimulus: "一昌", stim_key_association: 'left'},
-    {stimulus: "武一", stim_key_association: 'left'},
+      }</p>", stim_key_association: 'right'},
+    {stimulus: "<p style='font-size:60pt'>希月</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>須知</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>一昌</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>武一</p>", stim_key_association: 'left'},
   ],
   randomize_order:true,
   repetitions: 2
@@ -275,23 +285,26 @@ var trial_block5 = {
       data: { iat_type: 'main' }
     }
   ],
-  timeline_variables: [
-    {stimulus: function(){
+  {stimulus: "<p style='font-size:60pt'>
+      function(){
       return nameup;
-      }, stim_key_association: 'left'},
-    {stimulus: function(){
+      }</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>
+      function(){
       return namedo;
-      }, stim_key_association: 'left'},
-   {stimulus: function(){
+      }</p>", stim_key_association: 'left'},
+   {stimulus: "<p style='font-size:60pt'>
+      function(){
       return fnameup;
-      }, stim_key_association: 'right'},
-    {stimulus: function(){
+      }</p>", stim_key_association: 'right'},
+    {stimulus: "<p style='font-size:60pt'>
+      function(){
       return fnamedo;
-      }, stim_key_association: 'right'},
-    {stimulus: "希月", stim_key_association: 'left'},
-    {stimulus: "須知", stim_key_association: 'left'},
-    {stimulus: "一昌", stim_key_association: 'left'},
-    {stimulus: "武一", stim_key_association: 'left'},
+      }</p>", stim_key_association: 'right'},
+    {stimulus: "<p style='font-size:60pt'>希月</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>須知</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>一昌</p>", stim_key_association: 'left'},
+    {stimulus: "<p style='font-size:60pt'>武一</p>", stim_key_association: 'left'},
   ],
   randomize_order:true,
   repetitions: 2
