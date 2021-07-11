@@ -32,9 +32,9 @@ var name_get = {
 //練習試行
 var instructions_block1 = {
   type: 'html-keyboard-response',
-  stimulus:  "<div style='position: absolute; top: 18%; left: 20%'><p>次の概念が出たらeキーを押して下さい :<br><strong>虫</strong>or<strong>わるい</strong></p></div>" +
-  "<div style='position: absolute; top: 18%; right: 20%'><p>次の概念が出たらiキーを押してください:<br><strong>よい</strong></p></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br><br>"+"虫もしくはわるい意味の単語が出てきたときは左手の中指で<strong>e</strong>キーを押してください。<br>" + "よい意味の単語が出てきたときは右手の中指で<strong>i</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" + "もし"+"間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください<br>" +" できるだけ早く、正確にキーを押してください<br><br> " +"準備ができたらgキーを押して始めて下さい</div>",
+  stimulus:  "<div style='position: absolute; top: 18%; left: 20%'><p>次の概念が出たらEキーを押して下さい:<br><strong>虫</strong>or<strong>わるい</strong></p></div>" +
+  "<div style='position: absolute; top: 18%; right: 20%'><p>次の概念が出たらIキーを押してください:<br><strong>よい</strong></p></div>" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br><br>"+"虫もしくはわるい意味の単語が出てきたときは左手の中指で<strong>E</strong>キーを押してください。<br>" + "よい意味の単語が出てきたときは右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" + "もし"+"間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください<br>" +" できるだけ早く、正確にキーを押してください<br><br> " +"準備ができたらGキーを押して始めて下さい</div>",
   choices:["g"]
 };
 
@@ -49,8 +49,8 @@ var trial_block1 = {
       force_correct_key_press: true,
       display_feedback: true,
       trial_duration: 3000,
-      left_category_key: 'e',
-      right_category_key: 'i',
+      left_category_key: 'E',
+      right_category_key: 'I',
       left_category_label: ['むし<br><br>わるい'],
       right_category_label: ['よい'],
       response_ends_trial: true,
@@ -80,13 +80,13 @@ var trial_block1 = {
 
 var instructions_block2 = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらeキーを押してください<br> " +
+  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>次の名前がでてきたらEキーを押してください:<br> " +
   "<strong>自分</strong><br>" + "or<br>" + "<strong>友人</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong> ここからが本番です</strong><br><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>e</strong>キーを押してください。 <br>" + "見知らぬ人の名前が出てきたときは右手の中指で<strong>i</strong>キーを押してください。<br><br>" + "もし" +
- "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
+  "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>ここからが本番です</strong><br><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "見知らぬ人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+ "間違えた場合は、赤い文字で<p style="color: red">x</p>が表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらgキーを押して始めて下さい</div>",
+  "準備ができたらGキーを押して始めて下さい</div>",
    choices:["g"]
 };
 
@@ -101,8 +101,8 @@ var trial_block2 = {
       force_correct_key_press: true,
       display_feedback: true,
       trial_duration: 3000, 
-      left_category_key: 'e',
-      right_category_key: 'i',
+      left_category_key: 'E',
+      right_category_key: 'I',
       left_category_label: ['自分<br><br>友人'],
       right_category_label: ['見知らぬ人'],
       response_ends_trial: true,
@@ -135,13 +135,13 @@ var trial_block2 = {
 
 var instructions_block3 = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらeキーを押してください<br> " +
+  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>次の名前がでてきたらEキーを押してください:<br> " +
   "<strong>自分</strong><br>" + "or<br>" + "<strong>友人</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong><br><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>e</strong>キーを押してください。 <br>" + "知らない人の名前が出てきたときは右手の中指で<strong>i</strong>キーを押してください。<br><br>" + "もし" +
- "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
+  "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong><br><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "知らない人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+ "間違えた場合は、赤い文字で<p style="color: red">x</p>が表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらgキーを押して始めて下さい</div>",
+  "準備ができたらGキーを押して始めて下さい</div>",
    choices:["g"]
 };
 
@@ -156,8 +156,8 @@ var trial_block3 = {
       force_correct_key_press: true,
       display_feedback: true,
       trial_duration: 3000, 
-      left_category_key: 'e',
-      right_category_key: 'i',
+      left_category_key: 'E',
+      right_category_key: 'I',
       left_category_label: ['自分<br><br>友人'],
       right_category_label: ['見知らぬ人'],
       response_ends_trial: true,
@@ -191,13 +191,13 @@ var trial_block3 = {
 
 var instructions_block4 = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらeキーを押してください<br> " +
+  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>次の名前がでてきたらEキーを押してください:<br> " +
   "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>見知らぬ人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>友人の名前</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>　<strong>先ほどの課題とは名前の位置が逆になっています。</strong> <br><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>f</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>j</strong>キーを押してください。<br><br>" + "もし" +
- "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
+  "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>友人の名前</strong></div>" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>　<strong>先ほどの課題とは名前の位置が逆になっています。</strong> <br><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+ "間違えた場合は、赤い文字で<p style="color: red">x</p>が表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらgキーを押して始めて下さい</div>",
+  "準備ができたらGキーを押して始めて下さい</div>",
    choices:["g"]
 };
 
@@ -212,8 +212,8 @@ var trial_block4 = {
       force_correct_key_press: true,
       display_feedback: true,
       trial_duration: 3000, 
-      left_category_key: 'e',
-      right_category_key: 'i',
+      left_category_key: 'E',
+      right_category_key: 'I',
       left_category_label: ['自分<br><br>見知らぬ人'],
       right_category_label: ['友人'],
       response_ends_trial: true,
@@ -246,13 +246,13 @@ var trial_block4 = {
 
 var instructions_block5 = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらeキーを押してください<br> " +
+  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらEキーを押してください<br> " +
   "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>見知らぬ人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "次の名前が出てきたらiキーを押してください:<br>"  + "<strong>友人の名前</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong><br><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>f</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>j</strong>キーを押してください。<br><br>" + "もし" +
- "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
+  "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>友人の名前</strong></div>" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong><br><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+ "間違えた場合は、赤い文字で<p style="color: red">x</p>が表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらgキーを押して始めて下さい</div>",
+  "準備ができたらGキーを押して始めて下さい</div>",
    choices:["g"]
 };
 
@@ -267,8 +267,8 @@ var trial_block5 = {
       force_correct_key_press: true,
       display_feedback: true,
       trial_duration: 3000, 
-      left_category_key: 'e',
-      right_category_key: 'i',
+      left_category_key: 'E',
+      right_category_key: 'I',
       left_category_label: ['自分<br><br>見知らぬ人'],
       right_category_label: ['友人'],
       response_ends_trial: true,
