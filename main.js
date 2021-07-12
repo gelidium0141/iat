@@ -10,10 +10,10 @@ var fullscreen_start ={
 var name_get = {
   type: 'survey-text',
   questions: [
-        {prompt: '<p>次に行う実験でどうしても必要なため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p>'+'<p>最も親しい同性の友人の名前に関しては、先ほど入力した名前と同じ名前を入力してください。</p><br>'+'<b>あなたの名字（姓）</b>を入力してください（例：田中 太郎さんなら、<b>田中</b>）', name: 'name_up', required:'True'},
+        {prompt: '<p>次に行う実験でどうしても必要なため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p>'+'<p>最も親しい同性の友人の名前に関しては、先ほど入力した名前と同じ名前を入力してください。</p>'+'<b>あなたの名字（姓）</b>を入力してください（例：田中 太郎さんなら、<b>田中</b>）', name: 'name_up', required:'True'},
         {prompt: '<b>あなたの名前（名）</b>を入力してください（例：田中 太郎さんなら、<b>太郎</b>）', name: 'name_do', required:'True'},
-      　{prompt: '<b>最も親しい同性の友人の名字</b>を入力してください<strong>（先ほど入力した名前と同じ名前を入力してください）</strong>', name: 'fname_up', required:'True'},
-      　{prompt: '<b>最も親しい同性の友人の名前</b>を入力してください<strong>（先ほど入力した名前と同じ名前を入力してください）</strong>', name: 'fname_do', required:'True'},
+      　{prompt: '<b>最も親しい同性の友人の名字</b>を入力してください<strong>（最初に入力した名前と同じ名前を入力してください）</strong>', name: 'fname_up', required:'True'},
+      　{prompt: '<b>最も親しい同性の友人の名前</b>を入力してください<strong>（最初に入力した名前と同じ名前を入力してください）</strong>', name: 'fname_do', required:'True'},
         ],
   button_label: '次へ',
   on_finish: function(data){
@@ -34,8 +34,8 @@ var instructions_block1 = {
   type: 'html-keyboard-response',
   stimulus:  "<div style='position: absolute; top: 18%; left: 20%'><p>次の概念が出たらEキーを押して下さい :<br><strong>虫</strong>or<strong>わるい</strong></p></div>" +
   "<div style='position: absolute; top: 18%; right: 20%'><p>次の概念が出たらIキーを押してください:<br><strong>よい</strong></p></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"虫もしくはわるい意味の単語が出てきたときは左手の中指で<strong>E</strong>キーを押してください。<br>" + "よい意味の単語が出てきたときは右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" + "もし"+"間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください<br>" +" できるだけ早く、正確にキーを押してください<br><br> " +"準備ができたらGキーを押して始めて下さい</div>",
-  choices:["g"]
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"虫もしくはわるい意味の単語が出てきたときは左手の中指で<strong>E</strong>キーを押してください。<br>" + "よい意味の単語が出てきたときは右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" + "もし"+"間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください<br>" +" できるだけ早く、正確にキーを押してください<br><br> " +"準備ができたらスペースキーを押して始めて下さい</div>",
+  choices: [' ']
 };
 
 var trial_block1 = {
@@ -86,8 +86,8 @@ var instructions_block2 = {
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong> ここからが本番です</strong>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "見知らぬ人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらGキーを押して始めて下さい</div>",
-   choices:["g"]
+  "準備ができたらスペースキーを押して始めて下さい</div>",
+  choices: [' ']
 };
 
 var trial_block2 = {
@@ -128,7 +128,7 @@ var trial_block2 = {
     {stimulus: "武一", stim_key_association: 'right'},
   ],
   randomize_order:true,
-  repetitions: 2
+  repetitions: 4
 };
 
 //SC-IAT_main:self+friend_vs_other
@@ -141,8 +141,8 @@ var instructions_block3 = {
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "知らない人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらGキーを押して始めて下さい</div>",
-   choices:["g"]
+  "準備ができたらスペースキーを押して始めて下さい</div>",
+  choices: [' ']
 };
 
 var trial_block3 = {
@@ -183,7 +183,7 @@ var trial_block3 = {
     {stimulus: "武一", stim_key_association: 'right'},
   ],
   randomize_order:true,
-  repetitions: 2
+  repetitions: 4
 };
 
 
@@ -197,8 +197,8 @@ var instructions_block4 = {
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>　<strong>先ほどの課題とは名前の位置が逆になっています。</strong> <br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらGキーを押して始めて下さい</div>",
-   choices:["g"]
+  "準備ができたらスペースキーを押して始めて下さい</div>",
+  choices: [' ']
 };
 
 var trial_block4 = {
@@ -239,7 +239,7 @@ var trial_block4 = {
     {stimulus: "武一", stim_key_association: 'left'},
   ],
   randomize_order:true,
-  repetitions: 2
+  repetitions: 4
 };
 
 //SC-IAT_main:self+other_vs_friend
@@ -252,8 +252,8 @@ var instructions_block5 = {
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらGキーを押して始めて下さい</div>",
-   choices:["g"]
+  "準備ができたらスペースキーを押して始めて下さい</div>",
+  choices: [' ']
 };
 
 var trial_block5 = {
@@ -294,7 +294,7 @@ var trial_block5 = {
     {stimulus: "武一", stim_key_association: 'left'},
   ],
   randomize_order:true,
-  repetitions: 2
+  repetitions: 4
 };
 
 var fullscreen_end ={
