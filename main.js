@@ -81,7 +81,7 @@ var trial_block1 = {
 var instructions_block2 = {
   type: 'html-keyboard-response',
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらEキーを押してください<br> " +
-  "<strong>自分</strong><br>" + "or<br>" + "<strong>友人</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
+  "<strong>友人</strong><br>" + "or<br>" + "<strong>自分</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
   "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong> ここからが本番です</strong>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "見知らぬ人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
@@ -103,7 +103,7 @@ var trial_block2 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['自分<br><br>友人'],
+      left_category_label: ['友人<br><br>自分'],
       right_category_label: ['見知らぬ人'],
       response_ends_trial: true,
       data: { iat_type: 'practice' }
@@ -136,7 +136,7 @@ var trial_block2 = {
 var instructions_block3 = {
   type: 'html-keyboard-response',
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらEキーを押してください<br> " +
-  "<strong>自分</strong><br>" + "or<br>" + "<strong>友人</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
+  "<strong>友人</strong><br>" + "or<br>" + "<strong>自分</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
   "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "知らない人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
@@ -158,7 +158,7 @@ var trial_block3 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['自分<br><br>友人'],
+      left_category_label: ['友人<br><br>自分'],
       right_category_label: ['見知らぬ人'],
       response_ends_trial: true,
       data: { iat_type: 'main' }
@@ -192,8 +192,8 @@ var trial_block3 = {
 var instructions_block4 = {
   type: 'html-keyboard-response',
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらEキーを押してください<br> " +
-  "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>見知らぬ人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>友人の名前</strong></div>" +
+  "<strong>見知らぬ人</strong><br>" + "or<br>" + "<strong>自分</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
+  "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>友人</strong></div>" +
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>　<strong>先ほどの課題とは名前の位置が逆になっています。</strong> <br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
@@ -214,7 +214,7 @@ var trial_block4 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['自分<br><br>見知らぬ人'],
+      left_category_label: ['見知らぬ人<br><br>自分'],
       right_category_label: ['友人'],
       response_ends_trial: true,
       data: { iat_type: 'practice' }
@@ -247,8 +247,8 @@ var trial_block4 = {
 var instructions_block5 = {
   type: 'html-keyboard-response',
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらEキーを押してください<br> " +
-  "<strong>自分の名前</strong><br>" + "or<br>" + "<strong>見知らぬ人の名前</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>友人の名前</strong></div>" +
+  "<strong>見知らぬ人</strong><br>" + "or<br>" + "<strong>自分</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
+  "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>友人</strong></div>" +
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'> <strong>これは先ほどと同じ課題です。</strong><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
@@ -269,7 +269,7 @@ var trial_block5 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['自分<br><br>見知らぬ人'],
+      left_category_label: ['見知らぬ人<br><br>自分'],
       right_category_label: ['友人'],
       response_ends_trial: true,
       data: { iat_type: 'main' }
