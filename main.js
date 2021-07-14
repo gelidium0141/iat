@@ -306,7 +306,7 @@ var fullscreen_end ={
 
 var experimentend = {
     type: 'instructions',
-    pages: ["<p>お疲れ様でした。次の課題へ移ります。</p>"+"<p>指示があるまでそのままでお待ちください。</p>"
+    pages: ["<p>お疲れ様でした。これで単語の振り分け課題は終わりです。</p>"+"<p>指示があるまでそのままでお待ちください。</p>"
     ],
     allow_backward: false,
     show_clickable_nav: true,
