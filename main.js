@@ -1,3 +1,6 @@
+var repo_site = "https://gelidium0141.github.io/iat/";
+
+
 var fullscreen_start ={
   type: 'fullscreen',
   message: '<p>以下のボタンをクリックすると、画面は全画面表示に切り替わります。実験の際は全画面表示で参加してください。</p>',
@@ -10,32 +13,45 @@ var fullscreen_start ={
 var name_get = {
   type: 'survey-text',
   questions: [
-        {prompt: '<p>次に行う実験でどうしても必要なため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p>'+'<p>最も親しい同性の友人の名前に関しては、最初に入力した名前と同じ名前を入力してください。</p><br><br>'+'<b>あなたの名字（姓）</b>を入力してください（例：田中 太郎さんなら、<b>田中</b>）', name: 'name_up', required:'True'},
-        {prompt: '<b>あなたの名前（名）</b>を入力してください（例：田中 太郎さんなら、<b>太郎</b>）', name: 'name_do', required:'True'},
-      　{prompt: '<b>最も親しい同性の友人の名字</b>を入力してください<strong>（最初に入力した名前と同じ名前を入力してください）</strong>', name: 'fname_up', required:'True'},
-      　{prompt: '<b>最も親しい同性の友人の名前</b>を入力してください<strong>（最初に入力した名前と同じ名前を入力してください）</strong>', name: 'fname_do', required:'True'},
+        {prompt: '<p>次に行う実験で刺激として利用するため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p>'+'<b>あなたの名字（姓）</b>を入力してください', name: 'name_up', required:'True'},
+        {prompt: '<b>あなたの名前（名）</b>を入力してください', name: 'name_do', required:'True'},
+        {prompt: '<b>あなたのあだな</b>を入力してください', name: 'name_sc', required:'True'},
         ],
   button_label: '次へ',
   on_finish: function(data){
     nameup = jsPsych.data.get().last(1).values()[0].response.name_up;
     namedo = jsPsych.data.get().last(1).values()[0].response.name_do;
-    fnameup = jsPsych.data.get().last(1).values()[0].response.fname_up;
-    fnamedo = jsPsych.data.get().last(1).values()[0].response.fname_do;
+    namesc = jsPsych.data.get().last(1).values()[0].response.name_sc;
     jsPsych.data.addProperties({name01: nameup});
     jsPsych.data.addProperties({name02: namedo});
+    jsPsych.data.addProperties({name05: namesc});
+  }
+};
+
+var oname_get = {
+  type: 'survey-text',
+  questions: [
+        {prompt: '<p>次に行う実験で刺激として利用するため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p>'+'<p>名前は漢字でお答えください。どうしてもわからない場合は、ひらがなでお答えください</p>'+'<p>最も親しい同性の友人の名前に関しては、最初に入力したイニシャルと同じ名前を入力してください。</p><br>'+'<b>最も親しい同性の友人の名字</b>を入力してください<strong>（入力したイニシャルと同じ名前を入力してください）</strong>', name: 'fname_up', required:'True'},
+      　{prompt: '<b>最も親しい同性の友人の名前</b>を入力してください<strong>（入力したイニシャルと同じ名前を入力してください）</strong>', name: 'fname_do', required:'True'},
+        {prompt: '<b>最も親しい同性の友人のあだな</b>を入力してください', name: 'fname_sc', required:'True'},
+        ],
+  button_label: '次へ',
+  on_finish: function(data){
+    fnameup = jsPsych.data.get().last(1).values()[0].response.fname_up;
+    fnamedo = jsPsych.data.get().last(1).values()[0].response.fname_do;
+    fnamesc = jsPsych.data.get().last(1).values()[0].response.fname_sc;
     jsPsych.data.addProperties({name03: fnameup});
     jsPsych.data.addProperties({name04: fnamedo});
+    jsPsych.data.addProperties({name06: fnamesc});
   }
 };
 
 
 //練習試行
 var instructions_block1 = {
-  type: 'html-keyboard-response',
-  stimulus:  "<div style='position: absolute; top: 18%; left: 20%'><p>次の概念が出たらEキーを押して下さい :<br><strong>虫</strong>or<strong>わるい</strong></p></div>" +
-  "<div style='position: absolute; top: 18%; right: 20%'><p>次の概念が出たらIキーを押してください:<br><strong>よい</strong></p></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"虫もしくはわるい意味の単語が出てきたときは左手の中指で<strong>E</strong>キーを押してください。<br>" + "よい意味の単語が出てきたときは右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" + "もし"+"間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください<br>" +" できるだけ早く、正確にキーを押してください<br><br> " +"準備ができたらスペースキーを押して始めて下さい</div>",
-  choices: [' ']
+  type: "html-keyboard-response",
+  stimulus:"<img src='" + repo_site + "experiment/test_iat.png' width='60%'></img>"+"<p style = text-align: center'><strong>これは練習です</strong></p>"+"<p>キーボードを利用した単語の分類課題を行います。</p>"+"<p>画面中央に表示される単語が、左上の<b>「わるい」</b>または<b>「虫」</b>のカテゴリーに当てはまると思ったら<b>「E」</b>キーを、<br>右上の<b>「よい」</b>のカテゴリーに当てはまると思ったら<b>「I」</b>キーを押してください。</p>"+ "<p><b>左右のカテゴリーは固定で、中央の単語が変わります。</b></p>"+"<p>間違えるとX（バツ）が中央に表示されるので、押したキーと反対のキーを押してください</br><b>スペースキー</b>を押すと開始します。</p>"+"<p style = 'font-size: 1.5em;'>単語が表示されたら、なるべく早く回答してください。</p>",
+  choices: [" "]
 };
 
 var trial_block1 = {
@@ -51,7 +67,7 @@ var trial_block1 = {
       trial_duration: 3000,
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['むし<br><br>わるい'],
+      left_category_label: ['わるい<br><br>むし'],
       right_category_label: ['よい'],
       response_ends_trial: true,
       data: {iat_type:'practice'}
@@ -80,13 +96,10 @@ var trial_block1 = {
 
 var instructions_block2 = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらEキーを押してください<br> " +
-  "<strong>友人</strong><br>" + "or<br>" + "<strong>自分</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><br><strong> ここからが本番です</strong><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "見知らぬ人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+  stimulus:"<img src='" + repo_site + "experiment/me_friend_iat.png' width='60%'></img>"+"<p style = text-align: center'><strong>ここからが本番です</strong><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "見知らぬ人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらスペースキーを押して始めて下さい</div>",
+  "準備ができたらスペースキーを押して始めて下さい</p>",
   choices: [' ']
 };
 
@@ -103,7 +116,7 @@ var trial_block2 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['友人<br><br>自分'],
+      left_category_label: ['自分<br><br>友人'],
       right_category_label: ['見知らぬ人'],
       response_ends_trial: true,
       data: { iat_type: 'practice' }
@@ -114,34 +127,36 @@ var trial_block2 = {
       return nameup;
       }, stim_key_association: 'left'},
     {stimulus: function(){
-      return namedo;
-      }, stim_key_association: 'left'},
-   {stimulus: function(){
       return fnameup;
+      }, stim_key_association: 'left'},
+    {stimulus: "金城", stim_key_association: 'right'},
+  　{stimulus: function(){
+      return namedo;
       }, stim_key_association: 'left'},
     {stimulus: function(){
       return fnamedo;
+      }, stim_key_association :'left'},
+    {stimulus: "東堂", stim_key_association: 'right'},
+    {stimulus: function(){
+      return namesc;
       }, stim_key_association: 'left'},
-    {stimulus: "希月", stim_key_association: 'right'},
-    {stimulus: "須知", stim_key_association: 'right'},
-    {stimulus: "一昌", stim_key_association: 'right'},
+    {stimulus: function(){
+        return fnamesc;
+      }, stim_key_association: 'left'},
+    {stimulus: "文香", stim_key_association: 'right'},
     {stimulus: "武一", stim_key_association: 'right'},
   ],
-  randomize_order:true,
-  repetitions: 4
+  repetitions: 2
 };
 
 //SC-IAT_main:self+friend_vs_other
 
 var instructions_block3 = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらEキーを押してください<br> " +
-  "<strong>友人</strong><br>" + "or<br>" + "<strong>自分</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>見知らぬ人</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><br><strong>これは先ほどと同じ課題です。</strong><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "知らない人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+  stimulus:"<img src='" + repo_site + "experiment/me_friend_iat.png' width='60%'></img>"+"<p style = text-align: center'><strong>これは先ほどと同じ課題です</strong><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "見知らぬ人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらスペースキーを押して始めて下さい</div>",
+  "準備ができたらスペースキーを押して始めて下さい</p>",
   choices: [' ']
 };
 
@@ -158,7 +173,7 @@ var trial_block3 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['友人<br><br>自分'],
+      left_category_label: ['自分<br><br>友人'],
       right_category_label: ['見知らぬ人'],
       response_ends_trial: true,
       data: { iat_type: 'main' }
@@ -169,21 +184,27 @@ var trial_block3 = {
       return nameup;
       }, stim_key_association: 'left'},
     {stimulus: function(){
-      return namedo;
-      }, stim_key_association: 'left'},
-   {stimulus: function(){
       return fnameup;
+      }, stim_key_association: 'left'},
+    {stimulus: "金城", stim_key_association: 'right'},
+  　{stimulus: function(){
+      return namedo;
       }, stim_key_association: 'left'},
     {stimulus: function(){
       return fnamedo;
+      }, stim_key_association :'left'},
+    {stimulus: "東堂", stim_key_association: 'right'},
+    {stimulus: function(){
+      return namesc;
       }, stim_key_association: 'left'},
-    {stimulus: "希月", stim_key_association: 'right'},
-    {stimulus: "須知", stim_key_association: 'right'},
-    {stimulus: "一昌", stim_key_association: 'right'},
+    {stimulus: function(){
+        return fnamesc;
+      }, stim_key_association: 'left'},
+    {stimulus: "文香", stim_key_association: 'right'},
     {stimulus: "武一", stim_key_association: 'right'},
   ],
   randomize_order:true,
-  repetitions: 4
+  repetitions: 3
 };
 
 
@@ -191,13 +212,10 @@ var trial_block3 = {
 
 var instructions_block4 = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらEキーを押してください<br> " +
-  "<strong>見知らぬ人</strong><br>" + "or<br>" + "<strong>自分</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>友人</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><br><strong>先ほどの課題とは名前の位置が逆になっています。</strong> <br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+  stimulus: "<img src='" + repo_site + "experiment/change_iat.png' width='60%'></img>"+"<p style = text-align: center'><strong>先ほどとは友人の位置が逆になっています</strong><br>+"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
-  "準備ができたらスペースキーを押して始めて下さい</div>",
+  "準備ができたらスペースキーを押して始めて下さい</p>",
   choices: [' ']
 };
 
@@ -214,8 +232,8 @@ var trial_block4 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['見知らぬ人<br><br>自分'],
-      right_category_label: ['友人'],
+      left_category_label: ['自分'],
+      right_category_label: ['見知らぬ人<br><br>友人'],
       response_ends_trial: true,
       data: { iat_type: 'practice' }
     }
@@ -225,32 +243,34 @@ var trial_block4 = {
       return nameup;
       }, stim_key_association: 'left'},
     {stimulus: function(){
-      return namedo;
-      }, stim_key_association: 'left'},
-   {stimulus: function(){
       return fnameup;
       }, stim_key_association: 'right'},
+    {stimulus: "金城", stim_key_association: 'right'},
+  　{stimulus: function(){
+      return namedo;
+      }, stim_key_association: 'left'},
     {stimulus: function(){
       return fnamedo;
+      }, stim_key_association :'right'},
+    {stimulus: "東堂", stim_key_association: 'right'},
+    {stimulus: function(){
+      return namesc;
+      }, stim_key_association: 'left'},
+    {stimulus: function(){
+        return fnamesc;
       }, stim_key_association: 'right'},
-    {stimulus: "希月", stim_key_association: 'left'},
-    {stimulus: "須知", stim_key_association: 'left'},
-    {stimulus: "一昌", stim_key_association: 'left'},
-    {stimulus: "武一", stim_key_association: 'left'},
+    {stimulus: "文香", stim_key_association: 'right'},
+    {stimulus: "武一", stim_key_association: 'right'},
   ],
-  randomize_order:true,
-  repetitions: 4
+  repetitions: 2
 };
 
 //SC-IAT_main:self+other_vs_friend
 
 var instructions_block5 = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'>:次の名前がでてきたらEキーを押してください<br> " +
-  "<strong>見知らぬ人</strong><br>" + "or<br>" + "<strong>自分</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "次の名前が出てきたらIキーを押してください:<br>"  + "<strong>友人</strong></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><br><strong>これは先ほどと同じ課題です。</strong><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
- "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
+  stimulus:"<img src='" + repo_site + "experiment/other_friend_iat.png' width='60%'></img>"+"<p style = text-align: center'><strong>これは先ほどと同じ課題です。</strong><br>" + "自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらスペースキーを押して始めて下さい</div>",
   choices: [' ']
@@ -269,8 +289,8 @@ var trial_block5 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['見知らぬ人<br><br>自分'],
-      right_category_label: ['友人'],
+      left_category_label: ['自分'],
+      right_category_label: ['見知らぬ人<br><br>友人'],
       response_ends_trial: true,
       data: { iat_type: 'main' }
     }
@@ -280,21 +300,27 @@ var trial_block5 = {
       return nameup;
       }, stim_key_association: 'left'},
     {stimulus: function(){
-      return namedo;
-      }, stim_key_association: 'left'},
-   {stimulus: function(){
       return fnameup;
       }, stim_key_association: 'right'},
+    {stimulus: "金城", stim_key_association: 'right'},
+  　{stimulus: function(){
+      return namedo;
+      }, stim_key_association: 'left'},
     {stimulus: function(){
       return fnamedo;
+      }, stim_key_association :'right'},
+    {stimulus: "東堂", stim_key_association: 'right'},
+    {stimulus: function(){
+      return namesc;
+      }, stim_key_association: 'left'},
+    {stimulus: function(){
+        return fnamesc;
       }, stim_key_association: 'right'},
-    {stimulus: "希月", stim_key_association: 'left'},
-    {stimulus: "須知", stim_key_association: 'left'},
-    {stimulus: "一昌", stim_key_association: 'left'},
-    {stimulus: "武一", stim_key_association: 'left'},
+    {stimulus: "文香", stim_key_association: 'right'},
+    {stimulus: "武一", stim_key_association: 'right'},
   ],
   randomize_order:true,
-  repetitions: 4
+  repetitions: 3
 };
 
 var fullscreen_end ={
@@ -306,7 +332,7 @@ var fullscreen_end ={
 
 var experimentend = {
     type: 'instructions',
-    pages: ["<p>お疲れ様でした。これで単語の振り分け課題は終わりです。</p>"+"<p>指示があるまでそのままでお待ちください。</p>"
+    pages: ["<p>お疲れ様でした。これで単語の振り分け課題は終わりです。</p>"+"<p>次に進んでください。</p>"
     ],
     allow_backward: false,
     show_clickable_nav: true,
@@ -318,6 +344,7 @@ var experimentend = {
 var timeline =[];
 timeline.push(fullscreen_start)
 timeline.push(name_get);
+timeline.push(oname_get);
 timeline.push(instructions_block1);
 timeline.push(trial_block1);
 timeline.push(instructions_block2);
