@@ -13,8 +13,8 @@ var fullscreen_start ={
 var name_get = {
   type: 'survey-text',
   questions: [
-        {prompt: '<p>次に行う実験で刺激として利用するため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p>'+'<b>あなたの名字（姓）</b>を入力してください', name: 'name_up', required:'True'},
-        {prompt: '<b>あなたの名前（名）</b>を入力してください', name: 'name_do', required:'True'},
+        {prompt: '<p>次に行う実験で刺激として利用するため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p>'+'<b>あなたの名字（姓）（例：山田太郎さんなら山田）</b>を入力してください', name: 'name_up', required:'True'},
+        {prompt: '<b>あなたの名前（名）（例：山田太郎さんなら太郎）</b>を入力してください', name: 'name_do', required:'True'},
         {prompt: '<b>あなたのあだな</b>を入力してください', name: 'name_sc', required:'True'},
         ],
   button_label: '次へ',
@@ -31,16 +31,16 @@ var name_get = {
 var oname_get = {
   type: 'survey-text',
   questions: [
-        {prompt: '<p>次に行う実験で刺激として利用するため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p>'+'<p>名前は漢字でお答えください。どうしてもわからない場合は、ひらがなでお答えください</p>'+'<p>最も親しい同性の友人の名前に関しては、最初に入力したイニシャルと同じ名前を入力してください。</p><br>'+'<b>最も親しい友人の名字</b>を入力してください（例：山田太郎なら山田）<strong>（入力したイニシャルと同じ名前を入力してください）</strong>', name: 'fname_up', required:'True'},
-      　{prompt: '<b>最も親しい友人の名前</b>を入力してください。（例：山田太郎なら太郎）<strong>（入力したイニシャルと同じ名前を入力してください）</strong>', name: 'fname_do', required:'True'},
-        {prompt: '<b>最も親しい友人のあだな</b>を入力してください', name: 'fname_sc', required:'True'},
+        {prompt: '<p>次に行う実験で刺激として利用するため記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。<br><br></p>'+'<p>名前の漢字がどうしてもわからない場合は、ひらがなでお答えください</p>'+'<p>最も親しい同性の友人の名前に関して、先ほど思い浮かべた人物と同じ人物の名前を入力してください。</p><br>'+'<b>最も親しい友人の名字 (性)（例：山田太郎さんなら山田）</b>を入力してください <strong>（先ほど思い浮かべた人物と同じ名前を入力してください）</strong>', name: 'fname_up', required:'True'},
+      　{prompt: '<b>最も親しい友人の名前 (名)（例：山田太郎さんなら太郎）</b>を入力してください <strong>（先ほど思い浮かべた人物と同じ名前を入力してください）</strong>', name: 'fname_do', required:'True'},
+        {prompt: '<b>最も親しい友人のあだな</b>を入力してください <strong>（あなたが日ごろその人に対して使用するあだなを入力してください）</strong>', name: 'fname_sc', required:'True'},
         ],
   button_label: '次へ',
   on_finish: function(data){
     fnameup = jsPsych.data.get().last(1).values()[0].response.fname_up;
     fnamedo = jsPsych.data.get().last(1).values()[0].response.fname_do;
     fnamesc = jsPsych.data.get().last(1).values()[0].response.fname_sc;
-    jsPsych.data.addProperties({name03: fnameup});
+    jsPsych.data.addProperties({name03: fnameup}); 
     jsPsych.data.addProperties({name04: fnamedo});
     jsPsych.data.addProperties({name06: fnamesc});
   }
@@ -96,7 +96,7 @@ var trial_block1 = {
 
 var instructions_block2 = {
   type: 'html-keyboard-response',
-  stimulus:"<img src='" + repo_site + "experiment/me_friend_iat.png' width='60%'></img>"+"<p style = text-align: center'><strong>ここからが本番です</strong><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "見知らぬ人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+  stimulus:"<img src='" + repo_site + "experiment/me_friend_iat.png' width='60%'></img>"+"<p style = text-align: center'><strong>ここからが本番です</strong><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "先ほど入力した名前以外の名前が出てきたときは見知らぬ人として右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらスペースキーを押して始めて下さい</p>",
@@ -129,22 +129,24 @@ var trial_block2 = {
     {stimulus: function(){
       return fnameup;
       }, stim_key_association: 'left'},
-    {stimulus: "金城", stim_key_association: 'right'},
+    {stimulus: "紀ノ定", stim_key_association: 'right'},
+    {stimulus: "いくぽん", stim_key_association: 'right'},
   　{stimulus: function(){
       return namedo;
       }, stim_key_association: 'left'},
     {stimulus: function(){
       return fnamedo;
       }, stim_key_association :'left'},
-    {stimulus: "東堂", stim_key_association: 'right'},
+    {stimulus: "縄田", stim_key_association: 'right'},
     {stimulus: function(){
       return namesc;
       }, stim_key_association: 'left'},
     {stimulus: function(){
         return fnamesc;
       }, stim_key_association: 'left'},
-    {stimulus: "文香", stim_key_association: 'right'},
-    {stimulus: "武一", stim_key_association: 'right'},
+    {stimulus: "郁夫", stim_key_association: 'right'},
+    {stimulus: "なわちゃん", stim_key_association: 'right'},
+    {stimulus: "桐子", stim_key_association: 'right'},
   ],
   repetitions: 2
 };
@@ -153,7 +155,7 @@ var trial_block2 = {
 
 var instructions_block3 = {
   type: 'html-keyboard-response',
-  stimulus:"<img src='" + repo_site + "experiment/me_friend_iat.png' width='60%'></img>"+"<p style = text-align: center'><strong>これは先ほどと同じ課題です</strong><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "見知らぬ人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+  stimulus:"<img src='" + repo_site + "experiment/me_friend_iat.png' width='60%'></img>"+"<p style = text-align: center'><strong>これは先ほどと同じ課題です</strong><br>" +"自分もしくは友人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "先ほど入力した名前以外の名前が出てきたときは見知らぬ人として右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらスペースキーを押して始めて下さい</p>",
@@ -186,22 +188,24 @@ var trial_block3 = {
     {stimulus: function(){
       return fnameup;
       }, stim_key_association: 'left'},
-    {stimulus: "金城", stim_key_association: 'right'},
+    {stimulus: "紀ノ定", stim_key_association: 'right'},
+    {stimulus: "いくぽん", stim_key_association: 'right'},
   　{stimulus: function(){
       return namedo;
       }, stim_key_association: 'left'},
     {stimulus: function(){
       return fnamedo;
       }, stim_key_association :'left'},
-    {stimulus: "東堂", stim_key_association: 'right'},
+    {stimulus: "縄田", stim_key_association: 'right'},
     {stimulus: function(){
       return namesc;
       }, stim_key_association: 'left'},
     {stimulus: function(){
         return fnamesc;
       }, stim_key_association: 'left'},
-    {stimulus: "文香", stim_key_association: 'right'},
-    {stimulus: "武一", stim_key_association: 'right'},
+    {stimulus: "郁夫", stim_key_association: 'right'},
+    {stimulus: "なわちゃん", stim_key_association: 'right'},
+    {stimulus: "桐子", stim_key_association: 'right'},
   ],
   randomize_order:true,
   repetitions: 3
@@ -245,22 +249,24 @@ var trial_block4 = {
     {stimulus: function(){
       return fnameup;
       }, stim_key_association: 'right'},
-    {stimulus: "金城", stim_key_association: 'right'},
+    {stimulus: "紀ノ定", stim_key_association: 'right'},
+    {stimulus: "いくぽん", stim_key_association: 'right'},
   　{stimulus: function(){
       return namedo;
       }, stim_key_association: 'left'},
     {stimulus: function(){
       return fnamedo;
       }, stim_key_association :'right'},
-    {stimulus: "東堂", stim_key_association: 'right'},
+    {stimulus: "縄田", stim_key_association: 'right'},
     {stimulus: function(){
       return namesc;
       }, stim_key_association: 'left'},
     {stimulus: function(){
         return fnamesc;
       }, stim_key_association: 'right'},
-    {stimulus: "文香", stim_key_association: 'right'},
-    {stimulus: "武一", stim_key_association: 'right'},
+    {stimulus: "郁夫", stim_key_association: 'right'},
+    {stimulus: "なわちゃん", stim_key_association: 'right'},
+    {stimulus: "桐子", stim_key_association: 'right'},
   ],
   repetitions: 2
 };
@@ -302,22 +308,24 @@ var trial_block5 = {
     {stimulus: function(){
       return fnameup;
       }, stim_key_association: 'right'},
-    {stimulus: "金城", stim_key_association: 'right'},
+    {stimulus: "紀ノ定", stim_key_association: 'right'},
+    {stimulus: "いくぽん", stim_key_association: 'right'},
   　{stimulus: function(){
       return namedo;
       }, stim_key_association: 'left'},
     {stimulus: function(){
       return fnamedo;
       }, stim_key_association :'right'},
-    {stimulus: "東堂", stim_key_association: 'right'},
+    {stimulus: "縄田", stim_key_association: 'right'},
     {stimulus: function(){
       return namesc;
       }, stim_key_association: 'left'},
     {stimulus: function(){
         return fnamesc;
       }, stim_key_association: 'right'},
-    {stimulus: "文香", stim_key_association: 'right'},
-    {stimulus: "武一", stim_key_association: 'right'},
+    {stimulus: "郁夫", stim_key_association: 'right'},
+    {stimulus: "なわちゃん", stim_key_association: 'right'},
+    {stimulus: "桐子", stim_key_association: 'right'},
   ],
   randomize_order:true,
   repetitions: 3
