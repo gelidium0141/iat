@@ -216,7 +216,7 @@ var trial_block3 = {
 
 var instructions_block4 = {
   type: 'html-keyboard-response',
-  stimulus: "<img src='" + repo_site + "experiment/change_iat.png' width='60%'></img>"+"<p style = text-align: center'><strong>先ほどとは友人の位置が逆になっています</strong><br>+"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+  stimulus: "<img src='" + repo_site + "experiment/change_iat.png' width='60%'></img>"+"<p style = text-align: center'><strong>先ほどとは友人の位置が逆になっています</strong><br>"+"自分もしくは見知らぬ人の名前が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "友人の名前が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらスペースキーを押して始めて下さい</p>",
