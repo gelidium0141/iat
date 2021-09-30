@@ -130,7 +130,7 @@ var trial_block2 = {
     {stimulus: function(){
         return fnameup;
         }, stim_key_association: 'left'},
-    {stimulus: "きりり", stin_key_association: 'right'},
+    {stimulus: "きりり", stim_key_association: 'right'},
     {stimulus: "いくぽん", stim_key_association: 'right'},
   　{stimulus: function(){
       return namedo;
@@ -191,7 +191,7 @@ var trial_block3 = {
     {stimulus: function(){
         return fnameup;
         }, stim_key_association: 'left'},
-    {stimulus: "きりり", stin_key_association: 'right'},
+    {stimulus: "きりり", stim_key_association: 'right'},
     {stimulus: "いくぽん", stim_key_association: 'right'},
   　{stimulus: function(){
       return namedo;
@@ -254,7 +254,7 @@ var trial_block4 = {
     {stimulus: function(){
         return fnameup;
         }, stim_key_association: 'left'},
-    {stimulus: "きりり", stin_key_association: 'right'},
+    {stimulus: "きりり", stim_key_association: 'right'},
     {stimulus: "いくぽん", stim_key_association: 'right'},
   　{stimulus: function(){
       return namedo;
@@ -315,7 +315,7 @@ var trial_block5 = {
     {stimulus: function(){
         return fnameup;
         }, stim_key_association: 'left'},
-    {stimulus: "きりり", stin_key_association: 'right'},
+    {stimulus: "きりり", stim_key_association: 'right'},
     {stimulus: "いくぽん", stim_key_association: 'right'},
   　{stimulus: function(){
       return namedo;
