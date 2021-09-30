@@ -353,6 +353,14 @@ var experimentend = {
     allow_backward: false,
     show_clickable_nav: true,
     button_label_next: "次へ",
+  　on_finish: function(data){
+    　jsPsych.data.addProperties({name01: 1});
+    　jsPsych.data.addProperties({name02: 2});
+    　jsPsych.data.addProperties({name03: 3});
+    　jsPsych.data.addProperties({name04: 4});
+      jsPsych.data.addProperties({name05: 5});
+      jsPsych.data.addProperties({name06: 6});
+  }
 };
 
 
