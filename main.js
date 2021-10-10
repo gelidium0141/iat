@@ -15,7 +15,7 @@ var name_get = {
   questions: [
         {prompt: '<p>次に行う課題で刺激として利用するため名前の記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。</p><br>'+'<b>あなたの名字（例：山田太郎さんなら山田）</b>を入力してください', name: 'name_up', required:'True'},
         {prompt: '<b>あなたの名前（例：山田太郎さんなら太郎）</b>を入力してください', name: 'name_do', required:'True'},
-        {prompt: '<b>あなたのあだな</b>をひらがなで入力してください<strong>（あなたが日ごろ先ほど思い浮かべた友人から呼ばれるあだなを入力してください）</strong>', name: 'name_sc', required:'True'},
+        {prompt: '<b>あなたのあだな</b>をひらがなで入力してください<strong>（あなたが普段、先ほど思い浮かべた友人から呼ばれる呼び名を入力してください）</strong>', name: 'name_sc', required:'True'},
         ],
   button_label: '次へ',
   on_finish: function(data){
@@ -33,7 +33,7 @@ var oname_get = {
   questions: [
         {prompt: '<p>次に行う課題で刺激として利用するため名前の記入をお願いしております。</p>'+'<p>ここで収集した名前については、次の課題でのみ使用し、分析には使用致しません。<br><br></p>'+'<p>先ほど思い浮かべた友人の名前を入力してください。</p>'+'<p>名前の漢字がどうしてもわからない場合は、ひらがなでお答えください</p><br>'+'<b>先ほど思い浮かべた友人の名字（例：山田太郎さんなら山田）</b>を入力してください', name: 'fname_up', required:'True'},
       　{prompt: '<b>先ほど思い浮かべた友人の名前 （例：山田太郎さんなら太郎）</b>を入力してください', name: 'fname_do', required:'True'},
-        {prompt: '<b>先ほど思い浮かべた友人のあだな</b>をひらがなで入力してください <strong>（あなたが日ごろその人に対して使用するあだなを入力してください）</strong>', name: 'fname_sc', required:'True'},
+        {prompt: '<b>先ほど思い浮かべた友人のあだな</b>をひらがなで入力してください <strong>（あなたが普段、その人に対して使用する呼び名を入力してください）</strong>', name: 'fname_sc', required:'True'},
         ],
   button_label: '次へ',
   on_finish: function(data){
