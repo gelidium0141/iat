@@ -96,7 +96,7 @@ var trial_block1 = {
 
 var instructions_block2 = {
   type: 'html-keyboard-response',
-  stimulus:"<img src='" + repo_site + "experiment/iat_cor.png' width='60%'></img>"+"<p style = text-align: center'><strong>ここからが本番です</strong><br>" +"<strong>親友もしくは自分の名前</strong>が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "<strong>先ほど入力した名前以外の名前</strong>が出てきたときは知らない人として右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+  stimulus:"<img src='" + repo_site + "experiment/iat_cor.png' width='60%'></img>"+"<p style = text-align: center'><strong>ここからが本番です</strong><br>" +"<strong>友人もしくは自分の名前</strong>が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "<strong>先ほど入力した名前以外の名前</strong>が出てきたときは知らない人として右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらスペースキーを押して始めて下さい</p>",
@@ -116,7 +116,7 @@ var trial_block2 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['親友<br><br>自分'],
+      left_category_label: ['友人<br><br>自分'],
       right_category_label: ['知らない人'],
       response_ends_trial: true,
       data: { iat_type: 'practice_1' }
@@ -157,7 +157,7 @@ var trial_block2 = {
 
 var instructions_block3 = {
   type: 'html-keyboard-response',
-  stimulus:"<img src='" + repo_site + "experiment/iat_cor.png' width='60%'></img>"+"<p style = text-align: center'><strong>これは先ほどと同じ課題です</strong><br>" +"<strong>親友もしくは自分の名前</strong>が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "<strong>先ほど入力した名前以外の名前</strong>が出てきたときは知らない人として右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+  stimulus:"<img src='" + repo_site + "experiment/iat_cor.png' width='60%'></img>"+"<p style = text-align: center'><strong>これは先ほどと同じ課題です</strong><br>" +"<strong>友人もしくは自分の名前</strong>が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "<strong>先ほど入力した名前以外の名前</strong>が出てきたときは知らない人として右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらスペースキーを押して始めて下さい</p>",
@@ -177,7 +177,7 @@ var trial_block3 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['親友<br><br>自分'],
+      left_category_label: ['友人<br><br>自分'],
       right_category_label: ['知らない人'],
       response_ends_trial: true,
       data: { iat_type: 'main_1' }
@@ -220,7 +220,7 @@ var trial_block3 = {
 
 var instructions_block4 = {
   type: 'html-keyboard-response',
-  stimulus: "<img src='" + repo_site + "experiment/chamge.png' width='60%'></img>"+"<p style = text-align: center'><strong>先ほどとは自分の位置が逆になっています</strong><br>"+"<strong>親友の名前</strong>が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "<strong>知らない人もしくは自分の名前</strong>が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+  stimulus: "<img src='" + repo_site + "experiment/chamge.png' width='60%'></img>"+"<p style = text-align: center'><strong>先ほどとは自分の位置が逆になっています</strong><br>"+"<strong>友人の名前</strong>が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "<strong>知らない人もしくは自分の名前</strong>が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
  "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらスペースキーを押して始めて下さい</p>",
@@ -240,7 +240,7 @@ var trial_block4 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['親友'],
+      left_category_label: ['友人'],
       right_category_label: ['知らない人<br><br>自分'],
       response_ends_trial: true,
       data: { iat_type: 'practice_2' }
@@ -281,7 +281,7 @@ var trial_block4 = {
 
 var instructions_block5 = {
   type: 'html-keyboard-response',
-  stimulus:"<img src='" + repo_site + "experiment/iat_inc.png' width='60%'></img>"+"<p style = text-align: center'><strong>これは先ほどと同じ課題です。</strong><br>" + "<strong>親友の名前</strong>が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "<strong>知らない人もしくは自分の名前</strong>が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
+  stimulus:"<img src='" + repo_site + "experiment/iat_inc.png' width='60%'></img>"+"<p style = text-align: center'><strong>これは先ほどと同じ課題です。</strong><br>" + "<strong>友人の名前</strong>が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>" + "<strong>知らない人もしくは自分の名前</strong>が出てきたときは右手の中指で<strong>I</strong>キーを押してください。<br><br>" + "もし" +
   "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
   "できるだけ早く、正確にキーを押してください。<br><br> " +
   "準備ができたらスペースキーを押して始めて下さい</div>",
@@ -301,7 +301,7 @@ var trial_block5 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['親友'],
+      left_category_label: ['友人'],
       right_category_label: ['知らない人<br><br>自分'],
       response_ends_trial: true,
       data: { iat_type: 'main_2' }
