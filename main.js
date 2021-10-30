@@ -65,8 +65,10 @@ document.onkeypress = function(e) {
 function tagflg0(ischecked){
     if(ischecked == true){
       document.getElementById("youans").disabled = true;
+      document.getElementById("myans").disabled = true;
     } else {
       document.getElementById("youans").disabled = false;
+      document.getElementById("myans").disabled = false;
     }
   }
 
