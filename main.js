@@ -526,7 +526,7 @@ var experimentend = {
 };
 
 var timeline =[];
-//timeline.push(fullscreen_start)
+timeline.push(fullscreen_start)
 timeline.push(name_get);
 timeline.push(oname_get);
 timeline.push(loop_node);
