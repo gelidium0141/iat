@@ -70,14 +70,6 @@ function tagflg0(ischecked){
     }
   }
 
-function tagflg0(ischecked){
-    if(ischecked == true){
-      document.getElementById("mines").disabled = true;
-    } else {
-      document.getElementById("mines").disabled = false;
-    }
-  }
-
 
 var fullscreen_start ={
   type: 'fullscreen',
