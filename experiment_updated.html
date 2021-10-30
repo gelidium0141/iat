@@ -44,7 +44,20 @@
 
 <script type="text/javascript">
 
+document.onkeypress = function(e) {
+  // エンターキーだったら無効にする
+  if (e.key === 'Enter') {
+    return false;
+  }
+}
 
+function tagflg0(ischecked){
+    if(ischecked == true){
+      document.getElementById("youans").disabled = true;
+    } else {
+      document.getElementById("youans").disabled = false;
+    }
+  }
 
 
 jsPsych.init({
