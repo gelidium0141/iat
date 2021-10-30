@@ -55,6 +55,21 @@ var stim_c = ['<p>わからない場合は右のボタンにチェックをし�
 
 label_c =['趣味は', '出身地は', '年齢は', '血液型は', '学部は', '部活・サークルは', 'アルバイトは', '特技は', '好きなスポーツは', '好きな食べ物は', '好きな飲み物は', '嫌いな食べ物は','得意な教科は', '苦手な教科は', '好きな季節は', '好きな本は', '好きなテレビ番組', '好きな芸能人は', '嫌いな芸能人は', '将来の夢は']
 
+document.onkeypress = function(e) {
+  // エンターキーだったら無効にする
+  if (e.key === 'Enter') {
+    return false;
+  }
+}
+
+function tagflg0(ischecked){
+    if(ischecked == true){
+      document.getElementById("youans").disabled = true;
+    } else {
+      document.getElementById("youans").disabled = false;
+    }
+  }
+
 var fullscreen_start ={
   type: 'fullscreen',
   message: '<p>これからは全画面表示で課題を行います。下のボタンをクリックしてください。</p>',
