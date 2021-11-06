@@ -83,7 +83,7 @@ var fullscreen_start ={
 //名前入手の説明
 var experimentstart = {
   type: 'instructions',
-  pages: ["<p style = text-align: center'><p>これから次の課題で利用するためにあなたとあなたが先ほど思い浮かべた友人のプロフィールについて回答していただきます</p>"+"<p>ここで収集した情報については、次の課題でのみ利用し、研究以外の目的では利用しません</p>"
+  pages: ["<p style = text-align: center'><p>これから次の課題で利用するため、あなたとあなたが先ほど思い浮かべた友人のプロフィールについて回答していただきます</p>"+"<p>ここで収集した情報については、次の課題でのみ利用し、研究以外の目的では利用しません</p>"
   　　　　　+"次のページからは下図のように、あなたとあなたの友人それぞれの<b>名字・名前・あだ名<b>を回答していただきます</p>"+"<img src='" + repo_site + "experiment/name_get.png' width='55%'></img>"+"<p>名字と名前はそれぞれ漢字で、あだ名はひらがなで回答してください</p>"+"<p>また、あだ名はあなた方が普段呼び合っているものを回答してください</p><br>"
            +"<p>準備ができたら次へを押して回答して下さい</p>"
   ],
@@ -130,7 +130,7 @@ var oname_get = {
 //カテゴリー取得の説明
 var experimentstart2 = {
   type: 'instructions',
-  pages: ["<img src='" + repo_site + "experiment/cate_get.png' width='70%'></img>"+"<p style = text-align: center'>次のページからは上図のように、<b>あなたと先ほど思い浮かべたあなたの友人それぞれのプロフィール</b>を回答していただきます</p>"+"<p>もし、<b>質問に対する回答がわからない</b>、または<b>異なる回答が思い浮かばない場合</b>は回答欄上部の<b>ボタンにチェック</b>をしてください</p><br>"+"<p>準備ができたら次へを押して回答して下さい</p>"
+  pages: ["<img src='" + repo_site + "experiment/cate_get.png' width='70%'></img>"+"<p style = text-align: center'>次のページからは上図のように、<b>あなたとあなたが先ほど思い浮かべた友人それぞれのプロフィール</b>を回答していただきます</p>"+"<p>もし、<b>質問に対する回答がわからない</b>、または<b>異なる回答が思い浮かばない場合</b>は回答欄上部の<b>ボタンにチェック</b>をしてください</p><br>"+"<p>準備ができたら次へを押して回答して下さい</p>"
   ],
   allow_backward: false,
   show_clickable_nav: true,
