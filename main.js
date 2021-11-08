@@ -353,23 +353,23 @@ var trial_block4 = {
         return stim[5];
     }, stim_key_association: 'left'},
     {stimulus:function(){
-        return stim[7];
+        return stim[6];
     }, stim_key_association: 'right'},
     {stimulus:function(){
-        return stim[6];
+        return stim[7];
     }, stim_key_association: 'left'},
     {stimulus:function(){
         return stim[8];
     }, stim_key_association: 'right'},
     {stimulus:function(){
-        return stim[10];
+        return stim[9];
     }, stim_key_association: 'left'},
     {stimulus:function(){
-        return stim[9];
-    }, stim_key_association: 'right'},
-    {stimulus:function(){
         return stim[11];
-    }, stim_key_association: 'left'}
+    }, stim_key_association: 'left'},
+    {stimulus:function(){
+        return stim[10];
+    }, stim_key_association: 'right'}
   ],
   repetitions: 2
 };
