@@ -489,7 +489,7 @@ var if_node1 = {
 var if_node2 = {
   timeline: [instructions_block5, trial_block5],
   conditional_function: function(){
-    if(i >= 20){
+    if(i >= 19){
       return true;
     } else {
       return false;
@@ -511,7 +511,7 @@ var if_node3 = {
 var if_node4 = {
   timeline: [instructions_block6, trial_block6],
   conditional_function: function(){
-    if(i >= 20){
+    if(i >= 19){
       return true;
     } else {
       return false;
