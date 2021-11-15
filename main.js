@@ -433,7 +433,7 @@ var trial_block5 = {
   }, stim_key_association: 'left'},
   ],
   randomize_order:true,
-  repetitions: 3
+  repetitions: 4
 };
 
 var instructions_block6 = {
