@@ -181,7 +181,7 @@ var categories = {
 
 var instructions_block1 = {
     type: 'html-keyboard-response',
-    stimulus:"<img src='" + repo_site + "experiment/cor_yazi.png' width='50%'></img>"+"<p style = 'text-align: center; font-size: 1.25em;'>本番です</p>"+'<strong>←(左向きのやじるし)</strong>が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>' + '<strong>→(右向きのやじるし)</strong>が出てきたときは右手の中指で<strong>I</strong>キーを押してください。 <br>' + "もし" +
+    stimulus:"<img src='" + repo_site + "experiment/inc_yazi.png' width='50%'></img>"+"<p style = 'text-align: center; font-size: 1.25em;'>本番です</p>"+'<strong>←(左向きのやじるし)</strong>が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>' + '<strong>→(右向きのやじるし)</strong>が出てきたときは右手の中指で<strong>I</strong>キーを押してください。 <br>' + "もし" +
    "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
     "できるだけ早く、正確にキーを押してください。<br><br> " +
     "準備ができたらスペースキーを押して始めて下さい</p>",
@@ -218,7 +218,7 @@ var trial_block1 = {
 
   var instructions_block2 = {
     type: 'html-keyboard-response',
-    stimulus:"<img src='" + repo_site + "experiment/inc_yazi.png' width='50%'></img>"+"<p style = 'text-align: center; font-size: 1.25em;'>先ほどとは矢印が表示されたときに押すキーが入れ替わっています<br><br>"+"本番です</p>"+'<strong>→(右向きのやじるし)</strong>が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>' + '<strong>←(左向きのやじるし)</strong>が出てきたときは右手の中指で<strong>I</strong>キーを押してください。 <br>' + "もし" +
+    stimulus:"<img src='" + repo_site + "experiment/cor_yazi.png' width='50%'></img>"+"<p style = 'text-align: center; font-size: 1.25em;'>先ほどとは矢印が表示されたときに押すキーが入れ替わっています<br><br>"+"本番です</p>"+'<strong>→(右向きのやじるし)</strong>が出てきたときは左手の中指で<strong>E</strong>キーを押してください。 <br>' + '<strong>←(左向きのやじるし)</strong>が出てきたときは右手の中指で<strong>I</strong>キーを押してください。 <br>' + "もし" +
    "間違えた場合は、赤い文字でxが表示されます。正しいキーを押しなおしてください。<br>" +
     "できるだけ早く、正確にキーを押してください。<br><br> " +
     "準備ができたらスペースキーを押して始めて下さい</p>",
