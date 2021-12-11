@@ -477,7 +477,7 @@ var trial_block6 = {
 
 var experimentstart3 = {
     type: 'instructions',
-    pages: ["<img src='" + repo_site + "experiment/rest.png' width='70%'></img>"+"<br><p style = text-align: center'></b>これは休憩ページです</p>"+"<p>次の課題へ進む準備ができたら、次へを押してください</p>"
+    pages: ["<img src='" + repo_site + "experiment/rest.png' width='50%'></img>"+"<br><p style = text-align: center'></b>これは休憩ページです</p>"+"<p>次の課題へ進む準備ができたら、次へを押してください</p>"
     ],
     allow_backward: false,
     show_clickable_nav: true,
