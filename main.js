@@ -600,24 +600,23 @@ var if_node4 = {
 var if_node5 = {
     timeline: [experimentstart3],
     conditional_function: function(){
-      if(i >= 19){
-        return true;
-      } else {
-        return false;
-      }
+       if(p >= 5){
+      return true;
+    } else {
+      return false;
     }
   }
-
+}
 var if_node6 = {
     timeline: [instructions_block7, trial_block7],
     conditional_function: function(){
-      if(i >= 19){
-        return true;
-      } else {
-        return false;
-      }
+       if(p >= 5){
+      return true;
+    } else {
+      return false;
     }
   }
+}
 
 var fullscreen_end ={
   type: 'fullscreen',
