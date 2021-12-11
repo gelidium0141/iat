@@ -10,7 +10,7 @@ var stim =[]
 var survey_c = ['次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>趣味</b>についてお答えください。</p>'+'<pre><b>（例：私の趣味は読書です　　　友人の趣味はサッカーです）</b></pre>',
                 '次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>出身地</b>についてお答えください。</p>'+'<pre><b>（例：私の出身地は大阪です　　　　友人の出身地は京都です）</b></pre>',
                 '次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>所属する部活・サークル</b>についてお答えください。</p>'+'<pre><b>（例：私の所属する部活・サークルは野球部です　友人の所属する部活・サークルは卓球部です）</b></pre>'+'<p>今所属している部活・サークルでも、昔所属していた部活・サークルでも構いません</p>',
-                '次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>アルバイト</b>についてお答えください。</p>'+'<pre><b>（例：私のアルバイトはローソン店員です　　　　友人のアルバイトは新聞配達です）</b></pre>'+'<p>今所属しているアルバイトでも、昔所属していたアルバイトでも構いません</p>',
+                '次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>職業</b>についてお答えください。</p>'+'<pre><b>（例：私の職業はアパレル店員です　　　　友人の職業は公務員です）</b></pre>'+'<p>現在の就業先でも、昔勤めていた職業でも構いません</p>',
                 '次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>特技</b>についてお答えください。</p>'+'<pre><b>（例：私の特技は早口言葉です　　　　友人の特技は英会話です）</b></pre>',
                 '次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>好きなスポーツ</b>についてお答えください。</p>'+'<pre><b>（例：私の好きなスポーツはフットサルです　　　　友人の好きなスポーツはテニスです）</b></pre>',
                 '次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>好きな食べ物</b>についてお答えください。</p>'+'<pre><b>（例：私の好きな食べ物はオムライスです　　　　友人の好きな食べ物はおにぎりです）</b></pre>',
@@ -26,34 +26,34 @@ var survey_c = ['次に行う課題で刺激として利用するため、<b>あ
                 '次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>好きなキャラクター</b>についてお答えください。</p>'+'<pre><b>（例：私の好きなキャラクターはピカチュウです　　　　友人の好きなキャラクターはドラえもんです）</b></pre>',
                 '次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>推し</b>についてお答えください。</p>'+'<pre><b>（例：私の推しは生田絵梨花です　　　　友人の推しはバイト先の先輩です）</b></pre>',
                 '次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>血液型</b>についてお答えください。</p>'+'<pre><b>（例：私の血液型はA型です　　　　友人の血液型はB型です）</b></pre>',
-                '次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>所属する学部</b>についてお答えください。</p>'+'<pre><b>（例：私の所属する学部は社会学部です　　　　友人の所属する学部は教育学部です）</b></pre>'+'<p>今所属している学部でも、昔所属していた学部でも構いません</p>',
+                '次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>出身校</b>についてお答えください。</p>'+'<pre><b>（例：私の出身校は○○付属高校です　　　　友人の出身校は××大学です）</b></pre>',
                 '次に行う課題で刺激として利用するため、<b>あなた</b>と<b>先ほど思い浮かべていただいた友人</b>のプロフィールについてお尋ねします。<p>'+'<p>ここで得た情報は次の課題のみで利用し、研究以外の目的で利用することはありません。<br></p><br>'+'<p>あなたとあなたの友人の<b>将来の夢</b>についてお答えください。</p>'+'<pre><b>（例：私の将来の夢は研究者です　　　　友人の将来の夢は医者です）</b></pre>'
               ]
-//inputタグに required="required"をつけると強制回答に
-var stim_c = ['<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の趣味は<input name="ms" type="text" id="mines" required="required"/>です。         友人の趣味は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の出身地は<input name="ms" type="text" id="mines" required="required"/>です。         友人の出身地は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の所属する部活・サークルは<input name="ms" type="text" id="mines" required="required"/>です。         友人の所属する部活・サークルは<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私のアルバイトは<input name="ms" type="text" id="mines" required="required"/>です。         友人のアルバイトは<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の特技は<input name="ms" type="text" id="mines" required="required"/>です。         友人の特技は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きなスポーツは<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きなスポーツは<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな食べ物は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな食べ物は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな飲み物は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな飲み物は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな色は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな色は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな本は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな本は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の得意な教科は<input name="ms" type="text" id="mines" required="required"/>です。         友人の得意な教科は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな服のブランドは<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな服のブランドは<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな季節は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな季節は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きなテレビ番組は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きなテレビ番組は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな芸能人は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな芸能人は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな映画は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな映画は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きなキャラクターは<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きなキャラクターは<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の推しは<input name="ms" type="text" id="mines" required="required"/>です。         友人の推しは<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の血液型は<input name="ms" type="text" id="mines" required="required"/>です。         友人の血液型は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の所属する学部は<input name="ms" type="text" id="mines" required="required"/>です。         友人の所属する学部は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
-              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>該当しない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の将来の夢は<input name="ms" type="text" id="mines" required="required"/>です。         友人の将来の夢は<input name="ys" type="text" id="youans"/>です。</b></p></pre>'
+//inputタグに required="required"をつけると強制回答に校
+var stim_c = ['<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の趣味は<input name="ms" type="text" id="mines" required="required"/>です。         友人の趣味は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の出身地は<input name="ms" type="text" id="mines" required="required"/>です。         友人の出身地は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の所属する部活・サークルは<input name="ms" type="text" id="mines" required="required"/>です。         友人の所属する部活・サークルは<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の職業は<input name="ms" type="text" id="mines" required="required"/>です。         友人の職業は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の特技は<input name="ms" type="text" id="mines" required="required"/>です。         友人の特技は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きなスポーツは<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きなスポーツは<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな食べ物は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな食べ物は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな飲み物は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな飲み物は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな色は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな色は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな本は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな本は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の得意な教科は<input name="ms" type="text" id="mines" required="required"/>です。         友人の得意な教科は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな服のブランドは<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな服のブランドは<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな季節は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな季節は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きなテレビ番組は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きなテレビ番組は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな芸能人は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな芸能人は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きな映画は<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きな映画は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の好きなキャラクターは<input name="ms" type="text" id="mines" required="required"/>です。         友人の好きなキャラクターは<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の推しは<input name="ms" type="text" id="mines" required="required"/>です。         友人の推しは<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の血液型は<input name="ms" type="text" id="mines" required="required"/>です。         友人の血液型は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の出身校は<input name="ms" type="text" id="mines" required="required"/>です。         友人の出身校は<input name="ys" type="text" id="youans"/>です。</b></p></pre>',
+              '<br><p><b>自分と友人、どちらか一方の回答がわからない場合</b>もしくは<b>答えたくない場合</b>は<b>右のボックスにチェックをしてください</b><input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;" onClick="tagflg0(this.checked);" ><br></p><br>'+'<pre><p><b> 私の将来の夢は<input name="ms" type="text" id="mines" required="required"/>です。         友人の将来の夢は<input name="ys" type="text" id="youans"/>です。</b></p></pre>'
             ]
 
-label_c =['趣味は', '出身地は', '所属する部活・サークルは', 'アルバイトは', '特技は', '好きなスポーツは', '好きな食べ物は', '好きな飲み物は', '好きな色は', '好きな本は', '得意な教科は', '好きな服のブランドは', '好きな季節は', '好きなテレビ番組は', '好きな芸能人は', '好きな映画は', '好きなキャラクターは', '推しは','血液型は', '所属する学部は', '将来の夢は']
+label_c =['趣味は', '出身地は', '所属する部活・サークルは', '職業は', '特技は', '好きなスポーツは', '好きな食べ物は', '好きな飲み物は', '好きな色は', '好きな本は', '得意な教科は', '好きな服のブランドは', '好きな季節は', '好きなテレビ番組は', '好きな芸能人は', '好きな映画は', '好きなキャラクターは', '推しは','血液型は', '出身校は', '将来の夢は']
 
 document.onkeypress = function(e) {
   // エンターキーだったら無効にする
@@ -392,7 +392,7 @@ var trial_block4 = {
     }, stim_key_association: 'left'}
   ],
   randomize_order:true,
-  repetitions: 6
+  repetitions: 10
 };
 
 
@@ -475,6 +475,84 @@ var trial_block6 = {
   repetitions: 6
 };
 
+var experimentstart3 = {
+    type: 'instructions',
+    pages: ["<img src='" + repo_site + "experiment/rest.png' width='70%'></img>"+"<br><p style = text-align: center'></b>これは休憩ページです</p>"+"<p>次の課題へ進む準備ができたら、次へを押してください</p>"
+    ],
+    allow_backward: false,
+    show_clickable_nav: true,
+    button_label_next: "次へ",
+  };
+
+var instructions_block7 = {
+    type: 'html-keyboard-response',
+    stimulus:"<img src='" + repo_site + "experiment/sf.png' width='60%'></img>"+"<p style = 'text-align: center; font-size: 1.25em;'><p>本番です</p>"+"<p>画面中央に表示される単語が、左上の<b>「友人」</b>のカテゴリーに当てはまると思ったら左手の中指で<b>「E」</b>キーを、<br>右上の<b>「自分」</b>のカテゴリーに当てはまると思ったら右手の中指で<b>「I」</b>キーを押してください。</p>"+"<p><b>左右のカテゴリーは固定で、中央の単語が変わります。</b></p>"
+    +"<p>もし間違えた場合は赤い文字でX（バツ）が中央に表示されるので、押したキーと反対のキーを押してください"
+    +"<p style = 'font-size: 1.5em;'>単語が表示されたらできるだけ早く、正確にキーを押してください。<br><br> "+"準備ができたらスペースキーを押して始めて下さい</p>",
+    choices: [' ']
+  };
+  
+  var trial_block7 = {
+    timeline: [
+      {
+        type: 'iat-html',
+        stimulus: jsPsych.timelineVariable('stimulus'),
+        stim_key_association: jsPsych.timelineVariable('stim_key_association'),
+        html_when_wrong: '<span style="color: red; font-size: 80px">X</span>',
+        bottom_instructions: '<p>もし間違ったキーを押したら、赤い文字でXが表示されます。正しいキーを押しなおしてください。</p>',
+        force_correct_key_press: true,
+        display_feedback: true,
+        trial_duration: 3000, 
+        left_category_key: 'E',
+        right_category_key: 'I',
+        left_category_label: ['友人'],
+        right_category_label: ['自分'],
+        response_ends_trial: true,
+        data: { iat_type: 'main_3' }
+      }
+    ],
+    timeline_variables: [
+      {stimulus:function(){
+          return namedo;
+      }, stim_key_association: 'right'},
+      {stimulus:function(){
+          return fnamedo;
+      }, stim_key_association: 'left'},
+      {stimulus:function(){
+          return stim[2];
+      }, stim_key_association: 'right'},
+      {stimulus:function(){
+          return stim[3];
+      }, stim_key_association: 'left'},
+      {stimulus:function(){
+          return stim[4];
+      }, stim_key_association: 'right'},
+      {stimulus:function(){
+          return stim[5];
+      }, stim_key_association: 'left'},
+      {stimulus:function(){
+          return stim[6];
+      }, stim_key_association: 'right'},
+      {stimulus:function(){
+          return stim[7];
+      }, stim_key_association: 'left'},
+      {stimulus:function(){
+          return stim[8];
+      }, stim_key_association: 'right'},
+      {stimulus:function(){
+          return stim[9];
+      }, stim_key_association: 'left'},
+      {stimulus:function(){
+          return stim[10];
+      }, stim_key_association: 'right'},
+      {stimulus:function(){
+          return stim[11];
+      }, stim_key_association: 'left'}
+    ],
+    randomize_order:true,
+    repetitions: 10
+  };
+
 var if_node1 = {
   timeline: [instructions_block3, trial_block3],
   conditional_function: function(){
@@ -519,6 +597,28 @@ var if_node4 = {
   }
 }
 
+var if_node5 = {
+    timeline: [experimentstart3],
+    conditional_function: function(){
+      if(i >= 19){
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+var if_node6 = {
+    timeline: [instructions_block7, trial_block7],
+    conditional_function: function(){
+      if(i >= 19){
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
 var fullscreen_end ={
   type: 'fullscreen',
   message: '<p>以下のボタンをクリックすると、全画面表示を終了します。</p>',
@@ -550,5 +650,7 @@ timeline.push(if_node1);
 timeline.push(if_node3);
 timeline.push(if_node2);
 timeline.push(if_node4);
+timeline.push(if_node5);
+timeline.push(if_node6);
 timeline.push(fullscreen_end);
 timeline.push(experimentend);
