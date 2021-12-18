@@ -1,5 +1,6 @@
 var repo_site = "https://gelidium0141.github.io/iat/";
 
+var stim = []
 
 var fullscreen_start ={
   type: 'fullscreen',
@@ -31,80 +32,50 @@ var trial_block1 = {
        type: 'html-keyboard-response',
        stimulus: jsPsych.timelineVariable('stimulus'),
        choices: ['E', 'I'],
-       prompt:"<p style='position: absolute; top: 15%; left: 20%'><font size='6'>自分に当てはまるなら<br><br></font>" + "<font size='7'><strong>E</strong>キー</font></p>"+"<font size='6'><p style='position: absolute; top: 15%; right: 20%'>当てはまらないなら<br><br></font>"+"<font size='7'><strong>I</strong>キー</font></p>",
+       prompt:"<p style='position: absolute; top: 15%; left: 20%'><font size='6'>自分に当てはまるなら<br><br></font>" + "<font size='7'><strong>E</strong>キー</font></p>"+"<font size='6'><p style='position: absolute; top: 15%; right: 20%'>自分に当てはまらないなら<br><br></font>"+"<font size='7'><strong>I</strong>キー</font></p>",
        post_trial_gap: 50,
        data: { iat_type: 'practice_1',
                number: jsPsych.timelineVariable('number')
-      }
+     },
     }
    ],
 timeline_variables: [
-{stimulus: '社交的な', stim_key_association: "right", number:"1"},
-{stimulus: '活力のある', stim_key_association: "left", number:"2"},
-{stimulus: '話好きな', stim_key_association: "right", number:"3"},
-{stimulus: '愛想のよい', stim_key_association: "left", number:"4"},
-{stimulus: '陽気な', stim_key_association: "right", number:"5"},
-{stimulus: '退屈な', stim_key_association: "left", number:"6"},
-{stimulus: '静かな', stim_key_association: "right", number:"7"},
-{stimulus: '反社会的な', stim_key_association: "left", number:"8"},
-{stimulus: '恥ずかしがりやな', stim_key_association: "right", number:"9"},
-{stimulus: '内向的な', stim_key_association: "left", number:"10"},
-{stimulus: 'まめな', stim_key_association: "right", number:"11"},
-{stimulus: '几帳面な', stim_key_association: "left", number:"12"},
-{stimulus: '勤勉な', stim_key_association: "right", number:"13"},
-{stimulus: '慎重な', stim_key_association: "left", number:"14"},
-{stimulus: '落ち着いた', stim_key_association: "right", number:"15"},
-{stimulus: '責任感のない', stim_key_association: "left", number:"16"},
-{stimulus: '不注意な', stim_key_association: "right", number:"17"},
-{stimulus: '怠惰な', stim_key_association: "left", number:"18"},
-{stimulus: 'だらしない', stim_key_association: "right", number:"19"},
-{stimulus: 'わがままな', stim_key_association: "left", number:"20"},
-{stimulus: '正直な', stim_key_association: "right", number:"21"},
-{stimulus: '信頼できる', stim_key_association: "left", number:"22"},
-{stimulus: '寛大な', stim_key_association: "right", number:"23"},
-{stimulus: 'やさしい', stim_key_association: "left", number:"24"},
-{stimulus: 'あたたかい', stim_key_association: "right", number:"25"},
-{stimulus: '自己中心的な', stim_key_association: "left", number:"26"},
-{stimulus: 'きざな', stim_key_association: "right", number:"27"},
-{stimulus: '欲張りな', stim_key_association: "left", number:"28"},
-{stimulus: '偉そうな', stim_key_association: "right", number:"29"},
-{stimulus: 'つまらない', stim_key_association: "left", number:"30"},
-{stimulus: '感じのいい', stim_key_association: "right", number:"31"},
-{stimulus: '情け深い', stim_key_association: "left", number:"32"},
-{stimulus: '忍耐強い', stim_key_association: "right", number:"33"},
-{stimulus: '気取らない', stim_key_association: "left", number:"34"},
-{stimulus: '愉快な', stim_key_association: "right", number:"35"},
-{stimulus: '短気な', stim_key_association: "left", number:"36"},
-{stimulus: '攻撃的な', stim_key_association: "right", number:"37"},
-{stimulus: '不愛想な', stim_key_association: "left", number:"38"},
-{stimulus: '頑固な', stim_key_association: "right", number:"39"},
-{stimulus: '起伏の激しい', stim_key_association: "left", number:"40"},
-{stimulus: '繊細な', stim_key_association: "right", number:"41"},
-{stimulus: '神経質な', stim_key_association: "left", number:"42"},
-{stimulus: '不機嫌な', stim_key_association: "right", number:"43"},
-{stimulus: '気まぐれな', stim_key_association: "left", number:"44"},
-{stimulus: '依存的な', stim_key_association: "right", number:"45"},
-{stimulus: '勇敢な', stim_key_association: "left", number:"46"},
-{stimulus: '無情な', stim_key_association: "right", number:"47"},
-{stimulus: '自信のある', stim_key_association: "left", number:"48"},
-{stimulus: '冷たい', stim_key_association: "right", number:"49"},
-{stimulus: '無神経な', stim_key_association: "left", number:"50"},
-{stimulus: '開放的な', stim_key_association: "right", number:"51"},
-{stimulus: '洞察力のある', stim_key_association: "left", number:"52"},
-{stimulus: '明瞭な', stim_key_association: "right", number:"53"},
-{stimulus: '異端な', stim_key_association: "left", number:"54"},
-{stimulus: '直感的な', stim_key_association: "right", number:"55"},
-{stimulus: '知性的な', stim_key_association: "left", number:"56"},
-{stimulus: '想像力豊かな', stim_key_association: "right", number:"57"},
-{stimulus: '素朴な', stim_key_association: "left", number:"58"},
-{stimulus: '保守的な', stim_key_association: "right", number:"59"},
-{stimulus: '狭量な', stim_key_association: "left", number:"60"}
+{stimulus: '社交的な', stim_key_association: "right", number:"1", stim_type: 'test1'},
+{stimulus: '活力のある', stim_key_association: "left", number:"2", stim_type: 'test1'},
+{stimulus: '話好きな', stim_key_association: "right", number:"3", stim_type: 'test1'},
+{stimulus: '愛想のよい', stim_key_association: "left", number:"4", stim_type: 'test1'},
+{stimulus: '陽気な', stim_key_association: "right", number:"5", stim_type: 'test1'},
+{stimulus: '正直な', stim_key_association: "right", number:"21", stim_type: 'test1'},
+{stimulus: '信頼できる', stim_key_association: "left", number:"22", stim_type: 'test1'},
+{stimulus: '寛大な', stim_key_association: "right", number:"23", stim_type: 'test1'},
+{stimulus: 'やさしい', stim_key_association: "left", number:"24", stim_type: 'test1'},
+{stimulus: 'あたたかい', stim_key_association: "right", number:"25", stim_type: 'test1'},
+{stimulus: '勇敢な', stim_key_association: "left", number:"46", stim_type: 'test1'},
+{stimulus: '無情な', stim_key_association: "right", number:"47", stim_type: 'test1'},
+{stimulus: '自信のある', stim_key_association: "left", number:"48", stim_type: 'test1'},
+{stimulus: '冷たい', stim_key_association: "right", number:"49", stim_type: 'test1'},
+{stimulus: '無神経な', stim_key_association: "left", number:"50", stim_type: 'test1'},
 ],
 randomize_order:true,
-repetitions: 1
+repetitions: 2
 };
 
+var debrief1 = {
+    type: "html-keyboard-response",
+    stimulus: function() {
+      var congruent_rt1 = Math.round(jsPsych.data.get().filter({iat_type:'practice_1'}).select('rt').mean());
+      if(congruent_rt1 <= 300){
+      return "<font size='5'><p>単語が表示されてから分類するまでの時間の平均は， <strong>" + congruent_rt1 + "ms</strong>でした。</p>"+
+      "<p>分類に要する時間としては早すぎます。これ以降の課題ではもう少し慎重に、かつすばやく回答してください。</P>"+"<p>準備ができた方はスペースキーを押して進んでください。</font></p>";
+      }else{
+       return "<font size='5'><p>単語が表示されてから分類するまでの時間の平均は， <strong>" + congruent_rt1 + "ms</strong>でした。</p>"+
+       "<p>引き続き課題への回答をお願いします</p>"+"<p>準備ができた方はスペースキーを押して進んでください。</font></p>";
+      }
+    },
+    choices: [' ']
+  };
 
+  
 
 var instructions_block2 = {
      type: 'html-keyboard-response',
@@ -112,13 +83,13 @@ var instructions_block2 = {
      choices: [' ']
     };
 
-    var trial_block2 = {
+var trial_block2 = {
         timeline:[
          {
            type: 'html-keyboard-response',
            stimulus: jsPsych.timelineVariable('stimulus'),
            choices: ['E', 'I'],
-           prompt:"<p style='position: absolute; top: 15%; left: 20%'><font size='6'>自分に当てはまるなら<br><br></font>" + "<font size='7'><strong>E</strong>キー</font></p>"+"<font size='6'><p style='position: absolute; top: 15%; right: 20%'>当てはまらないなら<br><br></font>"+"<font size='7'><strong>I</strong>キー</font></p>",
+           prompt:"<p style='position: absolute; top: 15%; left: 20%'><font size='6'>自分に当てはまるなら<br><br></font>" + "<font size='7'><strong>E</strong>キー</font></p>"+"<font size='6'><p style='position: absolute; top: 15%; right: 20%'>自分に当てはまらないなら<br><br></font>"+"<font size='7'><strong>I</strong>キー</font></p>",
            post_trial_gap: 50,
            data: { 
              iat_type: 'main_1',
@@ -157,6 +128,32 @@ var instructions_block2 = {
           {stimulus: '欲張りな', stim_key_association: "left", number:"28"},
           {stimulus: '偉そうな', stim_key_association: "right", number:"29"},
           {stimulus: 'つまらない', stim_key_association: "left", number:"30"},
+          ],
+    randomize_order:true,
+    repetitions: 2
+    };
+
+var instructions_block3 = {
+        type: 'html-keyboard-response',
+        stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が自分に当てはまると思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が自分には当てはまらないと思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+        choices: [' ']
+       };
+   
+var trial_block3 = {
+           timeline:[
+            {
+              type: 'html-keyboard-response',
+              stimulus: jsPsych.timelineVariable('stimulus'),
+              choices: ['E', 'I'],
+              prompt:"<p style='position: absolute; top: 15%; left: 20%'><font size='6'>自分に当てはまるなら<br><br></font>" + "<font size='7'><strong>E</strong>キー</font></p>"+"<font size='6'><p style='position: absolute; top: 15%; right: 20%'>自分に当てはまらないなら<br><br></font>"+"<font size='7'><strong>I</strong>キー</font></p>",
+              post_trial_gap: 50,
+              data: { 
+                iat_type: 'main_1',
+                number:jsPsych.timelineVariable('number')
+              }
+            }
+           ],
+    timeline_variables: [
           {stimulus: '感じのいい', stim_key_association: "right", number:"31"},
           {stimulus: '情け深い', stim_key_association: "left", number:"32"},
           {stimulus: '忍耐強い', stim_key_association: "right", number:"33"},
@@ -187,24 +184,24 @@ var instructions_block2 = {
           {stimulus: '素朴な', stim_key_association: "left", number:"58"},
           {stimulus: '保守的な', stim_key_association: "right", number:"59"},
           {stimulus: '狭量な', stim_key_association: "left", number:"60"}
-          ],
-    randomize_order:true,
-    repetitions: 2
-    };
+        ],
+       randomize_order:true,
+       repetitions: 2
+       };
 
-var instructions_block3 = {
+var instructions_block4 = {
         type: 'html-keyboard-response',
         stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>先ほどの課題とは名前の位置が逆になっています。</strong><br>"+"<strong>これは練習です</strong><br>"+"表示された単語が自分には当てはまらないと思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が自分に当てはまると思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
         choices: [' ']
        };
      
-var trial_block3 = {
+var trial_block4 = {
         timeline:[
          {
            type: 'html-keyboard-response',
            stimulus: jsPsych.timelineVariable('stimulus'),
            choices: ['E', 'I'],
-           prompt:"<p style='position: absolute; top: 15%; left: 20%'><font size='6'>当てはまらないなら<br><br></font>" + "<font size='7'><strong>E</strong>キー</font></p>"+"<font size='6'><p style='position: absolute; top: 15%; right: 20%'>自分に当てはまるなら<br><br></font>"+"<font size='7'><strong>I</strong>キー</font></p>",
+           prompt:"<p style='position: absolute; top: 15%; left: 20%'><font size='6'>自分に当てはまらないなら<br><br></font>" + "<font size='7'><strong>E</strong>キー</font></p>"+"<font size='6'><p style='position: absolute; top: 15%; right: 20%'>自分に当てはまるなら<br><br></font>"+"<font size='7'><strong>I</strong>キー</font></p>",
            post_trial_gap: 50,
            data: { iat_type: 'practice_2',
            number:jsPsych.timelineVariable('number')
@@ -212,84 +209,54 @@ var trial_block3 = {
         }
        ],
        timeline_variables: [
-        {stimulus: '社交的な', stim_key_association: "right", number:"1"},
-        {stimulus: '活力のある', stim_key_association: "left", number:"2"},
-        {stimulus: '話好きな', stim_key_association: "right", number:"3"},
-        {stimulus: '愛想のよい', stim_key_association: "left", number:"4"},
-        {stimulus: '陽気な', stim_key_association: "right", number:"5"},
-        {stimulus: '退屈な', stim_key_association: "left", number:"6"},
-        {stimulus: '静かな', stim_key_association: "right", number:"7"},
-        {stimulus: '反社会的な', stim_key_association: "left", number:"8"},
-        {stimulus: '恥ずかしがりやな', stim_key_association: "right", number:"9"},
-        {stimulus: '内向的な', stim_key_association: "left", number:"10"},
-        {stimulus: 'まめな', stim_key_association: "right", number:"11"},
-        {stimulus: '几帳面な', stim_key_association: "left", number:"12"},
-        {stimulus: '勤勉な', stim_key_association: "right", number:"13"},
-        {stimulus: '慎重な', stim_key_association: "left", number:"14"},
-        {stimulus: '落ち着いた', stim_key_association: "right", number:"15"},
-        {stimulus: '責任感のない', stim_key_association: "left", number:"16"},
-        {stimulus: '不注意な', stim_key_association: "right", number:"17"},
-        {stimulus: '怠惰な', stim_key_association: "left", number:"18"},
-        {stimulus: 'だらしない', stim_key_association: "right", number:"19"},
-        {stimulus: 'わがままな', stim_key_association: "left", number:"20"},
-        {stimulus: '正直な', stim_key_association: "right", number:"21"},
-        {stimulus: '信頼できる', stim_key_association: "left", number:"22"},
-        {stimulus: '寛大な', stim_key_association: "right", number:"23"},
-        {stimulus: 'やさしい', stim_key_association: "left", number:"24"},
-        {stimulus: 'あたたかい', stim_key_association: "right", number:"25"},
-        {stimulus: '自己中心的な', stim_key_association: "left", number:"26"},
-        {stimulus: 'きざな', stim_key_association: "right", number:"27"},
-        {stimulus: '欲張りな', stim_key_association: "left", number:"28"},
-        {stimulus: '偉そうな', stim_key_association: "right", number:"29"},
-        {stimulus: 'つまらない', stim_key_association: "left", number:"30"},
-        {stimulus: '感じのいい', stim_key_association: "right", number:"31"},
-        {stimulus: '情け深い', stim_key_association: "left", number:"32"},
-        {stimulus: '忍耐強い', stim_key_association: "right", number:"33"},
-        {stimulus: '気取らない', stim_key_association: "left", number:"34"},
-        {stimulus: '愉快な', stim_key_association: "right", number:"35"},
-        {stimulus: '短気な', stim_key_association: "left", number:"36"},
-        {stimulus: '攻撃的な', stim_key_association: "right", number:"37"},
-        {stimulus: '不愛想な', stim_key_association: "left", number:"38"},
-        {stimulus: '頑固な', stim_key_association: "right", number:"39"},
-        {stimulus: '起伏の激しい', stim_key_association: "left", number:"40"},
-        {stimulus: '繊細な', stim_key_association: "right", number:"41"},
-        {stimulus: '神経質な', stim_key_association: "left", number:"42"},
-        {stimulus: '不機嫌な', stim_key_association: "right", number:"43"},
-        {stimulus: '気まぐれな', stim_key_association: "left", number:"44"},
-        {stimulus: '依存的な', stim_key_association: "right", number:"45"},
-        {stimulus: '勇敢な', stim_key_association: "left", number:"46"},
-        {stimulus: '無情な', stim_key_association: "right", number:"47"},
-        {stimulus: '自信のある', stim_key_association: "left", number:"48"},
-        {stimulus: '冷たい', stim_key_association: "right", number:"49"},
-        {stimulus: '無神経な', stim_key_association: "left", number:"50"},
-        {stimulus: '開放的な', stim_key_association: "right", number:"51"},
-        {stimulus: '洞察力のある', stim_key_association: "left", number:"52"},
-        {stimulus: '明瞭な', stim_key_association: "right", number:"53"},
-        {stimulus: '異端な', stim_key_association: "left", number:"54"},
-        {stimulus: '直感的な', stim_key_association: "right", number:"55"},
-        {stimulus: '知性的な', stim_key_association: "left", number:"56"},
-        {stimulus: '想像力豊かな', stim_key_association: "right", number:"57"},
-        {stimulus: '素朴な', stim_key_association: "left", number:"58"},
-        {stimulus: '保守的な', stim_key_association: "right", number:"59"},
-        {stimulus: '狭量な', stim_key_association: "left", number:"60"}
+        {stimulus: '社交的な', stim_key_association: "right", number:"1", stim_type: 'test2'},
+        {stimulus: '活力のある', stim_key_association: "left", number:"2", stim_type: 'test2'},
+        {stimulus: '話好きな', stim_key_association: "right", number:"3", stim_type: 'test2'},
+        {stimulus: '愛想のよい', stim_key_association: "left", number:"4", stim_type: 'test2'},
+        {stimulus: '陽気な', stim_key_association: "right", number:"5", stim_type: 'test2'},
+        {stimulus: '正直な', stim_key_association: "right", number:"21", stim_type: 'test2'},
+        {stimulus: '信頼できる', stim_key_association: "left", number:"22", stim_type: 'test2'},
+        {stimulus: '寛大な', stim_key_association: "right", number:"23", stim_type: 'test2'},
+        {stimulus: 'やさしい', stim_key_association: "left", number:"24", stim_type: 'test2'},
+        {stimulus: 'あたたかい', stim_key_association: "right", number:"25", stim_type: 'test2'},
+        {stimulus: '勇敢な', stim_key_association: "left", number:"46", stim_type: 'test2'},
+        {stimulus: '無情な', stim_key_association: "right", number:"47", stim_type: 'test2'},
+        {stimulus: '自信のある', stim_key_association: "left", number:"48", stim_type: 'test2'},
+        {stimulus: '冷たい', stim_key_association: "right", number:"49", stim_type: 'test2'},
+        {stimulus: '無神経な', stim_key_association: "left", number:"50", stim_type: 'test2'},
         ],
-   randomize_order:true,
-   repetitions: 1
-   };
+        randomize_order:true,
+        repetitions: 2
+        };
 
-var instructions_block4 = {
+var debrief2 = {
+            type: "html-keyboard-response",
+            stimulus: function() {
+              var congruent_rt2 = Math.round(jsPsych.data.get().filter({iat_type:'practice_2'}).select('rt').mean());
+              if(congruent_rt2 <= 300){
+              return "<font size='5'><p>単語が表示されてから分類するまでの時間の平均は， <strong>" + congruent_rt2 + "ms</strong>でした。</p>"+
+              "<p>分類に要する時間としては早すぎます。これ以降の課題ではもう少し慎重に、かつすばやく回答してください。</P>"+"<p>準備ができた方はスペースキーを押して進んでください。</font></p>";
+              }else{
+               return "<font size='5'><p>単語が表示されてから分類するまでの時間の平均は， <strong>" + congruent_rt2 + "ms</strong>でした。</p>"+
+               "<p>引き続き課題への回答をお願いします</p>"+"<p>準備ができた方はスペースキーを押して進んでください。</font></p>";
+              }
+            },
+            choices: [' ']
+          };
+
+var instructions_block5 = {
             type: 'html-keyboard-response',
             stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が自分には当てはまらないと思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が自分に当てはまると思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
             choices: [' ']
            };
          
-var trial_block4 = {
+var trial_block5 = {
             timeline:[
              {
                type: 'html-keyboard-response',
                stimulus: jsPsych.timelineVariable('stimulus'),
                choices: ['E', 'I'],
-               prompt:"<p style='position: absolute; top: 15%; left: 20%'><font size='6'>当てはまらないなら<br><br></font>" + "<font size='7'><strong>E</strong>キー</font></p>"+"<font size='6'><p style='position: absolute; top: 15%; right: 20%'>自分に当てはまるなら<br><br></font>"+"<font size='7'><strong>I</strong>キー</font></p>",
+               prompt:"<p style='position: absolute; top: 15%; left: 20%'><font size='6'>自分に当てはまらないなら<br><br></font>" + "<font size='7'><strong>E</strong>キー</font></p>"+"<font size='6'><p style='position: absolute; top: 15%; right: 20%'>自分に当てはまるなら<br><br></font>"+"<font size='7'><strong>I</strong>キー</font></p>",
                post_trial_gap: 50,
                data: { iat_type: 'main_2',
                number:jsPsych.timelineVariable('number')
@@ -327,41 +294,67 @@ var trial_block4 = {
             {stimulus: '欲張りな', stim_key_association: "left", number:"28"},
             {stimulus: '偉そうな', stim_key_association: "right", number:"29"},
             {stimulus: 'つまらない', stim_key_association: "left", number:"30"},
-            {stimulus: '感じのいい', stim_key_association: "right", number:"31"},
-            {stimulus: '情け深い', stim_key_association: "left", number:"32"},
-            {stimulus: '忍耐強い', stim_key_association: "right", number:"33"},
-            {stimulus: '気取らない', stim_key_association: "left", number:"34"},
-            {stimulus: '愉快な', stim_key_association: "right", number:"35"},
-            {stimulus: '短気な', stim_key_association: "left", number:"36"},
-            {stimulus: '攻撃的な', stim_key_association: "right", number:"37"},
-            {stimulus: '不愛想な', stim_key_association: "left", number:"38"},
-            {stimulus: '頑固な', stim_key_association: "right", number:"39"},
-            {stimulus: '起伏の激しい', stim_key_association: "left", number:"40"},
-            {stimulus: '繊細な', stim_key_association: "right", number:"41"},
-            {stimulus: '神経質な', stim_key_association: "left", number:"42"},
-            {stimulus: '不機嫌な', stim_key_association: "right", number:"43"},
-            {stimulus: '気まぐれな', stim_key_association: "left", number:"44"},
-            {stimulus: '依存的な', stim_key_association: "right", number:"45"},
-            {stimulus: '勇敢な', stim_key_association: "left", number:"46"},
-            {stimulus: '無情な', stim_key_association: "right", number:"47"},
-            {stimulus: '自信のある', stim_key_association: "left", number:"48"},
-            {stimulus: '冷たい', stim_key_association: "right", number:"49"},
-            {stimulus: '無神経な', stim_key_association: "left", number:"50"},
-            {stimulus: '開放的な', stim_key_association: "right", number:"51"},
-            {stimulus: '洞察力のある', stim_key_association: "left", number:"52"},
-            {stimulus: '明瞭な', stim_key_association: "right", number:"53"},
-            {stimulus: '異端な', stim_key_association: "left", number:"54"},
-            {stimulus: '直感的な', stim_key_association: "right", number:"55"},
-            {stimulus: '知性的な', stim_key_association: "left", number:"56"},
-            {stimulus: '想像力豊かな', stim_key_association: "right", number:"57"},
-            {stimulus: '素朴な', stim_key_association: "left", number:"58"},
-            {stimulus: '保守的な', stim_key_association: "right", number:"59"},
-            {stimulus: '狭量な', stim_key_association: "left", number:"60"}
             ],
        randomize_order:true,
        repetitions: 2
        };
 
+       var instructions_block6 = {
+        type: 'html-keyboard-response',
+        stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が自分には当てはまらないと思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が自分に当てはまると思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+        choices: [' ']
+       };
+     
+var trial_block6 = {
+        timeline:[
+         {
+           type: 'html-keyboard-response',
+           stimulus: jsPsych.timelineVariable('stimulus'),
+           choices: ['E', 'I'],
+           prompt:"<p style='position: absolute; top: 15%; left: 20%'><font size='6'>自分に当てはまらないなら<br><br></font>" + "<font size='7'><strong>E</strong>キー</font></p>"+"<font size='6'><p style='position: absolute; top: 15%; right: 20%'>自分に当てはまるなら<br><br></font>"+"<font size='7'><strong>I</strong>キー</font></p>",
+           post_trial_gap: 50,
+           data: { iat_type: 'main_2',
+           number:jsPsych.timelineVariable('number')
+          }
+        }
+       ],
+       timeline_variables: [
+        {stimulus: '感じのいい', stim_key_association: "right", number:"31"},
+        {stimulus: '情け深い', stim_key_association: "left", number:"32"},
+        {stimulus: '忍耐強い', stim_key_association: "right", number:"33"},
+        {stimulus: '気取らない', stim_key_association: "left", number:"34"},
+        {stimulus: '愉快な', stim_key_association: "right", number:"35"},
+        {stimulus: '短気な', stim_key_association: "left", number:"36"},
+        {stimulus: '攻撃的な', stim_key_association: "right", number:"37"},
+        {stimulus: '不愛想な', stim_key_association: "left", number:"38"},
+        {stimulus: '頑固な', stim_key_association: "right", number:"39"},
+        {stimulus: '起伏の激しい', stim_key_association: "left", number:"40"},
+        {stimulus: '繊細な', stim_key_association: "right", number:"41"},
+        {stimulus: '神経質な', stim_key_association: "left", number:"42"},
+        {stimulus: '不機嫌な', stim_key_association: "right", number:"43"},
+        {stimulus: '気まぐれな', stim_key_association: "left", number:"44"},
+        {stimulus: '依存的な', stim_key_association: "right", number:"45"},
+        {stimulus: '勇敢な', stim_key_association: "left", number:"46"},
+        {stimulus: '無情な', stim_key_association: "right", number:"47"},
+        {stimulus: '自信のある', stim_key_association: "left", number:"48"},
+        {stimulus: '冷たい', stim_key_association: "right", number:"49"},
+        {stimulus: '無神経な', stim_key_association: "left", number:"50"},
+        {stimulus: '開放的な', stim_key_association: "right", number:"51"},
+        {stimulus: '洞察力のある', stim_key_association: "left", number:"52"},
+        {stimulus: '明瞭な', stim_key_association: "right", number:"53"},
+        {stimulus: '異端な', stim_key_association: "left", number:"54"},
+        {stimulus: '直感的な', stim_key_association: "right", number:"55"},
+        {stimulus: '知性的な', stim_key_association: "left", number:"56"},
+        {stimulus: '想像力豊かな', stim_key_association: "right", number:"57"},
+        {stimulus: '素朴な', stim_key_association: "left", number:"58"},
+        {stimulus: '保守的な', stim_key_association: "right", number:"59"},
+        {stimulus: '狭量な', stim_key_association: "left", number:"60"}
+        ],
+   randomize_order:true,
+   repetitions: 2
+   };
+
+      
 
 var fullscreen_end ={
   type: 'fullscreen',
@@ -384,11 +377,17 @@ timeline.push(fullscreen_start);
 timeline.push(experimentstart);
 timeline.push(instructions_block1);
 timeline.push(trial_block1);
+timeline.push(debrief1);
 timeline.push(instructions_block2);
 timeline.push(trial_block2);
 timeline.push(instructions_block3);
 timeline.push(trial_block3);
 timeline.push(instructions_block4);
 timeline.push(trial_block4);
+timeline.push(debrief2);
+timeline.push(instructions_block5);
+timeline.push(trial_block5);
+timeline.push(instructions_block6);
+timeline.push(trial_block6);
 timeline.push(fullscreen_end);
 timeline.push(experimentend);
