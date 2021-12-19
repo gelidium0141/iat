@@ -27,7 +27,7 @@ var instructions_block1 = {
   };
 
 
-var trial_block3 = {
+var trial_block1 = {
   timeline: [
     {
       type: 'iat-html',
