@@ -1,6 +1,7 @@
 var repo_site = "https://gelidium0141.github.io/iat/";
 
-var stim = []
+var stim1 = []
+var stim2 = []
 
 var fullscreen_start ={
   type: 'fullscreen',
@@ -11,7 +12,7 @@ var fullscreen_start ={
 
 var experimentstart = {
     type: 'instructions',
-    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<p>これから、画面中央に表示される単語について自分に当てはまるかを判断する課題を行っていただきます<br></p>"+"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong>"+
+    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<p>これから、画面中央に表示される単語について自分に当てはまるかを判断する課題を行っていただきます<br></p>"+"<p><strong>ここでは、自分について回答してください</strong>"+'<p><strong>自分についての回答だと理解した人は、右のボックスにチェックを入れてください<input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;", required></strong>'+
             "<p>課題は全部で4回あります</p>"+"<p>準備ができたら次へを押して回答して下さい</p>"
     ],
     allow_backward: false,
@@ -22,7 +23,7 @@ var experimentstart = {
 
 var instructions_block1 = {
     type: 'html-keyboard-response',
-    stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"表示された単語が自分に当てはまると思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が自分には当てはまらないと思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+    stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +'<p><strong>ここでは、あなた自身について答えてください</strong><br><br>'+'準備ができたらスペースキーを押して始めて下さい</div>',
     choices: [' ']
   };
 
@@ -37,6 +38,11 @@ var trial_block1 = {
        data: { iat_type: 'practice_1',
                number: jsPsych.timelineVariable('number')
      },
+     on_finish: function(data){
+      var congruent_rt1 = Math.round(jsPsych.data.get().filter({iat_type:'practice_1'}).select('rt').mean());
+      jsPsych.data.addProperties({rt1: congruent_rt1});
+      stim1.push(congruent_rt1)
+    }
     }
    ],
 timeline_variables: [
@@ -90,7 +96,7 @@ var debrief1 = {
 var debrief_node1 = {
   timeline: [debrief1],
   conditional_function: function(){
-    if(stim[1] <= 350){
+    if(stim1[1] <= 350){
       return true;
     } else {
       return false;
@@ -102,7 +108,7 @@ var debrief_node1 = {
 
 var instructions_block2 = {
      type: 'html-keyboard-response',
-     stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が自分に当てはまると思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が自分には当てはまらないと思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+     stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +'<p><strong>ここでは、あなた自身について答えてください</strong><br><br>'+'準備ができたらスペースキーを押して始めて下さい</div>',
      choices: [' ']
     };
 
@@ -117,7 +123,7 @@ var trial_block2 = {
            data: { 
              iat_type: 'main_1',
              number:jsPsych.timelineVariable('number')
-           }
+           },
          }
         ],
         timeline_variables: [
@@ -165,7 +171,7 @@ var trial_block2 = {
 
 var instructions_block3 = {
         type: 'html-keyboard-response',
-        stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>先ほどの課題とは名前の位置が逆になっています。</strong><br>"+"<strong>これは練習です</strong><br>"+"表示された単語が自分には当てはまらないと思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が自分に当てはまると思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+        stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>先ほどの課題とは「自分に当てはまる」と「自分に当てはまらない」の位置が逆になっています。</strong><br><br>"+"<strong>これは練習です</strong><br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、あなた自身について答えてください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
         choices: [' ']
        };
      
@@ -179,8 +185,13 @@ var trial_block3 = {
            post_trial_gap: 50,
            data: { iat_type: 'practice_2',
            number:jsPsych.timelineVariable('number')
-          }
-        }
+          },
+          on_finish: function(data){
+            var congruent_rt2 = Math.round(jsPsych.data.get().filter({iat_type:'practice_2'}).select('rt').mean());
+            jsPsych.data.addProperties({rt2: congruent_rt2});
+            stim2.push(congruent_rt2)
+        },
+       }
        ],
        timeline_variables: [
         {stimulus: '社交的な', stim_key_association: "right", number:"1"},
@@ -223,9 +234,29 @@ var trial_block3 = {
         repetitions: 1
         };
 
+var debrief2 = {
+          type: "html-keyboard-response",
+          stimulus:"<font size='5'><p>先ほどの課題では分類を行う時間が早すぎます。</P>"+"<p>適当に回答せず、もっと慎重に、かつ素早く回答してください。</font></p>"+"<p>上の文章を読んだ方はスペースキーを押して次へ進んでください。</font></p>",
+          choices: [' ']
+        };
+        
+        
+var debrief_node2 = {
+          timeline: [debrief2],
+          conditional_function: function(){
+            if(stim2[1] <= 350){
+              return true;
+            } else {
+              return false;
+          } 
+        }
+        }
+        
+
+
 var instructions_block4 = {
             type: 'html-keyboard-response',
-            stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が自分には当てはまらないと思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が自分に当てはまると思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+            stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、あなた自身について答えてください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
             choices: [' ']
            };
          
@@ -309,7 +340,7 @@ timeline.push(instructions_block2);
 timeline.push(trial_block2);
 timeline.push(instructions_block3);
 timeline.push(trial_block3);
-timeline.push(debrief_node1);
+timeline.push(debrief_node2);
 timeline.push(instructions_block4);
 timeline.push(trial_block4);
 timeline.push(fullscreen_end);
