@@ -96,7 +96,7 @@ var debrief1 = {
 var debrief_node1 = {
   timeline: [debrief1],
   conditional_function: function(){
-    if(stim1[1] <= 350){
+    if(stim1[1] <= 500){
       return true;
     } else {
       return false;
@@ -244,7 +244,7 @@ var debrief2 = {
 var debrief_node2 = {
           timeline: [debrief2],
           conditional_function: function(){
-            if(stim2[1] <= 350){
+            if(stim2[1] <= 500){
               return true;
             } else {
               return false;
