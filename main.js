@@ -12,7 +12,7 @@ var fullscreen_start ={
 
 var experimentstart = {
     type: 'instructions',
-    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<p>これから、画面中央に表示される単語について自分に当てはまるかを判断する課題を行っていただきます<br></p>"+"<p><strong>ここでは、自分について回答してください</strong>"+'<p><strong>自分についての回答だと理解した人は、右のボックスにチェックを入れてください<input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;", required></strong>'+
+    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<p>これから、画面中央に表示される単語について自分に当てはまるかを判断する課題を行っていただきます<br></p>"+"<p><strong>ここでは、自分について回答してください</strong>"+'<p><strong>自分についての回答だと理解した人は、右のボックスにチェックを入れてください<input type="checkbox", id= scales", name="tag" style="width:25px; height:25px;", required></strong><br><br>'+
             "<p>課題は練習を含め全部で6回あります</p>"+"<p>準備ができたら次へを押して回答して下さい</p>"
     ],
     allow_backward: false,
@@ -149,7 +149,7 @@ var trial_block2 = {
 
     var instructions_block3 = {
         type: 'html-keyboard-response',
-        stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>この画面は休憩画面です</strong><br>"+"<strong>先ほどと同じ課題をもう一度行います</strong><br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +'準備ができたらスペースキーを押して始めて下さい</div>',
+        stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>この画面は休憩画面です</strong><br>"+"<strong>先ほどと同じ課題をもう一度行います</strong><br><br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +'準備ができたらスペースキーを押して始めて下さい</div>',
         choices: [' ']
        };
    
