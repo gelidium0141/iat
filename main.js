@@ -23,7 +23,7 @@ var experimentstart = {
 
 var instructions_block1 = {
     type: 'html-keyboard-response',
-    stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +'<p><strong>ここでは、あなた自身について答えてください</strong><br><br>'+'準備ができたらスペースキーを押して始めて下さい</div>',
+    stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +'準備ができたらスペースキーを押して始めて下さい</div>',
     choices: [' ']
   };
 
@@ -88,7 +88,7 @@ var debrief_node1 = {
 
 var instructions_block2 = {
      type: 'html-keyboard-response',
-     stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +'<p><strong>ここでは、あなた自身について答えてください</strong><br><br>'+'準備ができたらスペースキーを押して始めて下さい</div>',
+     stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +'準備ができたらスペースキーを押して始めて下さい</div>',
      choices: [' ']
     };
 
@@ -151,7 +151,7 @@ var trial_block2 = {
 
 var instructions_block3 = {
         type: 'html-keyboard-response',
-        stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>先ほどの課題とは「自分に当てはまる」と「自分に当てはまらない」の位置が逆になっています。</strong><br><br>"+"<strong>これは練習です</strong><br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、あなた自身について答えてください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+        stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>先ほどの課題とは「自分に当てはまる」と「自分に当てはまらない」の位置が逆になっています。</strong><br><br>"+"<strong>これは練習です</strong><br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"準備ができたらスペースキーを押して始めて下さい</div>",
         choices: [' ']
        };
      
@@ -216,7 +216,7 @@ var debrief_node2 = {
 
 var instructions_block4 = {
             type: 'html-keyboard-response',
-            stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"<strong>これが最後の課題です</strong><br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、あなた自身について答えてください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+            stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"<strong>これが最後の課題です</strong><br>"+"表示された単語が<strong>自分には当てはまらない</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"準備ができたらスペースキーを押して始めて下さい</div>",
             choices: [' ']
            };
          
