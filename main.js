@@ -48,211 +48,211 @@ var trial_block1 = {
   ],
 timeline_variables: [
     {stimulus: '社交的な', stim_key_association: function(){
-      if(selectedRecode1 == "1"){
+      if(selectedRecode1 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"1"},
     {stimulus: '愛想のよい', stim_key_association: function(){
-      if(selectedRecode1 == "2"){
+      if(selectedRecode2 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"2"},
     {stimulus: '陽気な', stim_key_association: function(){
-      if(selectedRecode1 == "3"){
+      if(selectedRecode3 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"3"},
     {stimulus: '退屈な', stim_key_association: function(){
-      if(selectedRecode1 == "4"){
+      if(selectedRecode4 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"4"},
     {stimulus: '恥ずかしがりやな', stim_key_association: function(){
-      if(selectedRecode1 == "5"){
+      if(selectedRecode5 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"5"},
     {stimulus: '内向的な', stim_key_association: function(){
-      if(selectedRecode1 == "6"){
+      if(selectedRecode6 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"6"},
     {stimulus: 'まめな', stim_key_association: function(){
-      if(selectedRecode1 == "7"){
+      if(selectedRecode7 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"7"},
     {stimulus: '几帳面な', stim_key_association: function(){
-      if(selectedRecode1 == "8"){
+      if(selectedRecode8 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"8"},
     {stimulus: '礼儀正しい', stim_key_association: function(){
-      if(selectedRecode1 == "9"){
+      if(selectedRecode9 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"9"},
     {stimulus: '責任感のない', stim_key_association: function(){
-      if(selectedRecode1 == "10"){
+      if(selectedRecode10 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"10"},
     {stimulus: 'だらしない', stim_key_association: function(){
-      if(selectedRecode1 == "11"){
+      if(selectedRecode11 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"11"},
     {stimulus: 'わがままな', stim_key_association: function(){
-      if(selectedRecode1 == "12"){
+      if(selectedRecode12 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"12"},
     {stimulus: '正直な', stim_key_association: function(){
-      if(selectedRecode1 == "13"){
+      if(selectedRecode13 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"13"},
     {stimulus: '寛大な', stim_key_association: function(){
-      if(selectedRecode1 == "14"){
+      if(selectedRecode14 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"14"},
     {stimulus: 'やさしい', stim_key_association: function(){
-      if(selectedRecode1 == "15"){
+      if(selectedRecode15 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"15"},
     {stimulus: '自己中心的な', stim_key_association: function(){
-      if(selectedRecode1 == "16"){
+      if(selectedRecode16 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"16"},
     {stimulus: '偉そうな', stim_key_association: function(){
-      if(selectedRecode1 == "17"){
+      if(selectedRecode17 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"17"},
     {stimulus: 'つまらない', stim_key_association: function(){
-      if(selectedRecode1 == "18"){
+      if(selectedRecode18 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"18"},
     {stimulus: '落ち着いた', stim_key_association: function(){
-      if(selectedRecode1 == "19"){
+      if(selectedRecode19 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"19"},
     {stimulus: '感じのいい', stim_key_association: function(){
-      if(selectedRecode1 == "20"){
+      if(selectedRecode20 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"20"},
     {stimulus: '忍耐強い', stim_key_association: function(){
-      if(selectedRecode1 == "21"){
+      if(selectedRecode21 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"21"},
     {stimulus: '短気な', stim_key_association: function(){
-      if(selectedRecode1 == "22"){
+      if(selectedRecode22 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"22"},
     {stimulus: '不愛想な', stim_key_association: function(){
-      if(selectedRecode1 == "23"){
+      if(selectedRecode23 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"23"},
     {stimulus: '厳しい', stim_key_association: function(){
-      if(selectedRecode1 == "24"){
+      if(selectedRecode24 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"24"},
     {stimulus: '感情的な', stim_key_association: function(){
-      if(selectedRecode1 == "25"){
+      if(selectedRecode25 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"25"},
     {stimulus: '神経質な', stim_key_association: function(){
-      if(selectedRecode1 == "26"){
+      if(selectedRecode26 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"26"},
     {stimulus: '心配性な', stim_key_association: function(){
-      if(selectedRecode1 == "27"){
+      if(selectedRecode27 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"27"},
     {stimulus: '勇敢な', stim_key_association: function(){
-      if(selectedRecode1 == "28"){
+      if(selectedRecode28 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"28"},
     {stimulus: 'たくましい', stim_key_association: function(){
-      if(selectedRecode1 == "29"){
+      if(selectedRecode29 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"29"},
     {stimulus: '無神経な', stim_key_association: function(){
-      if(selectedRecode1 == "30"){
+      if(selectedRecode30 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"30"},
     {stimulus: '明瞭な', stim_key_association: function(){
-      if(selectedRecode1 == "31"){
+      if(selectedRecode31 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"31"},
     {stimulus: '異端な',stim_key_association: function(){
-      if(selectedRecode1 == "32"){
+      if(selectedRecode32 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"32"},
     {stimulus: '直感的な', stim_key_association: function(){
-      if(selectedRecode1 == "33"){
+      if(selectedRecode33 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"33"},
     {stimulus: '素朴な', stim_key_association: function(){
-      if(selectedRecode1 == "34"){
+      if(selectedRecode34 == 1){
       return "left"
     }else{
       return "right"} ;
     }, number:"34"},
     {stimulus: '頑固な', stim_key_association: function(){
-      if(selectedRecode1 == "35"){
+      if(selectedRecode35 == 1){
       return "left"
     }else{
       return "right"} ;
