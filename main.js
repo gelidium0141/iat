@@ -222,7 +222,7 @@ var instructions_block2 = {
           }else{
             return "right"} ;
           }, number:"9"},
-          {stimulus: '責任感のない', stim_key_association: function(){
+          {stimulus: '責任感がある', stim_key_association: function(){
             if(selectedRecode10 == 1){
             return "left"
           }else{
@@ -300,7 +300,7 @@ var instructions_block2 = {
           }else{
             return "right"} ;
           }, number:"22"},
-          {stimulus: '不愛想な', stim_key_association: function(){
+          {stimulus: '無愛想な', stim_key_association: function(){
             if(selectedRecode23 == 1){
             return "left"
           }else{
@@ -463,7 +463,7 @@ var trial_block3 = {
                }else{
                  return "right"} ;
                }, number:"9"},
-               {stimulus: '責任感のない', stim_key_association: function(){
+               {stimulus: '責任感がある', stim_key_association: function(){
                  if(selectedRecode10 == 1){
                  return "left"
                }else{
@@ -541,7 +541,7 @@ var trial_block3 = {
                }else{
                  return "right"} ;
                }, number:"22"},
-               {stimulus: '不愛想な', stim_key_association: function(){
+               {stimulus: '無愛想な', stim_key_association: function(){
                  if(selectedRecode23 == 1){
                  return "left"
                }else{
@@ -835,7 +835,7 @@ var trial_block5 = {
                 }else{
                   return "right"} ;
                 }, number:"9"},
-                {stimulus: '責任感のない', stim_key_association: function(){
+                {stimulus: '責任感がある', stim_key_association: function(){
                   if(selectedRecode45 == 1){
                   return "left"
                 }else{
@@ -913,7 +913,7 @@ var trial_block5 = {
                 }else{
                   return "right"} ;
                 }, number:"22"},
-                {stimulus: '不愛想な', stim_key_association: function(){
+                {stimulus: '無愛想な', stim_key_association: function(){
                   if(selectedRecode58 == 1){
                   return "left"
                 }else{
@@ -1076,7 +1076,7 @@ var trial_block6 = {
                       }else{
                         return "right"} ;
                       }, number:"9"},
-                      {stimulus: '責任感のない', stim_key_association: function(){
+                      {stimulus: '責任感がある', stim_key_association: function(){
                         if(selectedRecode45 == 1){
                         return "left"
                       }else{
@@ -1154,7 +1154,7 @@ var trial_block6 = {
                       }else{
                         return "right"} ;
                       }, number:"22"},
-                      {stimulus: '不愛想な', stim_key_association: function(){
+                      {stimulus: '無愛想な', stim_key_association: function(){
                         if(selectedRecode58 == 1){
                         return "left"
                       }else{
