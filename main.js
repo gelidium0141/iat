@@ -11,7 +11,7 @@ var fullscreen_start ={
 
 var experimentstart1 = {
     type: 'instructions',
-    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<p>これから、画面中央に表示される単語について<br><br>"+"<strong>先ほど思い浮かべた友人に当てはまるかどうか</strong><br><br>"+"判断する課題を行っていただきます<br></p>"+
+    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<p>これから、画面中央に表示される単語について<br><br>"+"<strong>先ほど思い浮かべた友人に当てはまるかどうか</strong><br><br>"+"判断する課題を行っていただきます<br><br></p>"+
             "<p>課題は全部で3回あります</p>"+"<p>準備ができたら次へを押して回答して下さい</p>"
     ],
     allow_backward: false,
@@ -22,7 +22,7 @@ var experimentstart1 = {
 
 var instructions_block1 = {
     type: 'html-keyboard-response',
-    stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど思い浮かべた友人について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+    stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br><br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど思い浮かべた友人について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
     choices: [' ']
   };
 
@@ -40,8 +40,8 @@ var trial_block1 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['<font size="6"><p>友人に<br><br>'+'当てはまる</p></font>'],
-      right_category_label: ['<font size="6"><p>友人に<br><br>'+'当てはまらない</p></font>'],
+      left_category_label: ['<font size="6"><p>友人に<br>'+'当てはまる</p></font>'],
+      right_category_label: ['<font size="6"><p>友人に<br>'+'当てはまらない</p></font>'],
       response_ends_trial: true,
       data: { iat_type: 'practice_1' }
     }
@@ -144,7 +144,7 @@ repetitions: 1
 
 var instructions_block2 = {
      type: 'html-keyboard-response',
-     stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど思い浮かべた友人について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+     stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br><br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど思い浮かべた友人について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
      choices: [' ']
     };
 
@@ -161,8 +161,8 @@ var instructions_block2 = {
           trial_duration: 3000, 
           left_category_key: 'E',
           right_category_key: 'I',
-          left_category_label: ['<font size="6"><p>友人に<br><br>'+'当てはまる</p></font>'],
-          right_category_label: ['<font size="6"><p>友人に<br><br>'+'当てはまらない</p></font>'],
+          left_category_label: ['<font size="6"><p>友人に<br>'+'当てはまる</p></font>'],
+          right_category_label: ['<font size="6"><p>友人に<br>'+'当てはまらない</p></font>'],
           response_ends_trial: true,
           data: { iat_type: 'main_1' }
         }
@@ -402,8 +402,8 @@ var trial_block3 = {
                trial_duration: 3000, 
                left_category_key: 'E',
                right_category_key: 'I',
-               left_category_label: ['<font size="6"><p>友人に<br><br>'+'当てはまる</p></font>'],
-               right_category_label: ['<font size="6"><p>友人に<br><br>'+'当てはまらない</p></font>'],
+               left_category_label: ['<font size="6"><p>友人に<br>'+'当てはまる</p></font>'],
+               right_category_label: ['<font size="6"><p>友人に<br>'+'当てはまらない</p></font>'],
                response_ends_trial: true,
                data: { iat_type: 'main_1' }
              }
@@ -626,7 +626,7 @@ var trial_block3 = {
 
 var experimentstart2 = {
     type: 'instructions',
-    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<p>続いて、画面中央に表示される単語について<br><br>"+"<strong>あなた自身に当てはまるかどうか</strong><br><br>"+"判断する課題を行っていただきます<br></p>"+
+    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<p>続いて、画面中央に表示される単語について<br><br>"+"<strong>あなた自身に当てはまるかどうか</strong><br><br>"+"判断する課題を行っていただきます<br><br></p>"+
             "<p>課題は全部で3回あります</p>"+"<p>準備ができたら次へを押して回答して下さい</p>"
     ],
     allow_backward: false,
@@ -636,7 +636,7 @@ var experimentstart2 = {
 
 var instructions_block4 = {
               type: 'html-keyboard-response',
-              stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>先ほどの課題とは判断の対象が「先ほど思い浮かべた友人」から「あなた自身」に変わっています。</strong><br><br>"+"<strong>これは練習です</strong><br>"+"表示された単語が<strong>あなた自身に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>あなた自身に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここではあなた自身について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+              stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>先ほどの課題とは判断の対象が「先ほど思い浮かべた友人」から「あなた自身」に変わっています。</strong><br><br>"+"<strong>これは練習です</strong><br><br>"+"表示された単語が<strong>あなた自身に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>あなた自身に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここではあなた自身について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
               choices: [' ']
              };
      
@@ -653,8 +653,8 @@ var trial_block4 = {
                   trial_duration: 3000, 
                   left_category_key: 'E',
                   right_category_key: 'I',
-                  left_category_label: ['<font size="6"><p>あなた自身に<br><br>'+'当てはまる</p></font>'],
-                  right_category_label: ['<font size="6"><p>あなた自身に<br><br>'+'当てはまらない</p></font>'],
+                  left_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまる</p></font>'],
+                  right_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまらない</p></font>'],
                   response_ends_trial: true,
                   data: { iat_type: 'practice_2' }
                 }
@@ -757,7 +757,7 @@ var trial_block4 = {
 
 var instructions_block5 = {
               type: 'html-keyboard-response',
-              stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が<strong>あなた自身に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>あなた自身に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、あなた自身について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+              stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br><br>"+"表示された単語が<strong>あなた自身に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>あなた自身に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、あなた自身について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
               choices: [' ']
              };
          
@@ -774,8 +774,8 @@ var trial_block5 = {
                    trial_duration: 3000, 
                    left_category_key: 'E',
                    right_category_key: 'I',
-                   left_category_label: ['<font size="6"><p>あなた自身に<br><br>'+'当てはまる</p></font>'],
-                   right_category_label: ['<font size="6"><p>あなた自身に<br><br>'+'当てはまらない</p></font>'],
+                   left_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまる</p></font>'],
+                   right_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまらない</p></font>'],
                    response_ends_trial: true,
                    data: { iat_type: 'main_2' }
                  }
@@ -998,7 +998,7 @@ var trial_block5 = {
          
 var instructions_block6 = {
                    type: 'html-keyboard-response',
-                   stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>この画面は休憩画面です</strong><br>"+"<strong>先ほどと同じ課題をもう一度行います</strong><br>"+"表示された単語が<strong>あなた自身に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>あなた自身に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここではあなた自身について判断してください</strong><br><br>"+'準備ができたらスペースキーを押して始めて下さい</div>',
+                   stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>この画面は休憩画面です</strong><br>"+"<strong>先ほどと同じ課題をもう一度行います</strong><br><br>"+"表示された単語が<strong>あなた自身に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>あなた自身に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここではあなた自身について判断してください</strong><br><br>"+'準備ができたらスペースキーを押して始めて下さい</div>',
                    choices: [' ']
                   };
               
@@ -1015,8 +1015,8 @@ var trial_block6 = {
                         trial_duration: 3000, 
                         left_category_key: 'E',
                         right_category_key: 'I',
-                        left_category_label: ['<font size="6"><p>あなた自身に<br><br>'+'当てはまる</p></font>'],
-                        right_category_label: ['<font size="6"><p>あなた自身に<br><br>'+'当てはまらない</p></font>'],
+                        left_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまる</p></font>'],
+                        right_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまらない</p></font>'],
                         response_ends_trial: true,
                         data: { iat_type: 'main_2' }
                       }
