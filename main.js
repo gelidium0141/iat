@@ -11,7 +11,7 @@ var fullscreen_start ={
 
 var experimentstart1 = {
     type: 'instructions',
-    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<p>これから、画面中央に表示される単語について先ほど思い浮かべた友人に当てはまるかを判断する課題を行っていただきます<br></p>"+
+    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<p>これから、画面中央に表示される単語について<strong>先ほど思い浮かべた友人</strong>に当てはまるかを判断する課題を行っていただきます<br><br></p>"+
             "<p>課題は全部で3回あります</p>"+"<p>準備ができたら次へを押して回答して下さい</p>"
     ],
     allow_backward: false,
@@ -22,7 +22,7 @@ var experimentstart1 = {
 
 var instructions_block1 = {
     type: 'html-keyboard-response',
-    stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"表示された単語が先ほど思い浮かべた友人に当てはまると思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が先ほど思い浮かべた友人に当てはまらないと思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど思い浮かべた友人について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+    stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまらない</strogn>と思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど思い浮かべた友人について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
     choices: [' ']
   };
 
@@ -40,8 +40,8 @@ var trial_block1 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['<p>友人に<br>'+'当てはまる</p>'],
-      right_category_label: ['<p>友人に<br>'+'当てはまらない</p>'],
+      left_category_label: ['<font size="5"><p>友人に<br>'+'当てはまる</p></font>'],
+      right_category_label: ['<font size="5"><p>友人に<br>'+'当てはまらない</p></font>'],
       response_ends_trial: true,
       data: { iat_type: 'practice_1' }
     }
@@ -144,7 +144,7 @@ repetitions: 1
 
 var instructions_block2 = {
      type: 'html-keyboard-response',
-     stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が先ほど思い浮かべた友人に当てはまると思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が先ほど思い浮かべた友人に当てはまらないと思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど思い浮かべた友人について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+     stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど思い浮かべた友人について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
      choices: [' ']
     };
 
@@ -161,8 +161,8 @@ var instructions_block2 = {
           trial_duration: 3000, 
           left_category_key: 'E',
           right_category_key: 'I',
-          left_category_label: ['<p>友人に<br>'+'当てはまる</p>'],
-          right_category_label: ['<p>友人に<br>'+'当てはまらない</p>'],
+          left_category_label: ['<font size="5"><p>友人に<br>'+'当てはまる</p></font>'],
+          right_category_label: ['<font size="5"><p>友人に<br>'+'当てはまらない</p></font>'],
           response_ends_trial: true,
           data: { iat_type: 'main_1' }
         }
@@ -402,8 +402,8 @@ var trial_block3 = {
                trial_duration: 3000, 
                left_category_key: 'E',
                right_category_key: 'I',
-               left_category_label: ['<p>友人に<br>'+'当てはまる</p>'],
-               right_category_label: ['<p>友人に<br>'+'当てはまらない</p>'],
+               left_category_label: ['<font size="5"><p>友人に<br>'+'当てはまる</p></font>'],
+               right_category_label: ['<font size="5"><p>友人に<br>'+'当てはまらない</p></font>'],
                response_ends_trial: true,
                data: { iat_type: 'main_1' }
              }
@@ -653,8 +653,8 @@ var trial_block4 = {
                   trial_duration: 3000, 
                   left_category_key: 'E',
                   right_category_key: 'I',
-                  left_category_label: ['<p>自分に<br>'+'当てはまる</p>'],
-                  right_category_label: ['<p>自分に<br>'+'当てはまらない</p>'],
+                  left_category_label: ['<font size="5"><p>自分に<br>'+'当てはまる</p></font>'],
+                  right_category_label: ['<font size="5"><p>自分に<br>'+'当てはまらない</p></font>'],
                   response_ends_trial: true,
                   data: { iat_type: 'practice_2' }
                 }
@@ -774,8 +774,8 @@ var trial_block5 = {
                    trial_duration: 3000, 
                    left_category_key: 'E',
                    right_category_key: 'I',
-                   left_category_label: ['<p>自分に<br>'+'当てはまる</p>'],
-                   right_category_label: ['<p>自分に<br>'+'当てはまらない</p>'],
+                   left_category_label: ['<font size="5"><p>自分に<br>'+'当てはまる</p></font>'],
+                   right_category_label: ['<font size="5"><p>自分に<br>'+'当てはまらない</p></font>'],
                    response_ends_trial: true,
                    data: { iat_type: 'main_2' }
                  }
@@ -1015,8 +1015,8 @@ var trial_block6 = {
                         trial_duration: 3000, 
                         left_category_key: 'E',
                         right_category_key: 'I',
-                        left_category_label: ['<p>自分に<br>'+'当てはまる</p>'],
-                        right_category_label: ['<p>自分に<br>'+'当てはまらない</p>'],
+                        left_category_label: ['<font size="5"><p>自分に<br>'+'当てはまる</p></font>'],
+                        right_category_label: ['<font size="5"><p>自分に<br>'+'当てはまらない</p><font>'],
                         response_ends_trial: true,
                         data: { iat_type: 'main_2' }
                       }
