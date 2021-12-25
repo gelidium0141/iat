@@ -40,8 +40,8 @@ var trial_block1 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['<font size="6"><p>友人に<br>'+'当てはまる</p></font>'],
-      right_category_label: ['<font size="6"><p>友人に<br>'+'当てはまらない</p></font>'],
+      left_category_label: ['<font size="6"><p>友人に<br><br>'+'当てはまる</p></font>'],
+      right_category_label: ['<font size="6"><p>友人に<br><br>'+'当てはまらない</p></font>'],
       response_ends_trial: true,
       data: { iat_type: 'practice_1' }
     }
@@ -161,8 +161,8 @@ var instructions_block2 = {
           trial_duration: 3000, 
           left_category_key: 'E',
           right_category_key: 'I',
-          left_category_label: ['<font size="6"><p>友人に<br>'+'当てはまる</p></font>'],
-          right_category_label: ['<font size="6"><p>友人に<br>'+'当てはまらない</p></font>'],
+          left_category_label: ['<font size="6"><p>友人に<br><br>'+'当てはまる</p></font>'],
+          right_category_label: ['<font size="6"><p>友人に<br><br>'+'当てはまらない</p></font>'],
           response_ends_trial: true,
           data: { iat_type: 'main_1' }
         }
@@ -402,8 +402,8 @@ var trial_block3 = {
                trial_duration: 3000, 
                left_category_key: 'E',
                right_category_key: 'I',
-               left_category_label: ['<font size="6"><p>友人に<br>'+'当てはまる</p></font>'],
-               right_category_label: ['<font size="6"><p>友人に<br>'+'当てはまらない</p></font>'],
+               left_category_label: ['<font size="6"><p>友人に<br><br>'+'当てはまる</p></font>'],
+               right_category_label: ['<font size="6"><p>友人に<br><br>'+'当てはまらない</p></font>'],
                response_ends_trial: true,
                data: { iat_type: 'main_1' }
              }
@@ -653,8 +653,8 @@ var trial_block4 = {
                   trial_duration: 3000, 
                   left_category_key: 'E',
                   right_category_key: 'I',
-                  left_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまる</p></font>'],
-                  right_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまらない</p></font>'],
+                  left_category_label: ['<font size="6"><p>あなた自身に<br><br>'+'当てはまる</p></font>'],
+                  right_category_label: ['<font size="6"><p>あなた自身に<br><br>'+'当てはまらない</p></font>'],
                   response_ends_trial: true,
                   data: { iat_type: 'practice_2' }
                 }
@@ -774,8 +774,8 @@ var trial_block5 = {
                    trial_duration: 3000, 
                    left_category_key: 'E',
                    right_category_key: 'I',
-                   left_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまる</p></font>'],
-                   right_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまらない</p></font>'],
+                   left_category_label: ['<font size="6"><p>あなた自身に<br><br>'+'当てはまる</p></font>'],
+                   right_category_label: ['<font size="6"><p>あなた自身に<br><br>'+'当てはまらない</p></font>'],
                    response_ends_trial: true,
                    data: { iat_type: 'main_2' }
                  }
@@ -1015,8 +1015,8 @@ var trial_block6 = {
                         trial_duration: 3000, 
                         left_category_key: 'E',
                         right_category_key: 'I',
-                        left_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまる</p></font>'],
-                        right_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまらない</p></font>'],
+                        left_category_label: ['<font size="6"><p>あなた自身に<br><br>'+'当てはまる</p></font>'],
+                        right_category_label: ['<font size="6"><p>あなた自身に<br><br>'+'当てはまらない</p></font>'],
                         response_ends_trial: true,
                         data: { iat_type: 'main_2' }
                       }
