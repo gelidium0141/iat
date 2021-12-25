@@ -9,10 +9,10 @@ var fullscreen_start ={
   fullscreen_mode: true
 };
 
-var experimentstart = {
+var experimentstart1 = {
     type: 'instructions',
-    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<p>これから、画面中央に表示される単語について自分に当てはまるかを判断する課題を行っていただきます<br></p>"+"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong>"+
-            "<p>課題は全部で4回あります</p>"+"<p>準備ができたら次へを押して回答して下さい</p>"
+    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<p>これから、画面中央に表示される単語について先ほど思い浮かべた友人に当てはまるかを判断する課題を行っていただきます<br></p>"+
+            "<p>課題は全部で3回あります</p>"+"<p>準備ができたら次へを押して回答して下さい</p>"
     ],
     allow_backward: false,
     show_clickable_nav: true,
@@ -22,7 +22,7 @@ var experimentstart = {
 
 var instructions_block1 = {
     type: 'html-keyboard-response',
-    stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"表示された単語が自分に当てはまると思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が自分には当てはまらないと思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+    stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br>"+"表示された単語が先ほど思い浮かべた友人に当てはまると思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が先ほど思い浮かべた友人に当てはまらないと思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど思い浮かべた友人について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
     choices: [' ']
   };
 
@@ -40,8 +40,8 @@ var trial_block1 = {
       trial_duration: 3000, 
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['自分に当てはまる'],
-      right_category_label: ['自分に当てはまらない'],
+      left_category_label: ['<p>友人に<br>'+'当てはまる</p>'],
+      right_category_label: ['<p>友人に<br>'+'当てはまらない</p>'],
       response_ends_trial: true,
       data: { iat_type: 'practice_1' }
     }
@@ -71,7 +71,7 @@ timeline_variables: [
     }else{
       return "right"} ;
     }, number:"4"},
-    {stimulus: '恥ずかしがりやな', stim_key_association: function(){
+    {stimulus: '恥ずかしがりな', stim_key_association: function(){
       if(selectedRecode5 == 1){
       return "left"
     }else{
@@ -82,115 +82,7 @@ timeline_variables: [
       return "left"
     }else{
       return "right"} ;
-    }, number:"6"},
-    {stimulus: 'まめな', stim_key_association: function(){
-      if(selectedRecode7 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"7"},
-    {stimulus: '几帳面な', stim_key_association: function(){
-      if(selectedRecode8 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"8"},
-    {stimulus: '礼儀正しい', stim_key_association: function(){
-      if(selectedRecode9 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"9"},
-    {stimulus: '責任感のない', stim_key_association: function(){
-      if(selectedRecode10 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"10"},
-    {stimulus: 'だらしない', stim_key_association: function(){
-      if(selectedRecode11 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"11"},
-    {stimulus: 'わがままな', stim_key_association: function(){
-      if(selectedRecode12 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"12"},
-    {stimulus: '正直な', stim_key_association: function(){
-      if(selectedRecode13 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"13"},
-    {stimulus: '寛大な', stim_key_association: function(){
-      if(selectedRecode14 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"14"},
-    {stimulus: 'やさしい', stim_key_association: function(){
-      if(selectedRecode15 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"15"},
-    {stimulus: '自己中心的な', stim_key_association: function(){
-      if(selectedRecode16 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"16"},
-    {stimulus: '偉そうな', stim_key_association: function(){
-      if(selectedRecode17 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"17"},
-    {stimulus: 'つまらない', stim_key_association: function(){
-      if(selectedRecode18 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"18"},
-    {stimulus: '落ち着いた', stim_key_association: function(){
-      if(selectedRecode19 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"19"},
-    {stimulus: '感じのいい', stim_key_association: function(){
-      if(selectedRecode20 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"20"},
-    {stimulus: '忍耐強い', stim_key_association: function(){
-      if(selectedRecode21 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"21"},
-    {stimulus: '短気な', stim_key_association: function(){
-      if(selectedRecode22 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"22"},
-    {stimulus: '不愛想な', stim_key_association: function(){
-      if(selectedRecode23 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"23"},
-    {stimulus: '厳しい', stim_key_association: function(){
-      if(selectedRecode24 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"24"},
+    }, number:"6"}, 
     {stimulus: '感情的な', stim_key_association: function(){
       if(selectedRecode25 == 1){
       return "left"
@@ -233,18 +125,6 @@ timeline_variables: [
     }else{
       return "right"} ;
     }, number:"31"},
-    {stimulus: '異端な',stim_key_association: function(){
-      if(selectedRecode32 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"32"},
-    {stimulus: '直感的な', stim_key_association: function(){
-      if(selectedRecode33 == 1){
-      return "left"
-    }else{
-      return "right"} ;
-    }, number:"33"},
     {stimulus: '素朴な', stim_key_association: function(){
       if(selectedRecode34 == 1){
       return "left"
@@ -260,220 +140,1102 @@ timeline_variables: [
 ],
 randomize_order:true,
 repetitions: 1
-};
-
-var debrief1 = {
-    type: "html-keyboard-response",
-    stimulus: function() {
-      var congruent_rt1 = Math.round(jsPsych.data.get().filter({iat_type:'practice_1'}).select('rt').mean());
-      if(congruent_rt1 <= 300){
-      return "<font size='5'><p>単語が表示されてから分類するまでの時間の平均は， <strong>" + congruent_rt1 + "ms</strong>でした。</p>"+
-      "<p>分類に要する時間としては早すぎます。これ以降の課題ではもう少し慎重に、かつすばやく回答してください。</P>"+"<p>準備ができた方はスペースキーを押して進んでください。</font></p>";
-      }else{
-       return "<font size='5'><p>単語が表示されてから分類するまでの時間の平均は， <strong>" + congruent_rt1 + "ms</strong>でした。</p>"+
-       "<p>引き続き課題への回答をお願いします</p>"+"<p>準備ができた方はスペースキーを押して進んでください。</font></p>";
-      }
-    },
-    choices: [' ']
-  };
-
-  
+};  
 
 var instructions_block2 = {
      type: 'html-keyboard-response',
-     stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が自分に当てはまると思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が自分には当てはまらないと思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+     stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が先ほど思い浮かべた友人に当てはまると思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が先ほど思い浮かべた友人に当てはまらないと思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど思い浮かべた友人について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
      choices: [' ']
     };
 
-var trial_block2 = {
-        timeline:[
-         {
-           type: 'html-keyboard-response',
-           stimulus: jsPsych.timelineVariable('stimulus'),
-           choices: ['E', 'I'],
-           prompt:"<p style='position: absolute; top: 15%; left: 20%'><font size='6'>自分に当てはまるなら<br><br></font>" + "<font size='7'><strong>E</strong>キー</font></p>"+"<font size='6'><p style='position: absolute; top: 15%; right: 20%'>自分に当てはまらないなら<br><br></font>"+"<font size='7'><strong>I</strong>キー</font></p>",
-           post_trial_gap: 50,
-           data: { 
-             iat_type: 'main_1',
-             number:jsPsych.timelineVariable('number')
-           }
-         }
-        ],
-        timeline_variables: [
-          {stimulus: '社交的な', stim_key_association: "right", number:"1"},
-          {stimulus: '愛想のよい', stim_key_association: "left", number:"2"},
-          {stimulus: '陽気な', stim_key_association: "right", number:"3"},
-          {stimulus: '退屈な', stim_key_association: "left", number:"4"},
-          {stimulus: '恥ずかしがりやな', stim_key_association: "right", number:"5"},
-          {stimulus: '内向的な', stim_key_association: "left", number:"6"},
-          {stimulus: 'まめな', stim_key_association: "right", number:"7"},
-          {stimulus: '几帳面な', stim_key_association: "left", number:"8"},
-          {stimulus: '礼儀正しい', stim_key_association: "right", number:"9"},
-          {stimulus: '責任感のない', stim_key_association: "left", number:"10"},
-          {stimulus: 'だらしない', stim_key_association: "right", number:"11"},
-          {stimulus: 'わがままな', stim_key_association: "left", number:"12"},
-          {stimulus: '正直な', stim_key_association: "right", number:"13"},
-          {stimulus: '寛大な', stim_key_association: "left", number:"14"},
-          {stimulus: 'やさしい', stim_key_association: "right", number:"15"},
-          {stimulus: '自己中心的な', stim_key_association: "left", number:"16"},
-          {stimulus: '偉そうな', stim_key_association: "right", number:"17"},
-          {stimulus: 'つまらない', stim_key_association: "left", number:"18"},
-          {stimulus: '落ち着いた', stim_key_association: "right", number:"19"},
-          {stimulus: '感じのいい', stim_key_association: "left", number:"20"},
-          {stimulus: '忍耐強い', stim_key_association: "right", number:"21"},
-          {stimulus: '短気な', stim_key_association: "left", number:"22"},
-          {stimulus: '不愛想な', stim_key_association: "right", number:"23"},
-          {stimulus: '厳しい', stim_key_association: "left", number:"24"},
-          {stimulus: '感情的な', stim_key_association: "right", number:"25"},
-          {stimulus: '神経質な', stim_key_association: "left", number:"26"},
-          {stimulus: '心配性な', stim_key_association: "right", number:"27"},
-          {stimulus: '勇敢な', stim_key_association: "left", number:"28"},
-          {stimulus: 'たくましい', stim_key_association: "right", number:"29"},
-          {stimulus: '無神経な', stim_key_association: "left", number:"30"},
-          {stimulus: '明瞭な', stim_key_association: "left", number:"31"},
-          {stimulus: '異端な', stim_key_association: "left", number:"32"},
-          {stimulus: '直感的な', stim_key_association: "left", number:"33"},
-          {stimulus: '素朴な', stim_key_association: "left", number:"34"},
-          {stimulus: '頑固な', stim_key_association: "left", number:"35"},
-          ],
-    randomize_order:true,
-    repetitions: 2
-    };
-
-var instructions_block3 = {
-        type: 'html-keyboard-response',
-        stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>先ほどの課題とは名前の位置が逆になっています。</strong><br>"+"<strong>これは練習です</strong><br>"+"表示された単語が自分には当てはまらないと思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が自分に当てはまると思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
-        choices: [' ']
-       };
-     
-var trial_block3 = {
-        timeline:[
-         {
-           type: 'html-keyboard-response',
-           stimulus: jsPsych.timelineVariable('stimulus'),
-           choices: ['E', 'I'],
-           prompt:"<p style='position: absolute; top: 15%; left: 20%'><font size='6'>自分に当てはまらないなら<br><br></font>" + "<font size='7'><strong>E</strong>キー</font></p>"+"<font size='6'><p style='position: absolute; top: 15%; right: 20%'>自分に当てはまるなら<br><br></font>"+"<font size='7'><strong>I</strong>キー</font></p>",
-           post_trial_gap: 50,
-           data: { iat_type: 'practice_2',
-           number:jsPsych.timelineVariable('number')
-          }
+    var trial_block2 = {
+      timeline: [
+        {
+          type: 'iat-html',
+          stimulus: jsPsych.timelineVariable('stimulus'),
+          stim_key_association: jsPsych.timelineVariable('stim_key_association'),
+          html_when_wrong: '<span style="color: red; font-size: 80px">X</span>',
+          bottom_instructions: '<p>もし間違ったキーを押したら、赤い文字でXが表示されます。正しいキーを押しなおしてください。</p>',
+          force_correct_key_press: true,
+          display_feedback: true,
+          trial_duration: 3000, 
+          left_category_key: 'E',
+          right_category_key: 'I',
+          left_category_label: ['<p>友人に<br>'+'当てはまる</p>'],
+          right_category_label: ['<p>友人に<br>'+'当てはまらない</p>'],
+          response_ends_trial: true,
+          data: { iat_type: 'main_1' }
         }
-       ],
-       timeline_variables: [
-        {stimulus: '社交的な', stim_key_association: "right", number:"1"},
-          {stimulus: '愛想のよい', stim_key_association: "left", number:"2"},
-          {stimulus: '陽気な', stim_key_association: "right", number:"3"},
-          {stimulus: '退屈な', stim_key_association: "left", number:"4"},
-          {stimulus: '恥ずかしがりやな', stim_key_association: "right", number:"5"},
-          {stimulus: '内向的な', stim_key_association: "left", number:"6"},
-          {stimulus: 'まめな', stim_key_association: "right", number:"7"},
-          {stimulus: '几帳面な', stim_key_association: "left", number:"8"},
-          {stimulus: '礼儀正しい', stim_key_association: "right", number:"9"},
-          {stimulus: '責任感のない', stim_key_association: "left", number:"10"},
-          {stimulus: 'だらしない', stim_key_association: "right", number:"11"},
-          {stimulus: 'わがままな', stim_key_association: "left", number:"12"},
-          {stimulus: '正直な', stim_key_association: "right", number:"13"},
-          {stimulus: '寛大な', stim_key_association: "left", number:"14"},
-          {stimulus: 'やさしい', stim_key_association: "right", number:"15"},
-          {stimulus: '自己中心的な', stim_key_association: "left", number:"16"},
-          {stimulus: '偉そうな', stim_key_association: "right", number:"17"},
-          {stimulus: 'つまらない', stim_key_association: "left", number:"18"},
-          {stimulus: '落ち着いた', stim_key_association: "right", number:"19"},
-          {stimulus: '感じのいい', stim_key_association: "left", number:"20"},
-          {stimulus: '忍耐強い', stim_key_association: "right", number:"21"},
-          {stimulus: '短気な', stim_key_association: "left", number:"22"},
-          {stimulus: '不愛想な', stim_key_association: "right", number:"23"},
-          {stimulus: '厳しい', stim_key_association: "left", number:"24"},
-          {stimulus: '感情的な', stim_key_association: "right", number:"25"},
-          {stimulus: '神経質な', stim_key_association: "left", number:"26"},
-          {stimulus: '心配性な', stim_key_association: "right", number:"27"},
-          {stimulus: '勇敢な', stim_key_association: "left", number:"28"},
-          {stimulus: 'たくましい', stim_key_association: "right", number:"29"},
-          {stimulus: '無神経な', stim_key_association: "left", number:"30"},
-          {stimulus: '明瞭な', stim_key_association: "left", number:"31"},
-          {stimulus: '異端な', stim_key_association: "left", number:"32"},
-          {stimulus: '直感的な', stim_key_association: "left", number:"33"},
-          {stimulus: '素朴な', stim_key_association: "left", number:"34"},
-          {stimulus: '頑固な', stim_key_association: "left", number:"35"},
-          ],
+      ],
+        timeline_variables: [
+          {stimulus: '社交的な', stim_key_association: function(){
+            if(selectedRecode1 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"1"},
+          {stimulus: '愛想のよい', stim_key_association: function(){
+            if(selectedRecode2 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"2"},
+          {stimulus: '陽気な', stim_key_association: function(){
+            if(selectedRecode3 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"3"},
+          {stimulus: '退屈な', stim_key_association: function(){
+            if(selectedRecode4 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"4"},
+          {stimulus: '恥ずかしがりな', stim_key_association: function(){
+            if(selectedRecode5 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"5"},
+          {stimulus: '内向的な', stim_key_association: function(){
+            if(selectedRecode6 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"6"},
+          {stimulus: 'まめな', stim_key_association: function(){
+            if(selectedRecode7 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"7"},
+          {stimulus: '几帳面な', stim_key_association: function(){
+            if(selectedRecode8 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"8"},
+          {stimulus: '礼儀正しい', stim_key_association: function(){
+            if(selectedRecode9 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"9"},
+          {stimulus: '責任感のない', stim_key_association: function(){
+            if(selectedRecode10 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"10"},
+          {stimulus: 'だらしない', stim_key_association: function(){
+            if(selectedRecode11 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"11"},
+          {stimulus: 'わがままな', stim_key_association: function(){
+            if(selectedRecode12 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"12"},
+          {stimulus: '正直な', stim_key_association: function(){
+            if(selectedRecode13 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"13"},
+          {stimulus: '寛大な', stim_key_association: function(){
+            if(selectedRecode14 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"14"},
+          {stimulus: 'やさしい', stim_key_association: function(){
+            if(selectedRecode15 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"15"},
+          {stimulus: '自己中心的な', stim_key_association: function(){
+            if(selectedRecode16 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"16"},
+          {stimulus: '偉そうな', stim_key_association: function(){
+            if(selectedRecode17 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"17"},
+          {stimulus: 'つまらない', stim_key_association: function(){
+            if(selectedRecode18 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"18"},
+          {stimulus: '落ち着いた', stim_key_association: function(){
+            if(selectedRecode19 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"19"},
+          {stimulus: '感じのいい', stim_key_association: function(){
+            if(selectedRecode20 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"20"},
+          {stimulus: '忍耐強い', stim_key_association: function(){
+            if(selectedRecode21 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"21"},
+          {stimulus: '短気な', stim_key_association: function(){
+            if(selectedRecode22 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"22"},
+          {stimulus: '不愛想な', stim_key_association: function(){
+            if(selectedRecode23 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"23"},
+          {stimulus: '厳しい', stim_key_association: function(){
+            if(selectedRecode24 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"24"},
+          {stimulus: '感情的な', stim_key_association: function(){
+            if(selectedRecode25 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"25"},
+          {stimulus: '神経質な', stim_key_association: function(){
+            if(selectedRecode26 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"26"},
+          {stimulus: '心配性な', stim_key_association: function(){
+            if(selectedRecode27 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"27"},
+          {stimulus: '勇敢な', stim_key_association: function(){
+            if(selectedRecode28 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"28"},
+          {stimulus: 'たくましい', stim_key_association: function(){
+            if(selectedRecode29 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"29"},
+          {stimulus: '無神経な', stim_key_association: function(){
+            if(selectedRecode30 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"30"},
+          {stimulus: '明瞭な', stim_key_association: function(){
+            if(selectedRecode31 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"31"},
+          {stimulus: '異端な',stim_key_association: function(){
+            if(selectedRecode32 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"32"},
+          {stimulus: '直感的な', stim_key_association: function(){
+            if(selectedRecode33 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"33"},
+          {stimulus: '素朴な', stim_key_association: function(){
+            if(selectedRecode34 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"34"},
+          {stimulus: '頑固な', stim_key_association: function(){
+            if(selectedRecode35 == 1){
+            return "left"
+          }else{
+            return "right"} ;
+          }, number:"35"},
+        ],
         randomize_order:true,
         repetitions: 1
         };
 
-var debrief2 = {
-            type: "html-keyboard-response",
-            stimulus: function() {
-              var congruent_rt2 = Math.round(jsPsych.data.get().filter({iat_type:'practice_2'}).select('rt').mean());
-              if(congruent_rt2 <= 300){
-              return "<font size='5'><p>単語が表示されてから分類するまでの時間の平均は， <strong>" + congruent_rt2 + "ms</strong>でした。</p>"+
-              "<p>分類に要する時間としては早すぎます。これ以降の課題ではもう少し慎重に、かつすばやく回答してください。</P>"+"<p>準備ができた方はスペースキーを押して進んでください。</font></p>";
-              }else{
-               return "<font size='5'><p>単語が表示されてから分類するまでの時間の平均は， <strong>" + congruent_rt2 + "ms</strong>でした。</p>"+
-               "<p>引き続き課題への回答をお願いします</p>"+"<p>準備ができた方はスペースキーを押して進んでください。</font></p>";
-              }
-            },
-            choices: [' ']
-          };
+var instructions_block3 = {
+          type: 'html-keyboard-response',
+          stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>この画面は休憩画面です</strong><br>"+"<strong>先ほどと同じ課題をもう一度行います</strong><br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは先ほど思い浮かべた友人について判断してください</strong><br><br>"+'準備ができたらスペースキーを押して始めて下さい</div>',
+          choices: [' ']
+         };
+     
+var trial_block3 = {
+           timeline: [
+             {
+               type: 'iat-html',
+               stimulus: jsPsych.timelineVariable('stimulus'),
+               stim_key_association: jsPsych.timelineVariable('stim_key_association'),
+               html_when_wrong: '<span style="color: red; font-size: 80px">X</span>',
+               bottom_instructions: '<p>もし間違ったキーを押したら、赤い文字でXが表示されます。正しいキーを押しなおしてください。</p>',
+               force_correct_key_press: true,
+               display_feedback: true,
+               trial_duration: 3000, 
+               left_category_key: 'E',
+               right_category_key: 'I',
+               left_category_label: ['<p>友人に<br>'+'当てはまる</p>'],
+               right_category_label: ['<p>友人に<br>'+'当てはまらない</p>'],
+               response_ends_trial: true,
+               data: { iat_type: 'main_1' }
+             }
+           ],
+             timeline_variables: [
+               {stimulus: '社交的な', stim_key_association: function(){
+                 if(selectedRecode1 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"1"},
+               {stimulus: '愛想のよい', stim_key_association: function(){
+                 if(selectedRecode2 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"2"},
+               {stimulus: '陽気な', stim_key_association: function(){
+                 if(selectedRecode3 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"3"},
+               {stimulus: '退屈な', stim_key_association: function(){
+                 if(selectedRecode4 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"4"},
+               {stimulus: '恥ずかしがりな', stim_key_association: function(){
+                 if(selectedRecode5 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"5"},
+               {stimulus: '内向的な', stim_key_association: function(){
+                 if(selectedRecode6 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"6"},
+               {stimulus: 'まめな', stim_key_association: function(){
+                 if(selectedRecode7 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"7"},
+               {stimulus: '几帳面な', stim_key_association: function(){
+                 if(selectedRecode8 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"8"},
+               {stimulus: '礼儀正しい', stim_key_association: function(){
+                 if(selectedRecode9 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"9"},
+               {stimulus: '責任感のない', stim_key_association: function(){
+                 if(selectedRecode10 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"10"},
+               {stimulus: 'だらしない', stim_key_association: function(){
+                 if(selectedRecode11 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"11"},
+               {stimulus: 'わがままな', stim_key_association: function(){
+                 if(selectedRecode12 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"12"},
+               {stimulus: '正直な', stim_key_association: function(){
+                 if(selectedRecode13 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"13"},
+               {stimulus: '寛大な', stim_key_association: function(){
+                 if(selectedRecode14 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"14"},
+               {stimulus: 'やさしい', stim_key_association: function(){
+                 if(selectedRecode15 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"15"},
+               {stimulus: '自己中心的な', stim_key_association: function(){
+                 if(selectedRecode16 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"16"},
+               {stimulus: '偉そうな', stim_key_association: function(){
+                 if(selectedRecode17 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"17"},
+               {stimulus: 'つまらない', stim_key_association: function(){
+                 if(selectedRecode18 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"18"},
+               {stimulus: '落ち着いた', stim_key_association: function(){
+                 if(selectedRecode19 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"19"},
+               {stimulus: '感じのいい', stim_key_association: function(){
+                 if(selectedRecode20 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"20"},
+               {stimulus: '忍耐強い', stim_key_association: function(){
+                 if(selectedRecode21 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"21"},
+               {stimulus: '短気な', stim_key_association: function(){
+                 if(selectedRecode22 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"22"},
+               {stimulus: '不愛想な', stim_key_association: function(){
+                 if(selectedRecode23 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"23"},
+               {stimulus: '厳しい', stim_key_association: function(){
+                 if(selectedRecode24 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"24"},
+               {stimulus: '感情的な', stim_key_association: function(){
+                 if(selectedRecode25 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"25"},
+               {stimulus: '神経質な', stim_key_association: function(){
+                 if(selectedRecode26 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"26"},
+               {stimulus: '心配性な', stim_key_association: function(){
+                 if(selectedRecode27 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"27"},
+               {stimulus: '勇敢な', stim_key_association: function(){
+                 if(selectedRecode28 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"28"},
+               {stimulus: 'たくましい', stim_key_association: function(){
+                 if(selectedRecode29 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"29"},
+               {stimulus: '無神経な', stim_key_association: function(){
+                 if(selectedRecode30 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"30"},
+               {stimulus: '明瞭な', stim_key_association: function(){
+                 if(selectedRecode31 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"31"},
+               {stimulus: '異端な',stim_key_association: function(){
+                 if(selectedRecode32 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"32"},
+               {stimulus: '直感的な', stim_key_association: function(){
+                 if(selectedRecode33 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"33"},
+               {stimulus: '素朴な', stim_key_association: function(){
+                 if(selectedRecode34 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"34"},
+               {stimulus: '頑固な', stim_key_association: function(){
+                 if(selectedRecode35 == 1){
+                 return "left"
+               }else{
+                 return "right"} ;
+               }, number:"35"},
+             ],
+             randomize_order:true,
+             repetitions: 1
+             };
+
+var experimentstart2 = {
+              type: 'instructions',
+              pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<p>続いて、画面中央に表示される単語について自分自身に当てはまるかを判断する課題を行っていただきます<br></p>"+
+                      "<p>課題は全部で3回あります</p>"+"<p>準備ができたら次へを押して回答して下さい</p>"
+              ],
+              allow_backward: false,
+              show_clickable_nav: true,
+              button_label_next: "次へ",
+            };
 
 var instructions_block4 = {
-            type: 'html-keyboard-response',
-            stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が自分には当てはまらないと思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が自分に当てはまると思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、自分について判断するのであり、先ほど思い浮かべた友人についての判断ではありません</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
-            choices: [' ']
-           };
-         
+              type: 'html-keyboard-response',
+              stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/notme_me.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>先ほどの課題とは判断の対象が「先ほど思い浮かべた友人」から「自分」に変わっています。</strong><br><br>"+"<strong>これは練習です</strong><br>"+"表示された単語が<strong>自分に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは自分自身について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+              choices: [' ']
+             };
+     
 var trial_block4 = {
-            timeline:[
-             {
-               type: 'html-keyboard-response',
-               stimulus: jsPsych.timelineVariable('stimulus'),
-               choices: ['E', 'I'],
-               prompt:"<p style='position: absolute; top: 15%; left: 20%'><font size='6'>自分に当てはまらないなら<br><br></font>" + "<font size='7'><strong>E</strong>キー</font></p>"+"<font size='6'><p style='position: absolute; top: 15%; right: 20%'>自分に当てはまるなら<br><br></font>"+"<font size='7'><strong>I</strong>キー</font></p>",
-               post_trial_gap: 50,
-               data: { iat_type: 'main_2',
-               number:jsPsych.timelineVariable('number')
-              }
-            }
-           ],
-           timeline_variables: [
-            {stimulus: '社交的な', stim_key_association: "right", number:"1"},
-          {stimulus: '愛想のよい', stim_key_association: "left", number:"2"},
-          {stimulus: '陽気な', stim_key_association: "right", number:"3"},
-          {stimulus: '退屈な', stim_key_association: "left", number:"4"},
-          {stimulus: '恥ずかしがりやな', stim_key_association: "right", number:"5"},
-          {stimulus: '内向的な', stim_key_association: "left", number:"6"},
-          {stimulus: 'まめな', stim_key_association: "right", number:"7"},
-          {stimulus: '几帳面な', stim_key_association: "left", number:"8"},
-          {stimulus: '礼儀正しい', stim_key_association: "right", number:"9"},
-          {stimulus: '責任感のない', stim_key_association: "left", number:"10"},
-          {stimulus: 'だらしない', stim_key_association: "right", number:"11"},
-          {stimulus: 'わがままな', stim_key_association: "left", number:"12"},
-          {stimulus: '正直な', stim_key_association: "right", number:"13"},
-          {stimulus: '寛大な', stim_key_association: "left", number:"14"},
-          {stimulus: 'やさしい', stim_key_association: "right", number:"15"},
-          {stimulus: '自己中心的な', stim_key_association: "left", number:"16"},
-          {stimulus: '偉そうな', stim_key_association: "right", number:"17"},
-          {stimulus: 'つまらない', stim_key_association: "left", number:"18"},
-          {stimulus: '落ち着いた', stim_key_association: "right", number:"19"},
-          {stimulus: '感じのいい', stim_key_association: "left", number:"20"},
-          {stimulus: '忍耐強い', stim_key_association: "right", number:"21"},
-          {stimulus: '短気な', stim_key_association: "left", number:"22"},
-          {stimulus: '不愛想な', stim_key_association: "right", number:"23"},
-          {stimulus: '厳しい', stim_key_association: "left", number:"24"},
-          {stimulus: '感情的な', stim_key_association: "right", number:"25"},
-          {stimulus: '神経質な', stim_key_association: "left", number:"26"},
-          {stimulus: '心配性な', stim_key_association: "right", number:"27"},
-          {stimulus: '勇敢な', stim_key_association: "left", number:"28"},
-          {stimulus: 'たくましい', stim_key_association: "right", number:"29"},
-          {stimulus: '無神経な', stim_key_association: "left", number:"30"},
-          {stimulus: '明瞭な', stim_key_association: "left", number:"31"},
-          {stimulus: '異端な', stim_key_association: "left", number:"32"},
-          {stimulus: '直感的な', stim_key_association: "left", number:"33"},
-          {stimulus: '素朴な', stim_key_association: "left", number:"34"},
-          {stimulus: '頑固な', stim_key_association: "left", number:"35"},
-          ],
-       randomize_order:true,
-       repetitions: 2
-       };
+              timeline: [
+                {
+                  type: 'iat-html',
+                  stimulus: jsPsych.timelineVariable('stimulus'),
+                  stim_key_association: jsPsych.timelineVariable('stim_key_association'),
+                  html_when_wrong: '<span style="color: red; font-size: 80px">X</span>',
+                  bottom_instructions: '<p>もし間違ったキーを押したら、赤い文字でXが表示されます。正しいキーを押しなおしてください。</p>',
+                  force_correct_key_press: true,
+                  display_feedback: true,
+                  trial_duration: 3000, 
+                  left_category_key: 'E',
+                  right_category_key: 'I',
+                  left_category_label: ['<p>自分に<br>'+'当てはまる</p>'],
+                  right_category_label: ['<p>自分に<br>'+'当てはまらない</p>'],
+                  response_ends_trial: true,
+                  data: { iat_type: 'practice_2' }
+                }
+              ],
+              timeline_variables: [
+                {stimulus: '社交的な', stim_key_association: function(){
+                  if(selectedRecode36 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"1"},
+                {stimulus: '愛想のよい', stim_key_association: function(){
+                  if(selectedRecode37 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"2"},
+                {stimulus: '陽気な', stim_key_association: function(){
+                  if(selectedRecode38 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"3"},
+                {stimulus: '退屈な', stim_key_association: function(){
+                  if(selectedRecode39 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"4"},
+                {stimulus: '恥ずかしがりな', stim_key_association: function(){
+                  if(selectedRecode40 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"5"},
+                {stimulus: '内向的な', stim_key_association: function(){
+                  if(selectedRecode41 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"6"}, 
+                {stimulus: '感情的な', stim_key_association: function(){
+                  if(selectedRecode60 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"25"},
+                {stimulus: '神経質な', stim_key_association: function(){
+                  if(selectedRecode61 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"26"},
+                {stimulus: '心配性な', stim_key_association: function(){
+                  if(selectedRecode62 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"27"},
+                {stimulus: '勇敢な', stim_key_association: function(){
+                  if(selectedRecode63 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"28"},
+                {stimulus: 'たくましい', stim_key_association: function(){
+                  if(selectedRecode64 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"29"},
+                {stimulus: '無神経な', stim_key_association: function(){
+                  if(selectedRecode65 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"30"},
+                {stimulus: '明瞭な', stim_key_association: function(){
+                  if(selectedRecode66 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"31"},
+                {stimulus: '素朴な', stim_key_association: function(){
+                  if(selectedRecode69 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"34"},
+                {stimulus: '頑固な', stim_key_association: function(){
+                  if(selectedRecode70 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"35"},
+            ],
+            randomize_order:true,
+            repetitions: 1
+            };  
+
+var instructions_block5 = {
+              type: 'html-keyboard-response',
+              stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br>"+"表示された単語が<strong>自分自身に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分自身に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、自分自身について判断してください</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+              choices: [' ']
+             };
+         
+var trial_block5 = {
+               timeline: [
+                 {
+                   type: 'iat-html',
+                   stimulus: jsPsych.timelineVariable('stimulus'),
+                   stim_key_association: jsPsych.timelineVariable('stim_key_association'),
+                   html_when_wrong: '<span style="color: red; font-size: 80px">X</span>',
+                   bottom_instructions: '<p>もし間違ったキーを押したら、赤い文字でXが表示されます。正しいキーを押しなおしてください。</p>',
+                   force_correct_key_press: true,
+                   display_feedback: true,
+                   trial_duration: 3000, 
+                   left_category_key: 'E',
+                   right_category_key: 'I',
+                   left_category_label: ['<p>自分に<br>'+'当てはまる</p>'],
+                   right_category_label: ['<p>自分に<br>'+'当てはまらない</p>'],
+                   response_ends_trial: true,
+                   data: { iat_type: 'main_2' }
+                 }
+               ],
+               timeline_variables: [
+                {stimulus: '社交的な', stim_key_association: function(){
+                  if(selectedRecode36 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"1"},
+                {stimulus: '愛想のよい', stim_key_association: function(){
+                  if(selectedRecode37 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"2"},
+                {stimulus: '陽気な', stim_key_association: function(){
+                  if(selectedRecode38 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"3"},
+                {stimulus: '退屈な', stim_key_association: function(){
+                  if(selectedRecode39 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"4"},
+                {stimulus: '恥ずかしがりな', stim_key_association: function(){
+                  if(selectedRecode40 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"5"},
+                {stimulus: '内向的な', stim_key_association: function(){
+                  if(selectedRecode41 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"6"},
+                {stimulus: 'まめな', stim_key_association: function(){
+                  if(selectedRecode42 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"7"},
+                {stimulus: '几帳面な', stim_key_association: function(){
+                  if(selectedRecode43 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"8"},
+                {stimulus: '礼儀正しい', stim_key_association: function(){
+                  if(selectedRecode44 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"9"},
+                {stimulus: '責任感のない', stim_key_association: function(){
+                  if(selectedRecode45 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"10"},
+                {stimulus: 'だらしない', stim_key_association: function(){
+                  if(selectedRecode46 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"11"},
+                {stimulus: 'わがままな', stim_key_association: function(){
+                  if(selectedRecode47 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"12"},
+                {stimulus: '正直な', stim_key_association: function(){
+                  if(selectedRecode48 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"13"},
+                {stimulus: '寛大な', stim_key_association: function(){
+                  if(selectedRecode49 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"14"},
+                {stimulus: 'やさしい', stim_key_association: function(){
+                  if(selectedRecode50 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"15"},
+                {stimulus: '自己中心的な', stim_key_association: function(){
+                  if(selectedRecode51 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"16"},
+                {stimulus: '偉そうな', stim_key_association: function(){
+                  if(selectedRecode52 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"17"},
+                {stimulus: 'つまらない', stim_key_association: function(){
+                  if(selectedRecode53 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"18"},
+                {stimulus: '落ち着いた', stim_key_association: function(){
+                  if(selectedRecode54 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"19"},
+                {stimulus: '感じのいい', stim_key_association: function(){
+                  if(selectedRecode55 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"20"},
+                {stimulus: '忍耐強い', stim_key_association: function(){
+                  if(selectedRecode56 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"21"},
+                {stimulus: '短気な', stim_key_association: function(){
+                  if(selectedRecode57 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"22"},
+                {stimulus: '不愛想な', stim_key_association: function(){
+                  if(selectedRecode58 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"23"},
+                {stimulus: '厳しい', stim_key_association: function(){
+                  if(selectedRecode59 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"24"},
+                {stimulus: '感情的な', stim_key_association: function(){
+                  if(selectedRecode60 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"25"},
+                {stimulus: '神経質な', stim_key_association: function(){
+                  if(selectedRecode61 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"26"},
+                {stimulus: '心配性な', stim_key_association: function(){
+                  if(selectedRecode62 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"27"},
+                {stimulus: '勇敢な', stim_key_association: function(){
+                  if(selectedRecode63 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"28"},
+                {stimulus: 'たくましい', stim_key_association: function(){
+                  if(selectedRecode64 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"29"},
+                {stimulus: '無神経な', stim_key_association: function(){
+                  if(selectedRecode65 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"30"},
+                {stimulus: '明瞭な', stim_key_association: function(){
+                  if(selectedRecode66 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"31"},
+                {stimulus: '異端な',stim_key_association: function(){
+                  if(selectedRecode67 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"32"},
+                {stimulus: '直感的な', stim_key_association: function(){
+                  if(selectedRecode68 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"33"},
+                {stimulus: '素朴な', stim_key_association: function(){
+                  if(selectedRecode69 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"34"},
+                {stimulus: '頑固な', stim_key_association: function(){
+                  if(selectedRecode70 == 1){
+                  return "left"
+                }else{
+                  return "right"} ;
+                }, number:"35"},
+              ],
+              randomize_order:true,
+              repetitions: 1
+              };
+         
+var instructions_block6 = {
+                   type: 'html-keyboard-response',
+                   stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/me_notme.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>この画面は休憩画面です</strong><br>"+"<strong>先ほどと同じ課題をもう一度行います</strong><br>"+"表示された単語が<strong>自分自身に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>自分自身に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは自分自身について判断してください</strong><br><br>"+'準備ができたらスペースキーを押して始めて下さい</div>',
+                   choices: [' ']
+                  };
+              
+var trial_block6 = {
+                    timeline: [
+                      {
+                        type: 'iat-html',
+                        stimulus: jsPsych.timelineVariable('stimulus'),
+                        stim_key_association: jsPsych.timelineVariable('stim_key_association'),
+                        html_when_wrong: '<span style="color: red; font-size: 80px">X</span>',
+                        bottom_instructions: '<p>もし間違ったキーを押したら、赤い文字でXが表示されます。正しいキーを押しなおしてください。</p>',
+                        force_correct_key_press: true,
+                        display_feedback: true,
+                        trial_duration: 3000, 
+                        left_category_key: 'E',
+                        right_category_key: 'I',
+                        left_category_label: ['<p>自分に<br>'+'当てはまる</p>'],
+                        right_category_label: ['<p>自分に<br>'+'当てはまらない</p>'],
+                        response_ends_trial: true,
+                        data: { iat_type: 'main_2' }
+                      }
+                    ],
+                    timeline_variables: [
+                      {stimulus: '社交的な', stim_key_association: function(){
+                        if(selectedRecode36 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"1"},
+                      {stimulus: '愛想のよい', stim_key_association: function(){
+                        if(selectedRecode37 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"2"},
+                      {stimulus: '陽気な', stim_key_association: function(){
+                        if(selectedRecode38 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"3"},
+                      {stimulus: '退屈な', stim_key_association: function(){
+                        if(selectedRecode39 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"4"},
+                      {stimulus: '恥ずかしがりな', stim_key_association: function(){
+                        if(selectedRecode40 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"5"},
+                      {stimulus: '内向的な', stim_key_association: function(){
+                        if(selectedRecode41 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"6"},
+                      {stimulus: 'まめな', stim_key_association: function(){
+                        if(selectedRecode42 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"7"},
+                      {stimulus: '几帳面な', stim_key_association: function(){
+                        if(selectedRecode43 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"8"},
+                      {stimulus: '礼儀正しい', stim_key_association: function(){
+                        if(selectedRecode44 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"9"},
+                      {stimulus: '責任感のない', stim_key_association: function(){
+                        if(selectedRecode45 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"10"},
+                      {stimulus: 'だらしない', stim_key_association: function(){
+                        if(selectedRecode46 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"11"},
+                      {stimulus: 'わがままな', stim_key_association: function(){
+                        if(selectedRecode47 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"12"},
+                      {stimulus: '正直な', stim_key_association: function(){
+                        if(selectedRecode48 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"13"},
+                      {stimulus: '寛大な', stim_key_association: function(){
+                        if(selectedRecode49 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"14"},
+                      {stimulus: 'やさしい', stim_key_association: function(){
+                        if(selectedRecode50 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"15"},
+                      {stimulus: '自己中心的な', stim_key_association: function(){
+                        if(selectedRecode51 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"16"},
+                      {stimulus: '偉そうな', stim_key_association: function(){
+                        if(selectedRecode52 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"17"},
+                      {stimulus: 'つまらない', stim_key_association: function(){
+                        if(selectedRecode53 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"18"},
+                      {stimulus: '落ち着いた', stim_key_association: function(){
+                        if(selectedRecode54 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"19"},
+                      {stimulus: '感じのいい', stim_key_association: function(){
+                        if(selectedRecode55 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"20"},
+                      {stimulus: '忍耐強い', stim_key_association: function(){
+                        if(selectedRecode56 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"21"},
+                      {stimulus: '短気な', stim_key_association: function(){
+                        if(selectedRecode57 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"22"},
+                      {stimulus: '不愛想な', stim_key_association: function(){
+                        if(selectedRecode58 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"23"},
+                      {stimulus: '厳しい', stim_key_association: function(){
+                        if(selectedRecode59 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"24"},
+                      {stimulus: '感情的な', stim_key_association: function(){
+                        if(selectedRecode60 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"25"},
+                      {stimulus: '神経質な', stim_key_association: function(){
+                        if(selectedRecode61 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"26"},
+                      {stimulus: '心配性な', stim_key_association: function(){
+                        if(selectedRecode62 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"27"},
+                      {stimulus: '勇敢な', stim_key_association: function(){
+                        if(selectedRecode63 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"28"},
+                      {stimulus: 'たくましい', stim_key_association: function(){
+                        if(selectedRecode64 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"29"},
+                      {stimulus: '無神経な', stim_key_association: function(){
+                        if(selectedRecode65 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"30"},
+                      {stimulus: '明瞭な', stim_key_association: function(){
+                        if(selectedRecode66 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"31"},
+                      {stimulus: '異端な',stim_key_association: function(){
+                        if(selectedRecode67 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"32"},
+                      {stimulus: '直感的な', stim_key_association: function(){
+                        if(selectedRecode68 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"33"},
+                      {stimulus: '素朴な', stim_key_association: function(){
+                        if(selectedRecode69 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"34"},
+                      {stimulus: '頑固な', stim_key_association: function(){
+                        if(selectedRecode70 == 1){
+                        return "left"
+                      }else{
+                        return "right"} ;
+                      }, number:"35"},
+                    ],
+                    randomize_order:true,
+                    repetitions: 1
+                    };
 
 var fullscreen_end ={
   type: 'fullscreen',
@@ -493,16 +1255,19 @@ var experimentend = {
 
 var timeline =[];
 timeline.push(fullscreen_start);
-timeline.push(experimentstart);
+timeline.push(experimentstart1);
 timeline.push(instructions_block1);
 timeline.push(trial_block1);
-//timeline.push(debrief1);
-//timeline.push(instructions_block2);
-//timeline.push(trial_block2);
-//timeline.push(instructions_block3);
-//timeline.push(trial_block3);
-//timeline.push(debrief2);
-//timeline.push(instructions_block4);
-//timeline.push(trial_block4);
-//timeline.push(fullscreen_end);
-//timeline.push(experimentend);
+timeline.push(instructions_block2);
+timeline.push(trial_block2);
+timeline.push(instructions_block3);
+timeline.push(trial_block3);
+timeline.push(experimentstart2);
+timeline.push(instructions_block4);
+timeline.push(trial_block4);
+timeline.push(instructions_block5);
+timeline.push(trial_block5);
+timeline.push(instructions_block6);
+timeline.push(trial_block6);
+timeline.push(fullscreen_end);
+timeline.push(experimentend);
