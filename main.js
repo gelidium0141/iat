@@ -1016,7 +1016,7 @@ var trial_block6 = {
                         left_category_key: 'E',
                         right_category_key: 'I',
                         left_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまる</p></font>'],
-                        right_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまらない</p><font>'],
+                        right_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまらない</p></font>'],
                         response_ends_trial: true,
                         data: { iat_type: 'main_2' }
                       }
