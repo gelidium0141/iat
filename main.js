@@ -43,7 +43,8 @@ var trial_block1 = {
       left_category_label: ['<font size="6"><p>友人に<br>'+'当てはまる</p></font>'],
       right_category_label: ['<font size="6"><p>友人に<br>'+'当てはまらない</p></font>'],
       response_ends_trial: true,
-      data: { iat_type: 'practice_1' }
+      data: { iat_type: 'practice_1',
+              number:jsPsych.timelineVariable('number')}
     }
   ],
 timeline_variables: [
@@ -164,7 +165,8 @@ var instructions_block2 = {
           left_category_label: ['<font size="6"><p>友人に<br>'+'当てはまる</p></font>'],
           right_category_label: ['<font size="6"><p>友人に<br>'+'当てはまらない</p></font>'],
           response_ends_trial: true,
-          data: { iat_type: 'main_1' }
+          data: { iat_type: 'main_1',
+                  number:jsPsych.timelineVariable('number')}
         }
       ],
         timeline_variables: [
@@ -405,7 +407,8 @@ var trial_block3 = {
                left_category_label: ['<font size="6"><p>友人に<br>'+'当てはまる</p></font>'],
                right_category_label: ['<font size="6"><p>友人に<br>'+'当てはまらない</p></font>'],
                response_ends_trial: true,
-               data: { iat_type: 'main_1' }
+               data: { iat_type: 'main_1',
+                       number:jsPsych.timelineVariable('number')}
              }
            ],
              timeline_variables: [
@@ -656,7 +659,8 @@ var trial_block4 = {
                   left_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまる</p></font>'],
                   right_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまらない</p></font>'],
                   response_ends_trial: true,
-                  data: { iat_type: 'practice_2' }
+                  data: { iat_type: 'practice_2',
+                          number:jsPsych.timelineVariable('number')}
                 }
               ],
               timeline_variables: [
@@ -777,7 +781,8 @@ var trial_block5 = {
                    left_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまる</p></font>'],
                    right_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまらない</p></font>'],
                    response_ends_trial: true,
-                   data: { iat_type: 'main_2' }
+                   data: { iat_type: 'main_2',
+                           number:jsPsych.timelineVariable('number')}
                  }
                ],
                timeline_variables: [
@@ -1018,7 +1023,8 @@ var trial_block6 = {
                         left_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまる</p></font>'],
                         right_category_label: ['<font size="6"><p>あなた自身に<br>'+'当てはまらない</p></font>'],
                         response_ends_trial: true,
-                        data: { iat_type: 'main_2' }
+                        data: { iat_type: 'main_2',
+                                number:jsPsych.timelineVariable('number')}
                       }
                     ],
                     timeline_variables: [
