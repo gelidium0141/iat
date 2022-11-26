@@ -11,7 +11,7 @@ var fullscreen_start ={
 
 var experimentstart1 = {
     type: 'instructions',
-    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/fri_notfri.png' width='55%'></img>"+"<p>これから、画面中央に表示される単語について<br><br>"+"<strong>先ほど思い浮かべた友人に当てはまるかどうか</strong><br><br>"+"判断する課題を行っていただきます<br><br></p>"+
+    pages: ["<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/fri_notfri.png' width='55%'></img>"+"<p>これから、画面中央に表示される単語について<br><br>"+"<strong>あなたの友人に当てはまるかどうか</strong><br><br>"+"判断する課題を行っていただきます<br><br></p>"+
             "<p>課題は練習１回本番２回の計３回で構成されています</p>"+"<p>準備ができたら次へを押して回答して下さい</p>"
     ],
     allow_backward: false,
@@ -22,7 +22,7 @@ var experimentstart1 = {
 
 var instructions_block1 = {
     type: 'html-keyboard-response',
-    stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/fri_notfri.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br><br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど回答していただいたものを正答としています</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+    stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/fri_notfri.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは練習です</strong><br><br>"+"表示された単語が<strong>あなたの友人に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>あなたの友人に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど回答していただいたものを正答としています</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
     choices: [' ']
   };
 
@@ -145,7 +145,7 @@ repetitions: 1
 
 var instructions_block2 = {
      type: 'html-keyboard-response',
-     stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/fri_notfri.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br><br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど回答していただいたものを正答としています</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
+     stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/fri_notfri.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>これは本番です</strong><br><br>"+"表示された単語が<strong>あなたの友人に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>あなたの友人に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど回答していただいたものを正答としています</strong><br><br>"+"準備ができたらスペースキーを押して始めて下さい</div>",
      choices: [' ']
     };
 
@@ -387,7 +387,7 @@ var instructions_block2 = {
 
 var instructions_block3 = {
           type: 'html-keyboard-response',
-          stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/fri_notfri.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>この画面は休憩画面です</strong><br>"+"<strong>先ほどと同じ課題をもう一度行います</strong><br><br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>先ほど思い浮かべた友人に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど回答していただいたものを正答としています</strong><br><br>"+'準備ができたらスペースキーを押して始めて下さい</div>',
+          stimulus:"<p style = text-align: center'>"+"<img src='" + repo_site + "experiment/fri_notfri.png' width='55%'></img>"+"<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'><strong>この画面は休憩画面です</strong><br>"+"<strong>先ほどと同じ課題をもう一度行います</strong><br><br>"+"表示された単語が<strong>あなたの友人に当てはまる</strong>と思ったら左手の中指で<strong>E</strong>キーを押してください<br>"+"表示された単語が<strong>あなたの友人に当てはまらない</strong>と思ったら右手の中指で<strong>I</strong>キーを押してください<br><br>"+"単語は一度に一つだけ出てきます。<br><br>" +" できるだけ早く、正確にキーを押してください<br> " +"<p><strong>ここでは、先ほど回答していただいたものを正答としています</strong><br><br>"+'準備ができたらスペースキーを押して始めて下さい</div>',
           choices: [' ']
          };
      
